@@ -2,7 +2,13 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../sass/style.sass"
+        "../sass/style.sass",
+        "../sass/main/_index.sass",
+        "../sass/main/blocks/_intro.sass",
+        "../sass/main/blocks/_services1.sass",
+        "../sass/main/blocks/_services2.sass",
+        "../sass/main/blocks/_about.sass",
+        "../sass/main/blocks/_contacts.sass"
     ],
     "names": [],
     "file": "style.css"
