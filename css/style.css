@@ -361,4 +361,126 @@ template {
   font-weight: 900;
   font-style: normal;
 }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .panel {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.33%;
+          flex: 1 1 33.33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .panel.secondary-services {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+}
+
+section .panel .services-header, section .panel .services-text {
+  font-family: 'PF Bague Sans Pro', sans-serif;
+}
+
+section .panel .services-header {
+  text-transform: uppercase;
+  font-size: 22px;
+  position: relative;
+  margin-top: 0.6em;
+  padding-bottom: 0.6em;
+}
+
+section .panel .services-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: #031634;
+}
+
+section .panel .services-text {
+  font-size: 15px;
+  margin-top: 0.8em;
+  text-align: justify;
+}
+
+section .panel .services-logo {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.primary-services {
+  padding: 2em;
+  padding-bottom: 4em;
+}
+
+.primary-services:nth-child(1) {
+  background-color: #ebf0fa;
+  color: #031634;
+}
+
+.primary-services:nth-child(2) {
+  background-color: white;
+  color: #040004;
+}
+
+.primary-services:nth-child(3) {
+  background-color: #031634;
+  color: white;
+}
+
+.primary-services:nth-child(3) .services-header::after {
+  background-color: white;
+}
+
+.primary-services-info {
+  margin-top: 50%;
+}
+
+.secondary-services {
+  padding: 1em;
+  padding-bottom: 3em;
+}
+
+.secondary-services:nth-child(even) {
+  background-color: #ebf0fa;
+}
+
+.secondary-services .services-header {
+  color: #031634;
+}
+
+.secondary-services .services-text {
+  color: #5b5b5b;
+}
+
+.secondary-services img {
+  width: 4em;
+}
+
+.secondary-services .secondary-image {
+  margin-top: 55%;
+}
 /*# sourceMappingURL=style.css.map */
