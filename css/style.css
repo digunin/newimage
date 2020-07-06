@@ -476,11 +476,24 @@ section .panel .services-logo {
   color: #5b5b5b;
 }
 
-.secondary-services img {
+.secondary-services .secondary-image {
+  min-height: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.secondary-services .secondary-image img {
   width: 4em;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.secondary-services:nth-child(3) .secondary-image img {
+  width: 3.5em;
 }
 
 .secondary-services .secondary-image {
-  margin-top: 55%;
+  margin-top: 40%;
 }
 /*# sourceMappingURL=style.css.map */
