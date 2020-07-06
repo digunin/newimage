@@ -431,6 +431,88 @@ section .panel .services-logo {
           justify-content: center;
 }
 
+#intro {
+  background: url("../img/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #031634;
+}
+
+#intro .intro-phones-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 13vh;
+}
+
+#intro .intro-phones-panel img {
+  height: 10vh;
+}
+
+#intro .intro-phones-panel .logo {
+  margin-right: 10px;
+}
+
+#intro .intro-phones-panel .phones {
+  margin-right: 25px;
+}
+
+#intro .intro-header div {
+  font-family: 'PF Bague Sans Pro Bold', sans-serif;
+  font-size: 21vh;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+#intro .intro-header div:nth-child(1) {
+  margin-top: -2vh;
+  padding: 0 .4em;
+  display: inline-block;
+  color: white;
+  background-color: #031634;
+}
+
+#intro .intro-header div:nth-child(2) {
+  margin-left: 1.4em;
+}
+
+#intro .intro-subheader {
+  font-size: 21vh;
+  margin-left: 1.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#intro .intro-subheader div {
+  font-size: 32px;
+  margin-left: 0.2em;
+  margin-top: -0.6em;
+}
+
+#intro .intro-subheader div:nth-child(1) {
+  font-family: 'PF Bague Sans Pro Bold', sans-serif;
+}
+
+#intro .intro-subheader div:nth-child(2) {
+  font-family: 'PF Bague Sans Pro', sans-serif;
+  margin-left: 0.5em;
+}
+
+#intro .callback-button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: auto 45px 45px;
+}
+
+#intro .callback-button img {
+  width: 60px;
+}
+
 .primary-services {
   padding: 2em;
   padding-bottom: 4em;
