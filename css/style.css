@@ -362,6 +362,20 @@ template {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Humanist 521 Condenced';
+  src: url("../fonts/Hum521c.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Humanist 521 Condenced Bold';
+  src: url("../fonts/Hum521bc.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -462,7 +476,7 @@ section .panel .services-logo {
 }
 
 #intro .intro-header div {
-  font-family: 'PF Bague Sans Pro Bold', sans-serif;
+  font-family: 'Humanist 521 Condenced Bold', sans-serif;
   font-size: 21vh;
   text-transform: uppercase;
   line-height: 1;
@@ -470,7 +484,7 @@ section .panel .services-logo {
 
 #intro .intro-header div:nth-child(1) {
   margin-top: -2vh;
-  padding: 0 .4em;
+  padding: 0 .4em 0.05em;
   display: inline-block;
   color: white;
   background-color: #031634;
@@ -478,6 +492,7 @@ section .panel .services-logo {
 
 #intro .intro-header div:nth-child(2) {
   margin-left: 1.4em;
+  margin-top: -0.05em;
 }
 
 #intro .intro-subheader {
@@ -486,6 +501,7 @@ section .panel .services-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 0.02em;
 }
 
 #intro .intro-subheader div {
@@ -500,7 +516,6 @@ section .panel .services-logo {
 
 #intro .intro-subheader div:nth-child(2) {
   font-family: 'PF Bague Sans Pro', sans-serif;
-  margin-left: 0.5em;
 }
 
 #intro .callback-button {
