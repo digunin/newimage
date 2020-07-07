@@ -599,4 +599,92 @@ section .panel .services-logo {
 .secondary-services .secondary-image {
   margin-top: 40%;
 }
+
+#about .about-left, #about .about-right {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#about .about-left {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+#about .about-left .about-left-content {
+  font-family: 'PF Bague Sans Pro', sans-serif;
+  color: #031634;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 7%;
+}
+
+#about .about-left .about-left-footer {
+  width: 90%;
+  height: 64px;
+  background: url("../img/about/footer-image.png") no-repeat 0 0/cover;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-animation: view-footer 5s infinite;
+          animation: view-footer 5s infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.15);
+          box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.15);
+}
+
+#about .about-left .about-left-footer:hover {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.4);
+          box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.4);
+}
+
+#about .about-right {
+  background-color: #031634;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about .about-right img {
+  width: 70%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@-webkit-keyframes view-footer {
+  50% {
+    background-position: right 0;
+  }
+  100% {
+    background-position: left 0;
+  }
+}
+
+@keyframes view-footer {
+  50% {
+    background-position: right 0;
+  }
+  100% {
+    background-position: left 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
