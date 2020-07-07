@@ -363,16 +363,9 @@ template {
 }
 
 @font-face {
-  font-family: 'Humanist 521 Condenced';
-  src: url("../fonts/Hum521c.ttf");
+  font-family: 'Humanist 521';
+  src: local("Humanst521 BT"), url("../fonts/Humanst521 BT.ttf");
   font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Humanist 521 Condenced Bold';
-  src: url("../fonts/Hum521bc.ttf");
-  font-weight: bold;
   font-style: normal;
 }
 
@@ -446,7 +439,7 @@ section .panel .services-logo {
 }
 
 #intro {
-  background: url("../img/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
+  background: url("../img/intro/intro.png") repeat-y top right, radial-gradient(ellipse, white, #ebf0fa);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -460,7 +453,7 @@ section .panel .services-logo {
   display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-top: 13vh;
+  margin-top: 80px;
 }
 
 #intro .intro-phones-panel img {
@@ -475,15 +468,19 @@ section .panel .services-logo {
   margin-right: 25px;
 }
 
+#intro .intro-header {
+  margin-top: -2vh;
+}
+
 #intro .intro-header div {
-  font-family: 'Humanist 521 Condenced Bold', sans-serif;
+  font-family: 'Humanst521 BT Bold', sans-serif;
+  font-weight: bold;
   font-size: 21vh;
   text-transform: uppercase;
   line-height: 1;
 }
 
 #intro .intro-header div:nth-child(1) {
-  margin-top: -2vh;
   padding: 0 .4em 0.05em;
   display: inline-block;
   color: white;
@@ -496,22 +493,19 @@ section .panel .services-logo {
 }
 
 #intro .intro-subheader {
-  font-size: 21vh;
-  margin-left: 1.4em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 0.02em;
+  margin-left: 200px;
 }
 
 #intro .intro-subheader div {
   font-size: 32px;
-  margin-left: 0.2em;
-  margin-top: -0.6em;
 }
 
 #intro .intro-subheader div:nth-child(1) {
   font-family: 'PF Bague Sans Pro Bold', sans-serif;
+  margin-right: 1em;
 }
 
 #intro .intro-subheader div:nth-child(2) {
@@ -526,6 +520,18 @@ section .panel .services-logo {
 
 #intro .callback-button img {
   width: 60px;
+}
+
+@media screen and (max-width: 900px) {
+  #intro .intro-header {
+    margin-top: 0;
+  }
+  #intro .intro-subheader {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .primary-services {

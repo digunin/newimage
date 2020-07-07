@@ -29,19 +29,13 @@
   }
 
   @font-face {
-      font-family: 'Humanist 521 Condenced';
-      src: url('../fonts/Hum521c.ttf');
-      font-weight: normal;
-      font-style: normal;
+    font-family: 'Humanist 521';
+    src: local('Humanst521 BT'),
+        url('../fonts/Humanst521 BT.ttf');
+    font-weight: normal;
+    font-style: normal;
 
   }
-
-  @font-face {
-    font-family: 'Humanist 521 Condenced Bold';
-    src: url('../fonts/Hum521bc.ttf');
-    font-weight: bold;
-    font-style: normal;
-}
 
 @mixin B_reg {
     font-family: 'PF Bague Sans Pro', sans-serif;
@@ -56,9 +50,10 @@
 }
 
 @mixin H_reg {
-    font-family: 'Humanist 521 Condenced', sans-serif;
+    font-family: 'Humanst521 BT', sans-serif;
 }
 
 @mixin H_bold {
-    font-family: 'Humanist 521 Condenced Bold', sans-serif;
+    font-family: 'Humanst521 BT Bold', sans-serif;
+    font-weight: bold
 }
