@@ -1,11 +1,11 @@
 #intro
-    background: url('../img/intro/intro.png') repeat-y top right, radial-gradient(ellipse, white, $secondary-color)
+    background: url('../img/intro/intro.png') no-repeat top right/auto 100%, radial-gradient(ellipse, white, $secondary-color)
     flex-direction: column
     color: $primary-color
     .intro-phones-panel
         display: flex
         align-self: flex-end
-        margin-top: 80px
+        margin-top: 13vh
         img
             height: 10vh
         .logo
@@ -27,6 +27,8 @@
             &:nth-child(2)
                 margin-left: 1.4em
                 margin-top: -0.05em
+        img
+            height: 40vh
     .intro-subheader
         display: flex
         margin-left: 200px

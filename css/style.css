@@ -439,7 +439,7 @@ section .panel .services-logo {
 }
 
 #intro {
-  background: url("../img/intro/intro.png") repeat-y top right, radial-gradient(ellipse, white, #ebf0fa);
+  background: url("../img/intro/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -453,7 +453,7 @@ section .panel .services-logo {
   display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-top: 80px;
+  margin-top: 13vh;
 }
 
 #intro .intro-phones-panel img {
@@ -490,6 +490,10 @@ section .panel .services-logo {
 #intro .intro-header div:nth-child(2) {
   margin-left: 1.4em;
   margin-top: -0.05em;
+}
+
+#intro .intro-header img {
+  height: 40vh;
 }
 
 #intro .intro-subheader {
@@ -641,50 +645,80 @@ section .panel .services-logo {
   background: url("../img/about/footer-image.png") no-repeat 0 0/cover;
   margin: 0 auto;
   overflow: hidden;
-  -webkit-animation: view-footer 5s infinite;
-          animation: view-footer 5s infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
   -webkit-box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.15);
           box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.15);
+  -webkit-transition: background-position 2s;
+  transition: background-position 2s;
 }
 
 #about .about-left .about-left-footer:hover {
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  background-position: right 0;
   -webkit-box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.4);
           box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.4);
 }
 
 #about .about-right {
+  background: url("../img/about/octagon.png") no-repeat center/90% auto;
   background-color: #031634;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-perspective: 400px;
+          perspective: 400px;
 }
 
-#about .about-right img {
-  width: 70%;
+#about .about-right .wrapper {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  min-width: 17%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: spin 7s infinite;
+          animation: spin 7s infinite;
 }
 
-@-webkit-keyframes view-footer {
-  50% {
-    background-position: right 0;
+#about .about-right .wrapper img {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+}
+
+#about .about-right .wrapper img.face {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+#about .about-right .wrapper img.back {
+  -webkit-transform: translate(-50%, -50%) rotateY(180deg);
+          transform: translate(-50%, -50%) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
   100% {
-    background-position: left 0;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
   }
 }
 
-@keyframes view-footer {
-  50% {
-    background-position: right 0;
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
   100% {
-    background-position: left 0;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
   }
 }
 /*# sourceMappingURL=style.css.map */

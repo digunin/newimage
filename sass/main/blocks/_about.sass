@@ -19,21 +19,37 @@
             background: url('../img/about/footer-image.png') no-repeat 0 0/cover
             margin: 0 auto
             overflow: hidden
-            animation: view-footer 5s infinite
-            animation-play-state: paused
             box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.15)
+            transition: background-position 2s
             &:hover
-                animation-play-state: running
+                background-position: right 0
                 box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.4)
     .about-right
+        background: url('../img/about/octagon.png') no-repeat center/90% auto
         background-color: $primary-color
         justify-content: center
-        img
-            width: 70%
+        perspective: 400px
+        .wrapper
             align-self: center
+            min-width: 17%
+            position: relative
+            transform-style: preserve-3d
+            animation: spin 7s infinite
+            img
+                position: absolute
+                width: 100%
+                top: 50%
+                left: 50%
+                &.face
+                    transform: translate(-50%, -50%)
+                    backface-visibility: hidden
+                &.back
+                    transform: translate(-50%, -50%) rotateY(180deg)
+                    backface-visibility: hidden
 
-@keyframes view-footer
-    50%
-        background-position: right 0 
-    100%
-        background-position: left 0
+    @keyframes spin
+        0%
+            transform: rotateY(0deg)
+        100%
+            transform: rotateY(360deg)
+            
