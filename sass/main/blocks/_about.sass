@@ -13,6 +13,23 @@
             flex-direction: column
             justify-content: center
             padding: 5px 7%
+            &-header
+                text-transform: uppercase
+                font-size: 21px
+                position: relative
+                padding-bottom: 0.6em
+                &::after
+                    content: ""
+                    position: absolute
+                    bottom: 0px
+                    left: 0px
+                    width: 50%
+                    height: 1px
+                    background-color: $primary-color
+            p
+                font-size: 16px
+                margin-bottom: 0
+                text-align: justify
         .about-left-footer
             width: 90%
             height: 64px
@@ -25,12 +42,12 @@
                 background-position: right 0
                 box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.4)
     .about-right
-        background: url('../img/about/octagon.png') no-repeat center/90% auto
+        background: url('../img/about/octagon.png') no-repeat center/80% auto
         background-color: $primary-color
         justify-content: center
         .wrapper
             align-self: center
-            min-width: 17%
+            min-width: 16%
             position: relative
             perspective: 400px
             img

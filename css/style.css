@@ -639,6 +639,29 @@ section .panel .services-logo {
   padding: 5px 7%;
 }
 
+#about .about-left .about-left-content-header {
+  text-transform: uppercase;
+  font-size: 21px;
+  position: relative;
+  padding-bottom: 0.6em;
+}
+
+#about .about-left .about-left-content-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 50%;
+  height: 1px;
+  background-color: #031634;
+}
+
+#about .about-left .about-left-content p {
+  font-size: 16px;
+  margin-bottom: 0;
+  text-align: justify;
+}
+
 #about .about-left .about-left-footer {
   width: 90%;
   height: 64px;
@@ -658,7 +681,7 @@ section .panel .services-logo {
 }
 
 #about .about-right {
-  background: url("../img/about/octagon.png") no-repeat center/90% auto;
+  background: url("../img/about/octagon.png") no-repeat center/80% auto;
   background-color: #031634;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -669,7 +692,7 @@ section .panel .services-logo {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  min-width: 17%;
+  min-width: 16%;
   position: relative;
   -webkit-perspective: 400px;
           perspective: 400px;
