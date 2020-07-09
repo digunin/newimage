@@ -2,6 +2,17 @@ body
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
 
+#intro, #contacts
+      background: url('../img/intro/intro.png') no-repeat top right/auto 100%, radial-gradient(ellipse, white, $secondary-color)
+      flex-direction: column
+      position: relative
+      .callback-button
+        position: absolute
+        right: 45px
+        bottom: 45px
+        img
+            width: 60px
+
 section
     height: 100vh
     display: flex
@@ -35,4 +46,6 @@ section
             margin-top: auto
             display: flex
             justify-content: center
+            img
+                width: 92px
 

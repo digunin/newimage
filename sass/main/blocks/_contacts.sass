@@ -1,0 +1,44 @@
+#contacts
+    position: relative
+    .wrapper
+        color: $primary-color
+        margin: 100px
+        +B_reg
+        .phones, .e-mail
+            +B_bold
+        span
+            display: block
+        .contacts
+            display: inline-block
+            .header
+                position: relative
+                font-size: 24px
+                margin-top: 1.5em
+                padding-bottom: 0.6em
+                &::after
+                    position: absolute
+                    content: ""
+                    height: 1px
+                    width: 100%
+                    bottom: 0
+                    left: 0
+                    background-color: $primary-color
+            .adress
+                font-size: 18px
+            .phones
+                font-size: 20px
+            .e-mail
+                font-size: 20px
+        .route
+            font-size: 18px
+            width: 80%
+            p
+                text-align: justify
+                &:first-child
+                    margin-top: 0
+    .callback-button
+        position: absolute
+        right: 45px
+        bottom: 45px
+        img
+            width: 60px

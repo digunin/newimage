@@ -374,6 +374,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#intro, #contacts {
+  background: url("../img/intro/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+#intro .callback-button, #contacts .callback-button {
+  position: absolute;
+  right: 45px;
+  bottom: 45px;
+}
+
+#intro .callback-button img, #contacts .callback-button img {
+  width: 60px;
+}
+
 section {
   height: 100vh;
   display: -webkit-box;
@@ -438,12 +457,11 @@ section .panel .services-logo {
           justify-content: center;
 }
 
+section .panel .services-logo img {
+  width: 92px;
+}
+
 #intro {
-  background: url("../img/intro/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   color: #031634;
 }
 
@@ -514,16 +532,6 @@ section .panel .services-logo {
 
 #intro .intro-subheader div:nth-child(2) {
   font-family: 'PF Bague Sans Pro', sans-serif;
-}
-
-#intro .callback-button {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin: auto 45px 45px;
-}
-
-#intro .callback-button img {
-  width: 60px;
 }
 
 @media screen and (max-width: 900px) {
@@ -734,5 +742,79 @@ section .panel .services-logo {
     -webkit-transform: translate(-50%, -50%) rotateY(360deg);
             transform: translate(-50%, -50%) rotateY(360deg);
   }
+}
+
+#contacts {
+  position: relative;
+}
+
+#contacts .wrapper {
+  color: #031634;
+  margin: 100px;
+  font-family: 'PF Bague Sans Pro', sans-serif;
+}
+
+#contacts .wrapper .phones, #contacts .wrapper .e-mail {
+  font-family: 'PF Bague Sans Pro Bold', sans-serif;
+}
+
+#contacts .wrapper span {
+  display: block;
+}
+
+#contacts .wrapper .contacts {
+  display: inline-block;
+}
+
+#contacts .wrapper .contacts .header {
+  position: relative;
+  font-size: 24px;
+  margin-top: 1.5em;
+  padding-bottom: 0.6em;
+}
+
+#contacts .wrapper .contacts .header::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #031634;
+}
+
+#contacts .wrapper .contacts .adress {
+  font-size: 18px;
+}
+
+#contacts .wrapper .contacts .phones {
+  font-size: 20px;
+}
+
+#contacts .wrapper .contacts .e-mail {
+  font-size: 20px;
+}
+
+#contacts .wrapper .route {
+  font-size: 18px;
+  width: 80%;
+}
+
+#contacts .wrapper .route p {
+  text-align: justify;
+}
+
+#contacts .wrapper .route p:first-child {
+  margin-top: 0;
+}
+
+#contacts .callback-button {
+  position: absolute;
+  right: 45px;
+  bottom: 45px;
+}
+
+#contacts .callback-button img {
+  width: 60px;
 }
 /*# sourceMappingURL=style.css.map */
