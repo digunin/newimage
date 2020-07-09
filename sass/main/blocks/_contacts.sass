@@ -8,27 +8,29 @@
             +B_bold
         span
             display: block
-        .contacts
-            display: inline-block
-            .header
-                position: relative
-                font-size: 24px
-                margin-top: 1.5em
-                padding-bottom: 0.6em
-                &::after
-                    position: absolute
-                    content: ""
-                    height: 1px
-                    width: 100%
-                    bottom: 0
-                    left: 0
-                    background-color: $primary-color
-            .adress
-                font-size: 18px
-            .phones
-                font-size: 20px
-            .e-mail
-                font-size: 20px
+        .contacts-wrapper
+            display: flex
+            .contacts
+                margin-right: 5em
+                .header
+                    position: relative
+                    font-size: 24px
+                    margin-top: 1.5em
+                    padding-bottom: 0.6em
+                    &::after
+                        position: absolute
+                        content: ""
+                        height: 1px
+                        width: 100%
+                        bottom: 0
+                        left: 0
+                        background-color: $primary-color
+                .adress
+                    font-size: 18px
+                .phones
+                    font-size: 20px
+                .e-mail
+                    font-size: 20px
         .route
             font-size: 18px
             width: 80%

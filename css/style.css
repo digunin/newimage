@@ -486,6 +486,12 @@ section .panel .services-logo img {
   margin-right: 25px;
 }
 
+#intro .intro-phones-panel .phones p {
+  margin: 0;
+  font-family: 'PF Bague Sans Pro Bold', sans-serif;
+  font-size: 4.6vh;
+}
+
 #intro .intro-header {
   margin-top: -2vh;
 }
@@ -518,7 +524,7 @@ section .panel .services-logo img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 200px;
+  margin-left: 32vh;
 }
 
 #intro .intro-subheader div {
@@ -762,18 +768,24 @@ section .panel .services-logo img {
   display: block;
 }
 
-#contacts .wrapper .contacts {
-  display: inline-block;
+#contacts .wrapper .contacts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#contacts .wrapper .contacts .header {
+#contacts .wrapper .contacts-wrapper .contacts {
+  margin-right: 5em;
+}
+
+#contacts .wrapper .contacts-wrapper .contacts .header {
   position: relative;
   font-size: 24px;
   margin-top: 1.5em;
   padding-bottom: 0.6em;
 }
 
-#contacts .wrapper .contacts .header::after {
+#contacts .wrapper .contacts-wrapper .contacts .header::after {
   position: absolute;
   content: "";
   height: 1px;
@@ -783,15 +795,15 @@ section .panel .services-logo img {
   background-color: #031634;
 }
 
-#contacts .wrapper .contacts .adress {
+#contacts .wrapper .contacts-wrapper .contacts .adress {
   font-size: 18px;
 }
 
-#contacts .wrapper .contacts .phones {
+#contacts .wrapper .contacts-wrapper .contacts .phones {
   font-size: 20px;
 }
 
-#contacts .wrapper .contacts .e-mail {
+#contacts .wrapper .contacts-wrapper .contacts .e-mail {
   font-size: 20px;
 }
 
