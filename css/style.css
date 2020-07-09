@@ -484,12 +484,13 @@ section .panel .services-logo img {
 
 #intro .intro-phones-panel .phones {
   margin-right: 25px;
+  margin-top: -.5vh;
 }
 
 #intro .intro-phones-panel .phones p {
   margin: 0;
   font-family: 'PF Bague Sans Pro Bold', sans-serif;
-  font-size: 4.6vh;
+  font-size: 4.8vh;
 }
 
 #intro .intro-header {
@@ -544,11 +545,28 @@ section .panel .services-logo img {
   #intro .intro-header {
     margin-top: 0;
   }
+  #intro .intro-header img {
+    height: auto;
+    width: 90vw;
+  }
   #intro .intro-subheader {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-left: 32vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #intro .intro-phones-panel img {
+    display: none;
+  }
+  #intro .intro-subheader {
+    margin-left: 5px;
+  }
+  #intro .callback-button {
+    margin-bottom: 50px;
   }
 }
 
@@ -680,7 +698,7 @@ section .panel .services-logo img {
   width: 90%;
   height: 64px;
   background: url("../img/about/footer-image.png") no-repeat 0 0/cover;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   overflow: hidden;
   -webkit-box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.15);
           box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.15);
@@ -756,7 +774,8 @@ section .panel .services-logo img {
 
 #contacts .wrapper {
   color: #031634;
-  margin: 100px;
+  margin-top: 80px;
+  margin-left: 80px;
   font-family: 'PF Bague Sans Pro', sans-serif;
 }
 
@@ -775,14 +794,15 @@ section .panel .services-logo img {
 }
 
 #contacts .wrapper .contacts-wrapper .contacts {
-  margin-right: 5em;
+  margin-right: 4em;
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .header {
   position: relative;
-  font-size: 24px;
+  font-size: 26px;
   margin-top: 1.5em;
-  padding-bottom: 0.6em;
+  margin-bottom: .6em;
+  padding-bottom: .6em;
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .header::after {
@@ -796,19 +816,19 @@ section .panel .services-logo img {
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .adress {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .phones {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .e-mail {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #contacts .wrapper .route {
-  font-size: 18px;
+  font-size: 20px;
   width: 80%;
 }
 
