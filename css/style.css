@@ -380,7 +380,7 @@ body {
 }
 
 #intro, #contacts {
-  background: url("../img/intro/intro.png") no-repeat top right, radial-gradient(ellipse, white, #ebf0fa);
+  background: url("../img/intro/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -405,6 +405,13 @@ section {
   display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+section a {
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 section .panel {
@@ -574,6 +581,9 @@ section .panel .services-logo img {
 }
 
 .primary-services-info {
+  display: block;
+  margin: 0;
+  padding: 0;
   margin-top: 50%;
 }
 

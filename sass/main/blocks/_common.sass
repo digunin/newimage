@@ -7,7 +7,7 @@ body
     -moz-osx-font-smoothing: grayscale
 
 #intro, #contacts
-      background: url('../img/intro/intro.png') no-repeat top right, radial-gradient(ellipse, white, $secondary-color)
+      background: url('../img/intro/intro.png') no-repeat top right/auto 100%, radial-gradient(ellipse, white, $secondary-color)
       flex-direction: column
       position: relative
       .callback-button
@@ -21,6 +21,11 @@ section
     height: 100vh
     display: flex
     box-sizing: border-box
+    a
+        display: block
+        text-decoration: none
+        margin: 0
+        padding: 0
     .panel
         font-size: 1.2rem
         flex: 1 1 33.33%
