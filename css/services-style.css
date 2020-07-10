@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'PF Bague Sans Pro';
+  src: local("../fonts/PF Bague Sans Pro Regular"), local("PF-Bague-Sans-Pro-Regular"), url("../fonts/PFBagueSansPro.woff2") format("woff2"), url("../fonts/PFBagueSansPro.woff") format("woff"), url("../fonts/PFBagueSansPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF Bague Sans Pro Bold';
+  src: local("../fonts/PF Bague Sans Pro Bold"), local("PF-Bague-Sans-Pro-Bold"), url("../fonts/PFBagueSansPro-Bold.woff2") format("woff2"), url("../fonts/PFBagueSansPro-Bold.woff") format("woff"), url("../fonts/PFBagueSansPro-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PF Bague Sans Pro Black';
+  src: local("../fonts/PF Bague Sans Pro Black"), local("PF-Bague-Sans-Pro-Black"), url("../fonts/PFBagueSansPro-Black.woff2") format("woff2"), url("../fonts/PFBagueSansPro-Black.woff") format("woff"), url("../fonts/PFBagueSansPro-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Humanist 521';
+  src: local("Humanst521 BT"), url("../fonts/Humanst521 BT.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/*# sourceMappingURL=services-style.css.map */
