@@ -1,9 +1,10 @@
 #contacts
     position: relative
+    font-size: 1.5rem
+    padding: 3em
     .wrapper
         color: $primary-color
-        margin-top: 80px
-        margin-left: 80px
+        width: 80%
         +B_reg
         .phones, .e-mail
             +B_bold
@@ -11,12 +12,14 @@
             display: block
         .contacts-wrapper
             display: flex
+            justify-content: space-between
             .contacts
-                margin-right: 4em
+                &:first-child
+                    margin-right: 10px
                 .header
+                    font-size: 2.4em
                     position: relative
-                    font-size: 26px
-                    margin-top: 1.5em
+                    margin-top: 1em
                     margin-bottom: .6em
                     padding-bottom: .6em
                     &::after
@@ -28,14 +31,13 @@
                         left: 0
                         background-color: $primary-color
                 .adress
-                    font-size: 20px
+                    font-size: 1.6em
                 .phones
-                    font-size: 22px
+                    font-size: 1.8em
                 .e-mail
-                    font-size: 22px
+                    font-size: 1.8em
         .route
-            font-size: 20px
-            width: 80%
+            font-size: 1.6em
             p
                 text-align: justify
                 &:first-child

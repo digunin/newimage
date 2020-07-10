@@ -369,13 +369,18 @@ template {
   font-style: normal;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
+  font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #intro, #contacts {
-  background: url("../img/intro/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
+  background: url("../img/intro/intro.png") no-repeat top right, radial-gradient(ellipse, white, #ebf0fa);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -398,9 +403,12 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 section .panel {
+  font-size: 1.2rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 33.33%;
           flex: 1 1 33.33%;
@@ -425,7 +433,7 @@ section .panel .services-header, section .panel .services-text {
 
 section .panel .services-header {
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 2.2em;
   position: relative;
   margin-top: 0.6em;
   padding-bottom: 0.6em;
@@ -442,7 +450,7 @@ section .panel .services-header::after {
 }
 
 section .panel .services-text {
-  font-size: 15px;
+  font-size: 1.4em;
   margin-top: 0.8em;
   text-align: justify;
 }
@@ -541,35 +549,6 @@ section .panel .services-logo img {
   font-family: 'PF Bague Sans Pro', sans-serif;
 }
 
-@media screen and (max-width: 900px) {
-  #intro .intro-header {
-    margin-top: 0;
-  }
-  #intro .intro-header img {
-    height: auto;
-    width: 90vw;
-  }
-  #intro .intro-subheader {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-left: 32vw;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  #intro .intro-phones-panel img {
-    display: none;
-  }
-  #intro .intro-subheader {
-    margin-left: 5px;
-  }
-  #intro .callback-button {
-    margin-bottom: 50px;
-  }
-}
-
 .primary-services {
   padding: 2em;
   padding-bottom: 4em;
@@ -599,7 +578,7 @@ section .panel .services-logo img {
 }
 
 .secondary-services {
-  padding: 1em;
+  padding: 2em;
   padding-bottom: 3em;
 }
 
@@ -623,17 +602,21 @@ section .panel .services-logo img {
 }
 
 .secondary-services .secondary-image img {
-  width: 4em;
+  width: 6em;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
 .secondary-services:nth-child(3) .secondary-image img {
-  width: 3.5em;
+  width: 5em;
 }
 
 .secondary-services .secondary-image {
   margin-top: 40%;
+}
+
+#about {
+  font-size: 1.2rem;
 }
 
 #about .about-left, #about .about-right {
@@ -673,7 +656,7 @@ section .panel .services-logo img {
 
 #about .about-left .about-left-content-header {
   text-transform: uppercase;
-  font-size: 21px;
+  font-size: 2.2em;
   position: relative;
   padding-bottom: 0.6em;
 }
@@ -683,13 +666,13 @@ section .panel .services-logo img {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  width: 50%;
+  width: 100%;
   height: 1px;
   background-color: #031634;
 }
 
 #about .about-left .about-left-content p {
-  font-size: 16px;
+  font-size: 1.6em;
   margin-bottom: 0;
   text-align: justify;
 }
@@ -770,12 +753,13 @@ section .panel .services-logo img {
 
 #contacts {
   position: relative;
+  font-size: 1.5rem;
+  padding: 3em;
 }
 
 #contacts .wrapper {
   color: #031634;
-  margin-top: 80px;
-  margin-left: 80px;
+  width: 80%;
   font-family: 'PF Bague Sans Pro', sans-serif;
 }
 
@@ -791,16 +775,19 @@ section .panel .services-logo img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#contacts .wrapper .contacts-wrapper .contacts {
-  margin-right: 4em;
+#contacts .wrapper .contacts-wrapper .contacts:first-child {
+  margin-right: 10px;
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .header {
+  font-size: 2.4em;
   position: relative;
-  font-size: 26px;
-  margin-top: 1.5em;
+  margin-top: 1em;
   margin-bottom: .6em;
   padding-bottom: .6em;
 }
@@ -816,20 +803,19 @@ section .panel .services-logo img {
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .adress {
-  font-size: 20px;
+  font-size: 1.6em;
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .phones {
-  font-size: 22px;
+  font-size: 1.8em;
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .e-mail {
-  font-size: 22px;
+  font-size: 1.8em;
 }
 
 #contacts .wrapper .route {
-  font-size: 20px;
-  width: 80%;
+  font-size: 1.6em;
 }
 
 #contacts .wrapper .route p {
@@ -848,5 +834,62 @@ section .panel .services-logo img {
 
 #contacts .callback-button img {
   width: 60px;
+}
+
+@media screen and (max-width: 1400px) {
+  #contacts {
+    font-size: 1rem;
+  }
+  #contacts .wrapper .logo img {
+    width: 200px;
+  }
+  section .panel {
+    font-size: 1rem;
+  }
+  #about {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #intro .intro-header {
+    margin-top: 0;
+  }
+  #intro .intro-header img {
+    height: auto;
+    width: 90vw;
+  }
+  #intro .intro-subheader {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 32vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #intro .intro-phones-panel img {
+    display: none;
+  }
+  #intro .intro-subheader {
+    margin-left: 5px;
+  }
+  #about .about-left .about-left-footer {
+    -webkit-transition-duration: 2s;
+            transition-duration: 2s;
+  }
+  #contacts {
+    padding: .5em;
+  }
+  #contacts .wrapper {
+    width: 100%;
+  }
+  #contacts .wrapper .contacts-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
