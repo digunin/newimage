@@ -119,7 +119,8 @@ body {
 }
 
 .container .content-info .content-text {
-  font-size: 1.6em;
+  font-size: 1.8em;
+  line-height: 1.3;
   text-align: justify;
 }
 
@@ -149,11 +150,75 @@ body {
   width: 50%;
 }
 
-.content-info.souvenir-content-info {
-  width: 80%;
+.footer.car-footer img {
+  width: 700px;
+  max-width: 50%;
 }
 
 .footer.banner-footer img {
   width: 100%;
+}
+
+.primary-services-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+}
+
+.primary-services-container .side {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.primary-services-container .left-side {
+  font-family: 'PF Bague Sans Pro', sans-serif;
+  color: #031634;
+  padding: 2.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background-color: #ebf0fa;
+}
+
+.primary-services-container .left-side-header {
+  font-size: 3.2em;
+  margin-top: 2em;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.6em;
+}
+
+.primary-services-container .left-side-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: #031634;
+}
+
+.primary-services-container .left-side-info {
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.primary-services-container .left-side-footer {
+  margin: auto auto 3em;
+}
+
+.primary-services-container .left-side-footer img {
+  width: 92px;
+}
+
+.primary-services-container .right-side {
+  background: url("../../img/services/design/1.png") no-repeat center/80%;
 }
 /*# sourceMappingURL=services-style.css.map */
