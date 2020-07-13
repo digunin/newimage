@@ -122,4 +122,38 @@ body {
   font-size: 1.6em;
   text-align: justify;
 }
+
+.footer.laser-footer img {
+  width: 100%;
+}
+
+.container .content.plotter-content {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.container .content.plotter-content .content-info:nth-child(2) {
+  margin-top: 1em;
+}
+
+.footer.souvenir-footer {
+  text-align: center;
+}
+
+.footer.souvenir-footer .souvenirs-big {
+  width: 100%;
+}
+
+.footer.souvenir-footer .souvenirs-small {
+  width: 50%;
+}
+
+.content-info.souvenir-content-info {
+  width: 80%;
+}
+
+.footer.banner-footer img {
+  width: 100%;
+}
 /*# sourceMappingURL=services-style.css.map */
