@@ -25,4 +25,101 @@
   font-weight: normal;
   font-style: normal;
 }
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  font-size: 1rem;
+}
+
+.container .sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 20em;
+  background-color: #031634;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .sidebar .logo {
+  margin: 5em auto;
+}
+
+.container .sidebar .logo img {
+  width: 10em;
+}
+
+.container .sidebar .phones {
+  color: white;
+  margin: 3em auto;
+}
+
+.container .sidebar .phones div {
+  font-family: 'PF Bague Sans Pro Bold', sans-serif;
+  font-size: 2em;
+}
+
+.container .content {
+  font-family: 'PF Bague Sans Pro', sans-serif;
+  margin-right: 20em;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .content-info {
+  color: #031634;
+}
+
+.container .content-info .content-header {
+  font-size: 2.6em;
+  position: relative;
+  margin-bottom: .6em;
+  padding-bottom: .6em;
+}
+
+.container .content-info .content-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: #031634;
+}
+
+.container .content-info .content-text {
+  font-size: 1.6em;
+  text-align: justify;
+}
 /*# sourceMappingURL=services-style.css.map */

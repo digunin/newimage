@@ -1,0 +1,57 @@
+html
+    font-size: 10px
+
+body
+    font-size: 1.6rem
+
+*
+    box-sizing: border-box
+
+.container
+    font-size: 1rem
+    .sidebar
+        position: fixed
+        top: 0
+        right: 0
+        height: 100vh
+        width: 20em
+        background-color: $primary-color
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .logo
+            margin: 5em auto
+            img
+                width: 10em
+        .phones
+            color: white
+            margin: 3em auto
+            div
+                +B_bold
+                font-size: 2em
+    .content
+        +B_reg
+        margin-right: 20em
+        padding: 2em
+        display: flex
+        height: 100vh
+        flex-direction: column
+        justify-content: space-between
+        &-info
+            color: $primary-color
+            .content-header
+                font-size: 2.6em
+                position: relative
+                margin-bottom: .6em
+                padding-bottom: .6em
+                &::after
+                    content: ""
+                    position: absolute
+                    bottom: 0px
+                    left: 0px
+                    width: 100%
+                    height: 1px
+                    background-color: $primary-color
+            .content-text
+                font-size: 1.6em
+                text-align: justify 

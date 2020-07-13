@@ -36,6 +36,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 #intro, #contacts {
   background: url("../img/intro/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
   -webkit-box-orient: vertical;
