@@ -8,7 +8,7 @@ body
     box-sizing: border-box
 
 .container
-    font-size: 1rem
+    font-size: 1.1rem
     .sidebar
         position: fixed
         top: 0
@@ -40,6 +40,7 @@ body
         justify-content: space-between
         &-info
             color: $primary-color
+            flex: 1
             .content-header
                 font-size: 2.6em
                 position: relative
@@ -60,7 +61,7 @@ body
 
 .primary-services-container
     display: flex
-    font-size: 1rem
+    font-size: 1.1rem
     .side
         flex-basis: 50%
     .left-side
@@ -87,8 +88,11 @@ body
                 height: 1px
                 background-color: $primary-color
         &-info
-            font-size: 1.6rem
+            font-size: 1.8em
             text-align: justify
+            p
+                &:first-child
+                    margin-top: 0
         &-footer
             margin: auto auto 3em
             text-align: center

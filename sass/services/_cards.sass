@@ -1,3 +1,9 @@
+#cards1
+    .primary-services-container
+        .left-side
+            &-info
+                font-size: 2em
+    
 #cards1, #cards2
     .primary-services-container
         .left-side
@@ -8,8 +14,6 @@
                     background-color: $text-white-color
             &-info
                 p
-                    &:first-child
-                        margin-top: 0
                     &.phone
                         +B_bold
         .right-side
@@ -20,9 +24,11 @@
             &>img
                 align-self: center
                 width: 80%
+                min-height: 1px
             a
                 align-self: center
                 width: 20%
+                min-height: 1px
                 img
                     width: 100%
 
@@ -30,11 +36,12 @@
     .container
         display: flex
         .content
-            flex: 1 1 auto
+            flex: 1
             margin-right: 0
+            min-height: 100vh
         .sidebar
             position: static
-            flex: 1 0 auto
         .footer
             img
-                max-width: 100%
+                max-width: 80vw
+                max-height: 75vh

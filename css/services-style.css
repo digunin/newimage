@@ -40,7 +40,7 @@ body {
 }
 
 .container {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .container .sidebar {
@@ -100,6 +100,9 @@ body {
 
 .container .content-info {
   color: #031634;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .container .content-info .content-header {
@@ -129,7 +132,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .primary-services-container .side {
@@ -172,8 +175,12 @@ body {
 }
 
 .primary-services-container .left-side-info {
-  font-size: 1.6rem;
+  font-size: 1.8em;
   text-align: justify;
+}
+
+.primary-services-container .left-side-info p:first-child {
+  margin-top: 0;
 }
 
 .primary-services-container .left-side-footer {
@@ -239,6 +246,10 @@ body {
   background-origin: content-box;
 }
 
+#cards1 .primary-services-container .left-side-info {
+  font-size: 2em;
+}
+
 #cards1 .primary-services-container .left-side, #cards2 .primary-services-container .left-side {
   background-color: #031634;
   color: white;
@@ -246,10 +257,6 @@ body {
 
 #cards1 .primary-services-container .left-side-header::after, #cards2 .primary-services-container .left-side-header::after {
   background-color: white;
-}
-
-#cards1 .primary-services-container .left-side-info p:first-child, #cards2 .primary-services-container .left-side-info p:first-child {
-  margin-top: 0;
 }
 
 #cards1 .primary-services-container .left-side-info p.phone, #cards2 .primary-services-container .left-side-info p.phone {
@@ -274,6 +281,7 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   width: 80%;
+  min-height: 1px;
 }
 
 #cards1 .primary-services-container .right-side a, #cards2 .primary-services-container .right-side a {
@@ -281,6 +289,7 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   width: 20%;
+  min-height: 1px;
 }
 
 #cards1 .primary-services-container .right-side a img, #cards2 .primary-services-container .right-side a img {
@@ -295,24 +304,26 @@ body {
 
 #cards3 .container .content, #cards4 .container .content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+      -ms-flex: 1;
+          flex: 1;
   margin-right: 0;
+  min-height: 100vh;
 }
 
 #cards3 .container .sidebar, #cards4 .container .sidebar {
   position: static;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
 }
 
 #cards3 .container .footer img, #cards4 .container .footer img {
-  max-width: 100%;
+  max-width: 80vw;
+  max-height: 75vh;
 }
 
 @media screen and (max-width: 1400px) {
   .container {
+    font-size: .9rem;
+  }
+  .primary-services-container {
     font-size: .9rem;
   }
 }
