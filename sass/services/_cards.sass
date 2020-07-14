@@ -1,0 +1,40 @@
+#cards1, #cards2
+    .primary-services-container
+        .left-side
+            background-color: $primary-color
+            color: $text-white-color
+            &-header
+                &::after
+                    background-color: $text-white-color
+            &-info
+                p
+                    &:first-child
+                        margin-top: 0
+                    &.phone
+                        +B_bold
+        .right-side
+            background-color: $secondary-color
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            &>img
+                align-self: center
+                width: 80%
+            a
+                align-self: center
+                width: 20%
+                img
+                    width: 100%
+
+#cards3, #cards4
+    .container
+        display: flex
+        .content
+            flex: 1 1 auto
+            margin-right: 0
+        .sidebar
+            position: static
+            flex: 1 0 auto
+        .footer
+            img
+                max-width: 100%

@@ -239,6 +239,78 @@ body {
   background-origin: content-box;
 }
 
+#cards1 .primary-services-container .left-side, #cards2 .primary-services-container .left-side {
+  background-color: #031634;
+  color: white;
+}
+
+#cards1 .primary-services-container .left-side-header::after, #cards2 .primary-services-container .left-side-header::after {
+  background-color: white;
+}
+
+#cards1 .primary-services-container .left-side-info p:first-child, #cards2 .primary-services-container .left-side-info p:first-child {
+  margin-top: 0;
+}
+
+#cards1 .primary-services-container .left-side-info p.phone, #cards2 .primary-services-container .left-side-info p.phone {
+  font-family: 'PF Bague Sans Pro Bold', sans-serif;
+}
+
+#cards1 .primary-services-container .right-side, #cards2 .primary-services-container .right-side {
+  background-color: #ebf0fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#cards1 .primary-services-container .right-side > img, #cards2 .primary-services-container .right-side > img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 80%;
+}
+
+#cards1 .primary-services-container .right-side a, #cards2 .primary-services-container .right-side a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 20%;
+}
+
+#cards1 .primary-services-container .right-side a img, #cards2 .primary-services-container .right-side a img {
+  width: 100%;
+}
+
+#cards3 .container, #cards4 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#cards3 .container .content, #cards4 .container .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-right: 0;
+}
+
+#cards3 .container .sidebar, #cards4 .container .sidebar {
+  position: static;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+#cards3 .container .footer img, #cards4 .container .footer img {
+  max-width: 100%;
+}
+
 @media screen and (max-width: 1400px) {
   .container {
     font-size: .9rem;
