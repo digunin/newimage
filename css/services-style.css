@@ -220,8 +220,16 @@ body {
   width: 100%;
 }
 
-.primary-services-container .right-side {
+.primary-services-container.design .right-side {
   background: url("../../img/services/design/1.png") no-repeat center/80%;
+}
+
+.primary-services-container .right-side.poly1 {
+  background: url("../../img/services/polygraphy/1.png") no-repeat center/90%;
+}
+
+.primary-services-container .right-side.poly2 {
+  background: url("../../img/services/polygraphy/2.png") no-repeat center/90%;
 }
 
 @media screen and (max-width: 1400px) {
