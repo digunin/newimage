@@ -546,6 +546,14 @@ section .panel .services-logo img {
   min-height: 100%;
   border: 2px solid #031634;
   border-radius: 50%;
+  padding: 0.1em;
+  background-clip: content-box;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.fss-nav .fss-button.active {
+  background-color: #031634;
 }
 
 @media screen and (max-width: 1400px) {
