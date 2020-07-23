@@ -526,6 +526,28 @@ section .panel .services-logo img {
   width: 60px;
 }
 
+.fss-nav {
+  position: fixed;
+  left: 1em;
+  top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 1em;
+  min-width: 10em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fss-nav .fss-button {
+  color: #031634;
+  width: 1em;
+  min-height: 100%;
+  border: 2px solid #031634;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 1400px) {
   #contacts {
     font-size: 1rem;
