@@ -24,16 +24,19 @@ const setCurrentSection = function(n){
 }
 
 const setPrevious = function(elem){
-    elem.classList.remove('active-section', 'next-section')
+    elem.classList.remove('active-section')
+    elem.classList.remove('next-section')
     if(!elem.classList.contains('previous-section')) elem.classList.add('previous-section')
 }
 const setActive = function(elem){
-    elem.classList.remove('previous-section', 'next-section')
+    elem.classList.remove('previous-section')
+    elem.classList.remove('next-section')
     if(!elem.classList.contains('active-section')) elem.classList.add('active-section')
     elem.classList.add('active-section')
 }
 const setNext = function(elem){
-    elem.classList.remove('previous-section', 'active-section')
+    elem.classList.remove('previous-section')
+    elem.classList.remove('active-section')
     if(!elem.classList.contains('next-section')) elem.classList.add('next-section')
 }
 
