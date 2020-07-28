@@ -32,6 +32,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -47,7 +48,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
 }
 
 #intro .callback-button, #contacts .callback-button {
@@ -61,6 +61,13 @@ body {
 }
 
 section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -442,9 +449,9 @@ section .panel .services-logo img {
 }
 
 #contacts {
-  position: relative;
   font-size: 1.5rem;
   padding: 3em;
+  z-index: -1;
 }
 
 #contacts .wrapper {
@@ -528,8 +535,8 @@ section .panel .services-logo img {
 
 .fss-nav {
   position: fixed;
-  left: 1em;
-  top: 1em;
+  left: 0.5em;
+  top: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,12 +555,31 @@ section .panel .services-logo img {
   border-radius: 50%;
   padding: 0.1em;
   background-clip: content-box;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .fss-nav .fss-button.active {
   background-color: #031634;
+}
+
+.fss-nav .fss-button:hover {
+  cursor: pointer;
+}
+
+.active-section {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.previous-section {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.next-section {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 @media screen and (max-width: 1400px) {

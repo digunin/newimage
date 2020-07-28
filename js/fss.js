@@ -3,11 +3,44 @@ const byID = function(id){
 }
 
 var current = 0
+var sectionsNames = ["intro", "services", "services1", "about", "contacts"]
 
 const fssOnClick = function(n){
     if(n==current) return;
+    moveTo(n)
+}
+
+const moveTo = function(index) {
+    setCurrentButton(index)
+    setCurrentSection(index)
+    current = index
+}
+
+const setCurrentSection = function(n){
+    sectionsNames.map(function(name, i){
+        let section = byID(name)
+        i<n ? setPrevious(section) : (i==n ? setActive(section) : setNext(section))
+    })
+}
+
+const setPrevious = function(elem){
+    elem.classList.remove('active-section', 'next-section')
+    if(!elem.classList.contains('previous-section')) elem.classList.add('previous-section')
+}
+const setActive = function(elem){
+    elem.classList.remove('previous-section', 'next-section')
+    if(!elem.classList.contains('active-section')) elem.classList.add('active-section')
+    elem.classList.add('active-section')
+}
+const setNext = function(elem){
+    elem.classList.remove('previous-section', 'active-section')
+    if(!elem.classList.contains('next-section')) elem.classList.add('next-section')
+}
+
+const setCurrentButton = function(n){
     buttons = document.getElementsByClassName('fss-button');
     buttons[current].classList.toggle('active')
     buttons[n].classList.toggle('active')
-    current = n
 }
+
+moveTo(current)

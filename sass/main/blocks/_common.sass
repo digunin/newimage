@@ -3,6 +3,7 @@ html
     
 body
     font-size: 1.6rem
+    overflow: hidden
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
 
@@ -12,7 +13,6 @@ body
 #intro, #contacts
       background: url('../img/intro/intro.png') no-repeat top right/auto 100%, radial-gradient(ellipse, white, $secondary-color)
       flex-direction: column
-      position: relative
       .callback-button
         position: absolute
         right: 45px
@@ -21,6 +21,12 @@ body
             width: 60px
 
 section
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    transition: .2s
     height: 100vh
     display: flex
     box-sizing: border-box
