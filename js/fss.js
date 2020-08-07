@@ -3,7 +3,6 @@ const byID = function(id){
 }
 
 var current = 0
-var sectionsNames = ["intro", "services", "services1", "about", "contacts"]
 
 const fssOnClick = function(n){
     if(n==current) return;

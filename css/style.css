@@ -66,8 +66,8 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: .6s;
+  transition: .6s;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,7 +188,8 @@ section .panel .services-logo img {
   margin-top: -.5vh;
 }
 
-#intro .intro-phones-panel .phones p {
+#intro .intro-phones-panel .phones .phone-href {
+  color: inherit;
   margin: 0;
   font-family: 'PF Bague Sans Pro Bold', sans-serif;
   font-size: 4.8vh;
@@ -507,12 +508,18 @@ section .panel .services-logo img {
   font-size: 1.8em;
 }
 
+#contacts .wrapper .contacts-wrapper .contacts .phones .phone-href {
+  color: inherit;
+}
+
 #contacts .wrapper .contacts-wrapper .contacts .e-mail {
   font-size: 1.8em;
+  color: inherit;
 }
 
 #contacts .wrapper .route {
   font-size: 1.6em;
+  margin-top: 1em;
 }
 
 #contacts .wrapper .route p {
