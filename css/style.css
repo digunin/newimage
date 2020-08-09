@@ -66,8 +66,8 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: .6s;
-  transition: .6s;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,6 +75,7 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
+  z-index: -1;
 }
 
 section a {
@@ -552,6 +553,7 @@ section .panel .services-logo img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 99;
 }
 
 .fss-nav .fss-button {
@@ -577,16 +579,21 @@ section .panel .services-logo img {
 .active-section {
   -webkit-transform: scale(1);
           transform: scale(1);
+  z-index: 10;
 }
 
 .previous-section {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .next-section {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 @media screen and (max-width: 1400px) {

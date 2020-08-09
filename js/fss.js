@@ -3,6 +3,8 @@ const byID = function(id){
 }
 
 var current = 0
+var sectionCount = 0
+var wheelDelay = false
 
 const fssOnClick = function(n){
     if(n==current) return;
@@ -45,4 +47,38 @@ const setCurrentButton = function(n){
     buttons[n].classList.toggle('active')
 }
 
-moveTo(current)
+const keyHandler = function(event){
+    if(event.code == "ArrowDown"||event.code == "ArrowRight"){
+        current<sectionCount-1&&moveToNext()
+    }
+    if(event.code == "ArrowUp"||event.code == "ArrowLeft"){
+        current>0&&moveToPrevious()
+    }
+}
+
+const moveToNext = function(){
+    moveTo(current+1)
+}
+
+const moveToPrevious = function(){
+    moveTo(current-1)
+}
+
+const wheelHandler = function(event){
+    if(wheelDelay) return
+    if(event.deltaY < 0){
+        current>0&&moveToPrevious()
+    }else{
+        current<sectionCount-1&&moveToNext()
+    }
+    wheelDelay = true
+    setTimeout(function(){wheelDelay = false}, 400)
+}
+
+window.onload = function(){
+    sectionCount = sectionsNames.length
+    console.log(sectionCount);
+    document.body.addEventListener("keyup", keyHandler)
+    document.body.addEventListener("wheel", wheelHandler)
+    moveTo(current)
+}
