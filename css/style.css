@@ -61,13 +61,6 @@ body {
 }
 
 section {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,6 +567,16 @@ section .panel .services-logo img {
 
 .fss-nav .fss-button:hover {
   cursor: pointer;
+}
+
+.full-screen-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
 }
 
 .active-section {

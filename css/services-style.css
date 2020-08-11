@@ -348,6 +348,71 @@ body {
   max-height: 75vh;
 }
 
+.fss-nav {
+  position: fixed;
+  left: 0.5em;
+  top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 1em;
+  min-width: 10em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 99;
+}
+
+.fss-nav .fss-button {
+  color: #031634;
+  width: 1em;
+  min-height: 100%;
+  border: 2px solid #031634;
+  border-radius: 50%;
+  padding: 0.1em;
+  background-clip: content-box;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.fss-nav .fss-button.active {
+  background-color: #031634;
+}
+
+.fss-nav .fss-button:hover {
+  cursor: pointer;
+}
+
+.full-screen-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.active-section {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: 10;
+}
+
+.previous-section {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.next-section {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
 @media screen and (max-width: 1400px) {
   .container {
     font-size: .9rem;
