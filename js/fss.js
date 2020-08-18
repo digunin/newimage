@@ -2,7 +2,7 @@ const byID = function(id){
     return document.getElementById(id)
 }
 
-var current = 0
+var current = +localStorage.getItem(`${pageName}currentSection`)||0
 var sectionCount = 0
 var wheelDelay = false
 
@@ -12,15 +12,18 @@ const fssOnClick = function(n){
 }
 
 const moveTo = function(index) {
-    setCurrentButton(index)
     setCurrentSection(index)
     current = index
+    localStorage.setItem(`${pageName}currentSection`, current);
 }
 
 const setCurrentSection = function(n){
+    let buttons = document.getElementsByClassName('fss-button');
     sectionsNames.map(function(name, i){
         let section = byID(name)
+        let btn = buttons[i]
         i<n ? setPrevious(section) : (i==n ? setActive(section) : setNext(section))
+        i==n ? btn.classList.add('active') : btn.classList.remove('active');
     })
 }
 
@@ -41,11 +44,14 @@ const setNext = function(elem){
     if(!elem.classList.contains('next-section')) elem.classList.add('next-section')
 }
 
-const setCurrentButton = function(n){
-    buttons = document.getElementsByClassName('fss-button');
-    buttons[current].classList.toggle('active')
-    buttons[n].classList.toggle('active')
-}
+// const setCurrentButton = function(n){
+//     let buttons = document.getElementsByClassName('fss-button');
+//     console.log(`current = ${current}`);
+//     for(let i=0; i<sectionCount;i++){
+//         let elem = buttons[i];
+//         i==current ? elem.classList.add('active') : elem.classList.remove('active');
+//     }
+// }
 
 const keyHandler = function(event){
     if(event.code == "ArrowDown"||event.code == "ArrowRight"){
@@ -77,8 +83,8 @@ const wheelHandler = function(event){
 
 window.onload = function(){
     sectionCount = sectionsNames.length
-    console.log(sectionCount);
     document.body.addEventListener("keyup", keyHandler)
     document.body.addEventListener("wheel", wheelHandler)
     moveTo(current)
+    console.log('loading');
 }
