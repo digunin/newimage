@@ -166,7 +166,10 @@ section .panel .services-logo img {
   display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-top: 13vh;
+  margin-top: 12.7vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #intro .intro-phones-panel img {
@@ -180,6 +183,13 @@ section .panel .services-logo img {
 #intro .intro-phones-panel .phones {
   margin-right: 25px;
   margin-top: -.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #intro .intro-phones-panel .phones .phone-href {
