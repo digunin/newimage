@@ -546,13 +546,19 @@ section .panel .services-logo img {
 
 .fss-nav {
   position: fixed;
-  left: 0.5em;
-  top: 0.5em;
+  right: 0.1em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 1em;
-  min-width: 10em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 10em;
+  min-width: 1em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -560,10 +566,10 @@ section .panel .services-logo img {
 }
 
 .fss-nav .fss-button {
-  color: #031634;
-  width: 1em;
-  min-height: 100%;
-  border: 2px solid #031634;
+  color: #9e9e9e;
+  width: 100%;
+  min-height: 1em;
+  border: 2px solid #9e9e9e;
   border-radius: 50%;
   padding: 0.1em;
   background-clip: content-box;
@@ -572,7 +578,7 @@ section .panel .services-logo img {
 }
 
 .fss-nav .fss-button.active {
-  background-color: #031634;
+  background-color: #9e9e9e;
 }
 
 .fss-nav .fss-button:hover {
