@@ -591,28 +591,32 @@ section .panel .services-logo img {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
 }
 
 .active-section {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
   z-index: 10;
 }
 
 .previous-section {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
 .next-section {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 @media screen and (max-width: 1400px) {

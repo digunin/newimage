@@ -2,7 +2,7 @@ const byID = function(id){
     return document.getElementById(id)
 }
 
-var current = +localStorage.getItem(`${pageName}currentSection`)||0
+var current = +localStorage.getItem(pageName+'currentSection')||0
 var sectionCount = 0
 var wheelDelay = false
 
@@ -14,7 +14,7 @@ const fssOnClick = function(n){
 const moveTo = function(index) {
     setCurrentSection(index)
     current = index
-    localStorage.setItem(`${pageName}currentSection`, current);
+    localStorage.setItem(pageName+'currentSection', current);
 }
 
 const setCurrentSection = function(n){

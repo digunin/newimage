@@ -29,18 +29,20 @@
     left: 0
     right: 0
     bottom: 0
-    transition: .4s ease
+    transition: .2s ease
 
 .active-section
-    transform: scale(1)
+    transform: scaleY(1)
     z-index: 10
 
 .previous-section
-    transform: scale(0)
+    transform: scaleY(0)
     transition-duration: 0.2s
+    transform-origin: top
     // transform: translateY(-100%)
 
 .next-section
-    transform: scale(0)
+    transform: scaleY(0)
     transition-duration: 0.2s
+    transform-origin: bottom
     // transform: translateY(100%)
