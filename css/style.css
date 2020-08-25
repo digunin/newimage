@@ -274,7 +274,7 @@ section .panel .services-logo img {
   display: block;
   margin: 0;
   padding: 0;
-  margin-top: 50%;
+  margin-top: 15vw;
 }
 
 .secondary-services {
@@ -313,7 +313,7 @@ section .panel .services-logo img {
 }
 
 .secondary-services .secondary-image {
-  margin-top: 40%;
+  margin-top: 15vw;
 }
 
 #about {
