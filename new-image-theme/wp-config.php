@@ -1,4 +1,12 @@
 <?php
+if ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1') {
+    define('WP_SITEURL', 'http://localhost/site/');
+    define('WP_HOME'   , 'http://localhost/site');
+} else if (strpos($_SERVER['REMOTE_ADDR'],'192.168.') !== false) {
+    //local network: see ifconfig
+    define('WP_SITEURL', 'http://192.168.32.76/site/');
+    define('WP_HOME'   , 'http://192.168.32.76/site');
+}
 /**
  * Основные параметры WordPress.
  *
