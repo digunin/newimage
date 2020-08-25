@@ -81,7 +81,7 @@
             </div>
             <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo_inv.png'?>" /></div>
         </a>
-        <a href="/html/banner.html" class="panel secondary-services">
+        <a href="<?php echo get_permalink(6); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/banner.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">БАННЕРЫ<br>ПЛАКАТЫ</h2>

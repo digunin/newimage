@@ -8,6 +8,7 @@
         // третий параметр - от каких файлов зависит подключаемый файл
         wp_enqueue_style('normalize', get_template_directory_uri()."/assets/css/normalize.min.css");
         wp_enqueue_style('style', get_template_directory_uri()."/assets/css/style.min.css", array('normalize'));
+        wp_enqueue_style('services-style', get_template_directory_uri()."/assets/css/services-style.min.css", array('style'));
 
         // так подключается файл style.css из корневой папки темы
         // wp_enqueue_style('style', get_stylesheet_uri());
