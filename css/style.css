@@ -42,6 +42,11 @@ body {
           box-sizing: border-box;
 }
 
+h1, h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
 #intro, #contacts {
   background: url("../img/intro/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
   -webkit-box-orient: vertical;
@@ -232,19 +237,13 @@ section .panel .services-logo img {
   display: -ms-flexbox;
   display: flex;
   margin-left: 32vh;
-}
-
-#intro .intro-subheader div {
+  font-family: 'PF Bague Sans Pro', sans-serif;
   font-size: 32px;
 }
 
-#intro .intro-subheader div:nth-child(1) {
-  font-family: 'PF Bague Sans Pro Bold', sans-serif;
+#intro .intro-subheader strong {
   margin-right: 1em;
-}
-
-#intro .intro-subheader div:nth-child(2) {
-  font-family: 'PF Bague Sans Pro', sans-serif;
+  font-family: 'PF Bague Sans Pro Bold', sans-serif;
 }
 
 .primary-services {
