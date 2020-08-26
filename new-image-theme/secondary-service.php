@@ -10,6 +10,7 @@ Template Name: Дополнительные услуги
                 <div class="content-header"><?php echo get_the_title(); ?></div>
                 <div class="content-text">
                 <?php 
+                    global $post;
                     $content = get_the_content(); 
                     $content = apply_filters( 'the_content', $content );
                     $content = str_replace( ']]>', ']]>', $content );
@@ -20,8 +21,8 @@ Template Name: Дополнительные услуги
                 ?>
                 </div>
             </div>
-            <div class="footer">
-                <img src="<?php echo $img_url?>" alt="Примеры наружной рекламы" title="Примеры наружной рекламы">
+            <div class="footer <?php echo $post->post_name."-footer"; ?>">
+                <img src="<?php echo $img_url[0]["src"]; ?>" alt="<?php echo $img_url[0]["alt"]; ?>" title="<?php echo $img_url[0]["title"]; ?>">
             </div>
         </div>
         <div class="sidebar">

@@ -23,6 +23,7 @@
 
     function get_text_and_image($source){
         $txt = [];
+        $imgs = [];
         $tag_with_img = '';
         $source = explode("\n", $source);
         foreach($source as $line){
@@ -31,10 +32,15 @@
                 array_push($txt, $line);
             };
             if(startsWith($line, "<figure")){
-                $tag_with_img = $line;
+                $img_set = array(
+                    "src" => extract_img_src($line),
+                    "alt" => extract_img_alt($line),
+                    "title" => extract_img_title($line)
+                );
+                array_push($imgs, $img_set);
             }
         }
-        return [$txt, extract_img_src($tag_with_img)];
+        return [$txt, $imgs];
     }
 
     function startsWith($targetStr, $start){
@@ -42,9 +48,21 @@
         return (substr($targetStr, 0, $len) === $start); 
     }
 
-    function extract_img_src($str_with_src){
-        $start = strpos($str_with_src, "src=");
-        $end = strpos($str_with_src, " alt=");
-        return substr($str_with_src, $start+5, $end - $start - 6);
+    function extract_img_src($str){
+        $start = strpos($str, "src=");
+        $end = strpos($str, " alt=", $start);
+        return substr($str, $start+5, $end - $start - 6);
+    }
+
+    function extract_img_alt($str){
+        $start = strpos($str, "alt=");
+        $end = strpos($str, " class=", $start);
+        return substr($str, $start+5, $end - $start - 6);
+    }
+
+    function extract_img_title($str){
+        $start = strpos($str, "title=");
+        $end = strpos($str, " srcset=", $start);
+        return substr($str, $start+7, $end - $start - 8);
     }
 ?> 
