@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Главная
+*/
+?>
 <?php get_header(); ?>
 
 <section id="intro" class="full-screen-section active-section">
@@ -49,7 +54,7 @@
         </a>
 </section><!-- section services -->
 <section id="services1" class="full-screen-section next-section">
-        <a href="/html/laser.html" class="panel secondary-services">
+        <a href="<?php echo get_permalink(24); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/laser.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">ЛАЗЕРНАЯ РЕЗКА<br>И ГРАВИРОВКА</h2>
@@ -73,7 +78,7 @@
             </div>
             <div  class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
         </a>
-        <a href="/html/car.html" class="panel secondary-services">
+        <a href="<?php echo get_permalink(31); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/car.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">БРЕНДИРОВАНИЕ<br>АВТО</h2>

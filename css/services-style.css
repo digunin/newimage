@@ -116,6 +116,7 @@ body {
   position: relative;
   margin-bottom: .6em;
   padding-bottom: .6em;
+  text-transform: uppercase;
 }
 
 .container .content-info .content-header::after {
@@ -240,15 +241,6 @@ body {
 
 .footer.souvenir-footer .souvenirs-small {
   width: 50%;
-}
-
-.footer.car-footer img {
-  width: 700px;
-  max-width: 50%;
-}
-
-.footer.banner-footer img {
-  width: 100%;
 }
 
 .primary-services-container.design .right-side img {
