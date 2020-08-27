@@ -23,7 +23,7 @@ Template Name: Главная
         <div class="callback-button"><img src="<?php echo get_template_directory_uri().'/assets/img/callback_button.png'?>"/></div>
 </section><!--intro -->
 <section id="services" class="full-screen-section next-section">
-        <a href="/html/design.html" class="panel primary-services">
+        <a href="<?php echo get_permalink(47); ?>" class="panel primary-services">
             <div class="primary-services-info">
                 <h2 class="services-header">Дизайн</h2>
                 <div class="services-text"><p>Пред&shy;ла&shy;га&shy;ем ши&shy;ро&shy;кий спектр ус&shy;луг 
@@ -38,7 +38,7 @@ Template Name: Главная
             </div>
             <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_blue.png'?>" /></div>
         </a>
-        <a href="/html/polygraphy.html" class="panel primary-services">
+        <a href="<?php echo get_permalink(53); ?>" class="panel primary-services">
             <div class="primary-services-info">
                 <h2 class="services-header">Полиграфия</h2>
                 <div class="services-text"><p>Одно из нап&shy;рав&shy;ле&shy;ний де&shy;я&shy;тель&shy;нос&shy;ти на&shy;шей ком&shy;па&shy;нии пос&shy;тав&shy;ка и пе&shy;чать по&shy;ли&shy;гра&shy;фи&shy;чес&shy;кой рек&shy;лам&shy;ной про&shy;дук&shy;ции.</p></div>
@@ -62,7 +62,7 @@ Template Name: Главная
             </div>
             <div  class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
         </a>
-        <a href="/html/plotter.html" class="panel secondary-services">
+        <a href="<?php echo get_permalink(35); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/plotter.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">НАКЛЕЙКИ<br>ПЛОТТЕРНАЯ РЕЗКА</h2>
@@ -70,7 +70,7 @@ Template Name: Главная
             </div>
             <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo_inv.png'?>" /></div>
         </a>
-        <a href="/html/souvenir.html" class="panel secondary-services">
+        <a href="<?php echo get_permalink(38); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/souvenir.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">НАНЕСЕНИЕ НА<br>СУВЕНИРЫ</h2>
