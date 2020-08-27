@@ -45,12 +45,6 @@ Template Name: Дополнительные услуги
             ?>
             
         </div>
-        <div class="sidebar">
-            <div class="logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_inv.png' ?>"></div>
-            <div class="phones">
-                <a class="phone-href" href="tel:+74956469779">+7 (495) 646-9779</a>
-                <a class="phone-href" href="tel:+74955053203">+7 (495) 505-3203</a>
-            </div>
-        </div>
+        <?php print_sidebar(); ?>
     </div>
 <?php get_footer('services');

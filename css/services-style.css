@@ -218,6 +218,10 @@ body {
           align-items: center;
 }
 
+.bazz-widget {
+  display: none;
+}
+
 .footer.laser-footer img {
   width: 100%;
 }

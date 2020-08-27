@@ -1,25 +1,24 @@
 <?php 
     add_action('wp_enqueue_scripts', 'ni_styles');
     add_action('wp_footer', 'ni_scripts');
+    add_action('after_setup_theme', 'menu_reg');
     remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
 
-    function ni_styles(){
+    function menu_reg(){
+        add_theme_support('title-tag');
+    }
 
-        // а так - остальные файлы
-        // третий параметр - от каких файлов зависит подключаемый файл
+    function ni_styles(){
         wp_enqueue_style('normalize', get_template_directory_uri()."/assets/css/normalize.min.css");
         if(!is_front_page()){
             wp_enqueue_style('services-style', get_template_directory_uri()."/assets/css/services-style.min.css", array('normalize'));
         }else{
             wp_enqueue_style('style', get_template_directory_uri()."/assets/css/style.min.css", array('normalize'));
         }
-
-        // так подключается файл style.css из корневой папки темы
-        // wp_enqueue_style('style', get_stylesheet_uri());
     }
 
     function ni_scripts(){
-        if(is_front_page()){
+        if(is_front_page()||is_page_template('cards.php')){
             wp_enqueue_script('fss-script', get_template_directory_uri()."/assets/js/fss.min.js");
         }
     }
@@ -32,12 +31,14 @@
         $source = explode("\n", $source);
         foreach($source as $line){
             $line = trim($line);
-            if(startsWith($line, "<p")){
+            if(startsWith($line, "<p")||startsWith($line, "<a")){
                 array_push($current, $line);
             };
             if(startsWith($line, "<h")){
-                array_push($txt_blocks, $current);
-                $current = [];
+                if(sizeof($current)>0){
+                    array_push($txt_blocks, $current);
+                    $current = [];
+                }
                 array_push($current, extract_text_from_h($line));
             };
             if(startsWith($line, "<figure")){
@@ -71,5 +72,15 @@
     function extract_text_from_h($str){
         // return "Заголовок";
         return substr($str, 4, strlen($str)-9);
+    }
+
+    function print_sidebar(){
+        echo '<div class="sidebar">';
+            echo '<div class="logo"><img src="'.get_template_directory_uri().'/assets/img/contrast_logo_inv.png'.'"></div>';
+            echo '<div class="phones">';
+                echo '<a class="phone-href" href="tel:+74956469779">+7 (495) 646-9779</a>';
+                echo '<a class="phone-href" href="tel:+74955053203">+7 (495) 505-3203</a>';
+            echo "</div>";
+        echo "</div>";
     }
 ?> 

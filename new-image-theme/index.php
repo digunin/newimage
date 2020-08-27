@@ -20,7 +20,7 @@ Template Name: Главная
             <strong>Новый имидж</strong>
             <span>рекламно-производственная компания</span>
         </h1>
-        <div class="callback-button"><img src="<?php echo get_template_directory_uri().'/assets/img/callback_button.png'?>"/></div>
+        <div class="callback-button" style="display: none;"><img src="<?php echo get_template_directory_uri().'/assets/img/callback_button.png'?>"/></div>
 </section><!--intro -->
 <section id="services" class="full-screen-section next-section">
         <a href="<?php echo get_permalink(47); ?>" class="panel primary-services">
@@ -45,7 +45,7 @@ Template Name: Главная
             </div>
             <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo.png'?>" /></div>
         </a>
-        <a href="/html/cards.html" class="panel primary-services">
+        <a href="<?php echo get_permalink(148); ?>" class="panel primary-services">
             <div class="primary-services-info">
                 <h2 class="services-header">Пластиковые карты</h2>
                 <div class="services-text"><p>Ком&shy;па&shy;ния «НОВЫЙ ИМИДЖ» рас&shy;по&shy;ла&shy;га&shy;ет соб&shy;ствен&shy;ным про&shy;из&shy;вод&shy;ством в Мо&shy;скве и мы мо&shy;жем пред&shy;ло&shy;жить из&shy;го&shy;тов&shy;ле&shy;ние лю&shy;бых ти&shy;пов карт с раз&shy;лич&shy;ным на&shy;бо&shy;ром функ&shy;ций в крат&shy;чай&shy;шие сро&shy;ки.</p></div>
@@ -54,7 +54,7 @@ Template Name: Главная
         </a>
 </section><!-- section services -->
 <section id="services1" class="full-screen-section next-section">
-        <a href="<?php echo get_permalink(24); ?>" class="panel secondary-services">
+        <a href="<?php echo get_permalink(140); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/laser.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">ЛАЗЕРНАЯ РЕЗКА<br>И ГРАВИРОВКА</h2>
@@ -153,7 +153,7 @@ Template Name: Главная
                     позади мечети мост через р. Лихоборка и выход к проходной бизнес-центра «Вэлдан».</p>
             </div>
         </div>
-        <div class="callback-button"><img src="<?php echo get_template_directory_uri().'/assets/img/callback_button.png'?>"/></div>
+        <div class="callback-button" style="display: none;"><img src="<?php echo get_template_directory_uri().'/assets/img/callback_button.png'?>"/></div>
 </section><!-- section contacts -->
 <div class="fss-nav">
         <div class="fss-button" onClick="fssOnClick(0)"></div>
