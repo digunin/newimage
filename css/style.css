@@ -47,6 +47,10 @@ h1, h2 {
   font-weight: normal;
 }
 
+.bazz-widget {
+  margin-right: -30px;
+}
+
 #intro, #contacts {
   background: url("../img/intro/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
   -webkit-box-orient: vertical;
@@ -650,7 +654,14 @@ section .panel .services-logo img {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 575px) {
+  .bazz-widget {
+    display: block;
+    margin-right: -75px;
+  }
+  .bazz-widget.opened {
+    width: 420px;
+  }
   #intro .intro-phones-panel img {
     display: none;
   }
