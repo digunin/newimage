@@ -7,7 +7,7 @@ Template Name: Пластиковые карты
     $content = get_the_content(); 
     $content = apply_filters( 'the_content', $content );
     $content = str_replace( ']]>', ']]>', $content );
-    [$paragraph_array, $img_url] = get_text_and_image($content);
+    [$paragraph_array, $img_set] = get_text_and_image($content);
 ?>
 <?php get_header('services'); ?>
     <section id="cards1" class="full-screen-section active-section">
@@ -45,8 +45,8 @@ Template Name: Пластиковые карты
                 <div class="left-side-footer"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_inv.png'?>" alt=""></div>
             </div>
             <div class="side right-side">
-                <img src="<?php echo $img_url[0]["src"] ?>" alt="<?php echo $img_url[0]["alt"] ?>" title="<?php echo $img_url[0]["title"] ?>">
-                <img src="<?php echo $img_url[1]["src"] ?>" alt="<?php echo $img_url[1]["alt"] ?>" title="<?php echo $img_url[1]["title"] ?>">
+                <?php print_img_tag($img_set[0]); ?>
+                <?php print_img_tag($img_set[1]); ?>
             </div>
         </div>
     </section>
@@ -64,7 +64,7 @@ Template Name: Пластиковые карты
                     </div>
                 </div>
                 <div class="footer">
-                <img src="<?php echo $img_url[2]["src"] ?>" alt="<?php echo $img_url[2]["alt"] ?>" title="<?php echo $img_url[2]["title"] ?>">
+                <?php print_img_tag($img_set[2]); ?>
                 </div>
             </div>
             <?php print_sidebar(); ?>
@@ -84,7 +84,7 @@ Template Name: Пластиковые карты
                     </div>
                 </div>
                 <div class="footer">
-                    <img src="<?php echo $img_url[3]["src"] ?>" alt="<?php echo $img_url[3]["alt"] ?>" title="<?php echo $img_url[3]["title"] ?>">
+                    <?php print_img_tag($img_set[3]); ?>
                 </div>
             </div>
             <?php print_sidebar(); ?>

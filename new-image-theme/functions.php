@@ -43,6 +43,7 @@
             };
             if(startsWith($line, "<figure")){
                 $img_set = array(
+                    "id" => extract_img_id($line),
                     "src" => extract_from_attr($line, "src="),
                     "alt" => extract_from_attr($line, "alt="),
                     "title" => extract_from_attr($line, "title=")
@@ -74,6 +75,17 @@
         return substr($str, 4, strlen($str)-9);
     }
 
+    function extract_from_figure($str){
+        $start = strpos($str, "<img");
+        return substr($str, $start, strlen($str)-($start+9));
+    }
+
+    function extract_img_id($str){
+        $start = strpos($str, "wp-image-")+9;
+        $end = strpos($str, "\"", $start);
+        return absint(substr($str, $start, $end-$start));
+    }
+
     function print_sidebar(){
         echo '<div class="sidebar">';
             echo '<div class="logo"><img src="'.get_template_directory_uri().'/assets/img/contrast_logo_inv.png'.'"></div>';
@@ -82,5 +94,21 @@
                 echo '<a class="phone-href" href="tel:+74955053203">+7 (495) 505-3203</a>';
             echo "</div>";
         echo "</div>";
+    }
+
+    function print_img_tag($img_set, $extra_class=""){
+        echo '<img src="';
+        echo $img_set["src"];
+        echo '" alt="';
+        echo $img_set["alt"];
+        echo '" title="';
+        echo $img_set["title"];
+        echo '" srcset ="';
+        echo wp_get_attachment_image_srcset($img_set["id"], 'medium');
+        if($extra_class != ""){
+            echo '" class="';
+            echo $extra_class;
+        }
+        echo '">';
     }
 ?> 

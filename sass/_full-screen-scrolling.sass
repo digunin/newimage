@@ -29,20 +29,34 @@
     left: 0
     right: 0
     bottom: 0
-    transition: .2s ease
+    transition: .2s
 
 .active-section
-    transform: scaleY(1)
+    transform: scale(1)
     z-index: 10
 
 .previous-section
-    transform: scaleY(0)
-    transition-duration: 0.2s
-    transform-origin: top
+    transform: scale(0)
+    transition-duration: 0s
     // transform: translateY(-100%)
 
 .next-section
-    transform: scaleY(0)
-    transition-duration: 0.2s
-    transform-origin: bottom
+    transform: scale(0)
+    transition-duration: 0s
     // transform: translateY(100%)
+
+@media screen and ( max-width: 575px)
+    .fss-nav
+        position: fixed
+        top: auto
+        right: auto
+        bottom: 0.1em
+        left: 50%
+        transform: translateX(-50%)
+        flex-direction: row
+        min-height: 1em
+        min-width: 10em
+        .fss-button
+            min-height: 100%
+            width: 1em
+        

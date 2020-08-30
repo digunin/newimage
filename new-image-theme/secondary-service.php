@@ -8,7 +8,7 @@ Template Name: Дополнительные услуги
     $content = get_the_content(); 
     $content = apply_filters( 'the_content', $content );
     $content = str_replace( ']]>', ']]>', $content );
-    [$paragraph_array, $img_url] = get_text_and_image($content);
+    [$paragraph_array, $img_set] = get_text_and_image($content);
 ?>
 <?php get_header('services'); ?>
     <div class="container">
@@ -35,10 +35,10 @@ Template Name: Дополнительные услуги
             }else{
                 echo '<div class="footer '.$post->post_name.'-footer">';
                 if($post->post_name == "souvenir"){
-                    echo '<img class="souvenirs-small" src="'.$img_url[0]["src"].'" alt="'.$img_url[0]["alt"].'" title="'.$img_url[0]["title"].'">';
-                    echo '<img class="souvenirs-big" src="'.$img_url[1]["src"].'" alt="'.$img_url[1]["alt"].'" title="'.$img_url[1]["title"].'">';
+                    print_img_tag($img_set[0], "souvenirs-small");
+                    print_img_tag($img_set[1], "souvenirs-big");
                 }else{
-                    echo '<img src="'.$img_url[0]["src"].'" alt="'.$img_url[0]["alt"].'" title="'.$img_url[0]["title"].'">'; 
+                    print_img_tag($img_set[0]);
                 }
                 echo '</div>';
             };

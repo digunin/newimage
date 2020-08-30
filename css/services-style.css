@@ -319,27 +319,13 @@ body {
   width: 100%;
 }
 
-#cards3 .container, #cards4 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#cards3 .container .content, #cards4 .container .content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-right: 0;
-  min-height: 100vh;
-}
-
 #cards3 .container .sidebar, #cards4 .container .sidebar {
-  position: static;
+  position: fixed;
 }
 
 #cards3 .container .footer img, #cards4 .container .footer img {
-  max-width: 80vw;
-  max-height: 75vh;
+  max-width: 100%;
+  max-height: 72vh;
 }
 
 .fss-nav {
@@ -389,32 +375,50 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 .active-section {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: 10;
 }
 
 .previous-section {
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transform-origin: top;
-          transform-origin: top;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
 }
 
 .next-section {
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+@media screen and (max-width: 575px) {
+  .fss-nav {
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 0.1em;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 1em;
+    min-width: 10em;
+  }
+  .fss-nav .fss-button {
+    min-height: 100%;
+    width: 1em;
+  }
 }
 
 @media screen and (max-width: 1400px) {

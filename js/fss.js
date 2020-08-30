@@ -23,7 +23,6 @@ const moveTo = function(index) {
             console.log(callback_widget);
         }else{
             callback_widget.style.display = "block";
-            console.log("странно");
         }
     }
 }

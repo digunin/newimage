@@ -45,7 +45,7 @@ Template Name: Главная
             </div>
             <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo.png'?>" /></div>
         </a>
-        <a href="<?php echo get_permalink(59); ?>" class="panel primary-services">
+        <a href="<?php echo get_permalink(148); ?>" class="panel primary-services">
             <div class="primary-services-info">
                 <h2 class="services-header">Пластиковые карты</h2>
                 <div class="services-text"><p>Ком&shy;па&shy;ния «НОВЫЙ ИМИДЖ» рас&shy;по&shy;ла&shy;га&shy;ет соб&shy;ствен&shy;ным про&shy;из&shy;вод&shy;ством в Мо&shy;скве и мы мо&shy;жем пред&shy;ло&shy;жить из&shy;го&shy;тов&shy;ле&shy;ние лю&shy;бых ти&shy;пов карт с раз&shy;лич&shy;ным на&shy;бо&shy;ром функ&shy;ций в крат&shy;чай&shy;шие сро&shy;ки.</p></div>
@@ -54,7 +54,7 @@ Template Name: Главная
         </a>
 </section><!-- section services -->
 <section id="services1" class="full-screen-section next-section">
-        <a href="<?php echo get_permalink(24); ?>" class="panel secondary-services">
+        <a href="<?php echo get_permalink(140); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/laser.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">ЛАЗЕРНАЯ РЕЗКА<br>И ГРАВИРОВКА</h2>
@@ -131,7 +131,7 @@ Template Name: Главная
                     </p>
                     <a href="mailto:info@new-image.su" class="e-mail">Email: info@new-image.su</a>
                 </div>
-                <div class="contacts spb">
+                <div class="contacts spb" style="display:none">
                     <p class="header">КОНТАКТЫ В ПИТЕРЕ</p>
                     <p class="adress">
                         <span>196084, г. C.-Петербург,</span>
