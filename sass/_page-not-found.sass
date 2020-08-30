@@ -1,0 +1,39 @@
+#notfound
+    background: url('../img/intro/intro.png') no-repeat top right/auto 100%, radial-gradient(ellipse, white, $secondary-color)
+    font-size: 1.5rem
+    padding: 2em
+    min-height: 100vh
+    +B_reg
+    .wrapper
+        color: $primary-color
+        h1
+            font-size: 1.5em
+            margin-top: 1em
+        .logo
+            img
+                width: 200px
+        .links-wrapper
+            margin-top: 1em
+            display: flex
+            .links-block
+                font-size: 1.5em
+                &:nth-child(1)
+                    margin-right: 3em
+                ul
+                    li
+                        a
+                            &::after
+                                position: absolute
+                                left: 0
+                                bottom: 0
+                                content: ""
+                                height: 2px
+                                width: 100%
+                                background-color: $primary-color
+                                transform: scaleY(0)
+                                transition: 0.2s
+                            text-decoration: none
+                            position: relative
+                            &:hover
+                                &::after
+                                    transform: scaleY(1)
