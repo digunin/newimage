@@ -22,6 +22,10 @@
                 ul
                     li
                         a
+                            &:visited
+                                color: lighten($primary-color, 15%)
+                                &::after
+                                    background-color: lighten($primary-color, 15%)
                             &::after
                                 position: absolute
                                 left: 0
@@ -32,6 +36,7 @@
                                 background-color: $primary-color
                                 transform: scaleY(0)
                                 transition: 0.2s
+                            color: $primary-color
                             text-decoration: none
                             position: relative
                             &:hover

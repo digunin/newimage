@@ -162,5 +162,8 @@ Template Name: Главная
         <div class="fss-button" onClick="fssOnClick(3)"></div>
         <div class="fss-button" onClick="fssOnClick(4)"></div>
 </div>
-
+<script>
+    var sectionsNames = ["intro", "services", "services1", "about", "contacts"]
+    var pageName = 'index-'
+</script>
 <?php get_footer() ?>

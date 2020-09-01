@@ -29,7 +29,7 @@
     left: 0
     right: 0
     bottom: 0
-    transition: .2s
+    transition: .1s
 
 .active-section
     transform: scale(1)
@@ -38,12 +38,10 @@
 .previous-section
     transform: scale(0)
     transition-duration: 0s
-    // transform: translateY(-100%)
 
 .next-section
     transform: scale(0)
     transition-duration: 0s
-    // transform: translateY(100%)
 
 @media screen and ( max-width: 575px)
     .fss-nav
@@ -59,4 +57,13 @@
         .fss-button
             min-height: 100%
             width: 1em
+    .previous-section
+        transform: scaleX(0)
+        transition-duration: 0s
+        transform-origin: left
+
+    .next-section
+        transform: scaleX(0)
+        transition-duration: 0s
+        transform-origin: right
         

@@ -268,7 +268,7 @@ const wheelHandler = function(event){
 }
 
 const swipeHandler = function(e){
-    let {dir} = e.detail;
+    let dir = e.detail.dir;
     if(dir == "left"){
         moveToNext();
     }
@@ -279,7 +279,7 @@ const swipeHandler = function(e){
 
 window.onload = function(){
     sectionCount = sectionsNames.length;
-    swipe(document.body, { maxTime: 1000, minTime: 100, maxDist: 150,  minDist: 60 });
+    swipe(document.body, { maxTime: 800, minTime: 100, maxDist: 150,  minDist: 60 });
     document.body.addEventListener("swipe", swipeHandler, { passive: false });
     document.body.addEventListener("keyup", keyHandler);
     document.body.addEventListener("wheel", wheelHandler);

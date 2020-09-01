@@ -10,10 +10,10 @@
 
     function ni_styles(){
         wp_enqueue_style('normalize', get_template_directory_uri()."/assets/css/normalize.min.css");
-        if(!is_front_page()){
-            wp_enqueue_style('services-style', get_template_directory_uri()."/assets/css/services-style.min.css", array('normalize'));
-        }else{
+        if(is_front_page()){
             wp_enqueue_style('style', get_template_directory_uri()."/assets/css/style.min.css", array('normalize'));
+        }else{
+            wp_enqueue_style('services-style', get_template_directory_uri()."/assets/css/services-style.min.css", array('normalize'));
         }
     }
 
@@ -31,17 +31,22 @@
         $source = explode("\n", $source);
         foreach($source as $line){
             $line = trim($line);
-            if(startsWith($line, "<p")||startsWith($line, "<a")){
-                array_push($current, $line);
+            if($line == ""){
+                continue;
+            };
+            if(startsWith($line, "<p><a")){
+                array_push($current, extract_text_from_tag($line, "p"));
+                continue;
             };
             if(startsWith($line, "<h")){
                 if(sizeof($current)>0){
                     array_push($txt_blocks, $current);
                     $current = [];
                 }
-                array_push($current, extract_text_from_h($line));
+                array_push($current, extract_text_from_tag($line, "<h"));
+                continue;
             };
-            if(startsWith($line, "<figure")){
+            if(strPos($line, "<img")){
                 $img_set = array(
                     "id" => extract_img_id($line),
                     "src" => extract_from_attr($line, "src="),
@@ -49,7 +54,18 @@
                     "title" => extract_from_attr($line, "title=")
                 );
                 array_push($imgs, $img_set);
-            }
+                continue;
+            };
+            if(startsWith($line, "<p")){
+                $txt = extract_text_from_tag($line, "p");
+                $txt = trim($txt);
+                if(strlen($txt)>0){
+                    array_push($current, $line);
+                }
+            };
+            if(startsWith($line, "<a")){
+                array_push($current, $line);
+            };
         }
         array_push($txt_blocks, $current);
         return [$txt_blocks, $imgs];
@@ -70,14 +86,9 @@
         return substr($str, $start+$attr_len+1, $end - $start - $attr_len-1);
     }
 
-    function extract_text_from_h($str){
-        // return "Заголовок";
-        return substr($str, 4, strlen($str)-9);
-    }
-
-    function extract_from_figure($str){
-        $start = strpos($str, "<img");
-        return substr($str, $start, strlen($str)-($start+9));
+    function extract_text_from_tag($str, $tag){
+        $tag_len = strlen($tag)+2;
+        return substr($str, $tag_len, strlen($str)-($tag_len*2+1));
     }
 
     function extract_img_id($str){
@@ -88,7 +99,11 @@
 
     function print_sidebar(){
         echo '<div class="sidebar">';
-            echo '<div class="logo"><img src="'.get_template_directory_uri().'/assets/img/contrast_logo_inv.png'.'"></div>';
+            echo '<a style="display: block" href="'; 
+            echo get_home_url();
+            echo '" class="logo"><img src="';
+            echo get_template_directory_uri();
+            echo '/assets/img/contrast_logo_inv.png'.'"></a>';
             echo '<div class="phones">';
                 echo '<a class="phone-href" href="tel:+74956469779">+7 (495) 646-9779</a>';
                 echo '<a class="phone-href" href="tel:+74955053203">+7 (495) 505-3203</a>';
