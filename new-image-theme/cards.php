@@ -9,7 +9,7 @@ Template Name: Пластиковые карты
     $content = str_replace( ']]>', ']]>', $content );
     [$paragraph_array, $img_set] = get_text_and_image($content);
 ?>
-<?php get_header('services'); ?>
+<?php get_header(); ?>
     <section id="cards1" class="full-screen-section active-section">
         <div class="primary-services-container">
             <div class="side left-side">

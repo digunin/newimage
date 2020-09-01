@@ -6,6 +6,7 @@
 
     function menu_reg(){
         add_theme_support('title-tag');
+        register_nav_menu('hamburger_menu', 'Меню-гамбургер');
     }
 
     function ni_styles(){

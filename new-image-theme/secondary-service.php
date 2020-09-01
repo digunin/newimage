@@ -10,7 +10,7 @@ Template Name: Дополнительные услуги
     $content = str_replace( ']]>', ']]>', $content );
     [$paragraph_array, $img_set] = get_text_and_image($content);
 ?>
-<?php get_header('services'); ?>
+<?php get_header(); ?>
     <div class="container">
         <div class="content">
             <div class="content-info">

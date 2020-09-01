@@ -10,7 +10,7 @@ Template Name: Полиграфия
     $content = str_replace( ']]>', ']]>', $content );
     [$paragraph_array, $img_url] = get_text_and_image($content);
 ?>
-<?php get_header('services'); ?>
+<?php get_header(); ?>
     <section id="polygraphy1">
         <div class="primary-services-container">
             <div class="side left-side">

@@ -1,0 +1,80 @@
+header
+    +B_reg
+    font-size: 2rem
+    #menu-toggle
+        opacity: 0
+        &:checked
+            ~ .menu-btn
+                &>span
+                    transform: rotate(45deg)
+                    &::before
+                        top: 0
+                        transform: rotate(0)
+                    &::after
+                        top: 0
+                        transform: rotate(90deg)
+            ~ .menu-wrapper
+                left: 0
+    .menu-btn
+        z-index: 99
+        display: flex
+        position: fixed
+        align-items: center
+        top: 0.7em
+        left: 0.8em
+        width: 1.5em
+        height: 1.5em
+        cursor: pointer
+        &>span, &>span::before, &>span::after
+            display: block
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: grey
+            transition-duration: 0.2s
+        &>span::before
+            content: ""
+            top: -0.5em
+        &>span::after
+            content: ""
+            top: 0.5em
+    .menu-wrapper
+        position: fixed
+        top: 0
+        left: -100%
+        bottom: 0
+        width: 300px
+        z-index: 90
+        background-color: $primary-color
+        margin: 0
+        padding: 4em 0
+        transition-duration: 0.2s
+        // box-shadow: 6px 0px 6px rgba(256, 256, 256, .2)
+        // transform: translateX(-100%)
+        .menu
+            margin: 0
+            padding: 0
+            list-style: none
+            li
+                &.current-menu-item
+                    a
+                        padding-left: 2.5em
+                &:nth-child(1), &:nth-child(4)
+                    margin-bottom: 1em
+                a
+                    font-weight: 600
+                    display: block
+                    padding: 0.4em 1em
+                    color: $secondary-color
+                    text-decoration: none
+                    transition-duration: 0.2s
+                    &:hover
+                        background-color: #07384d
+
+@media screen and ( max-width: 575px)
+    header
+        .menu-wrapper
+            width: 100%
+        .menu-btn
+            left: 8px
+            top: 8px

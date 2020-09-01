@@ -3,7 +3,7 @@
 Template Name: Страница не найдена
 */
 ?>
-<?php get_header('services'); ?>
+<?php get_header(); ?>
 <div id="notfound">
         <div class="wrapper">
             <div class="logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_blue.png'?>"></div>

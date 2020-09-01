@@ -10,7 +10,7 @@ Template Name: Основные услуги
     $content = str_replace( ']]>', ']]>', $content );
     [$paragraph_array, $img_url] = get_text_and_image($content);
 ?>
-<?php get_header('services'); ?>
+<?php get_header(); ?>
     <div class="primary-services-container <?php $post->post_name ?>">
         <div class="side left-side">
             <div class="left-side-header"><?php echo get_the_title(); ?></div>
