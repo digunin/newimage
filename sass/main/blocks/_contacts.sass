@@ -1,11 +1,12 @@
 #contacts
     font-size: 1.5rem
     padding: 3em
-    padding-top: 6em
+    padding-top: ($menu-btn-width/3)*5
+    padding-left: ($menu-btn-width/3)*5
     z-index: -1
     .wrapper
         color: $primary-color
-        width: 80%
+        width: 85%
         +B_reg
         .phones, .e-mail
             +B_bold
@@ -15,6 +16,7 @@
             display: flex
             justify-content: space-between
             .contacts
+                flex-basis: 45%
                 &:first-child
                     margin-right: 10px
                 .header

@@ -1,8 +1,11 @@
 header
     +B_reg
     font-size: 2rem
+    height: 0
     #menu-toggle
-        opacity: 0
+        margin: 0
+        padding: 0
+        transform: scale(0)
         &:checked
             ~ .menu-btn
                 &>span
@@ -20,10 +23,10 @@ header
         display: flex
         position: fixed
         align-items: center
-        top: 0.7em
-        left: 0.8em
-        width: 1.5em
-        height: 1.5em
+        top: $menu-btn-width/3
+        left: $menu-btn-width/3
+        width: $menu-btn-width
+        height: $menu-btn-width
         cursor: pointer
         &>span, &>span::before, &>span::after
             display: block
@@ -34,10 +37,10 @@ header
             transition-duration: 0.2s
         &>span::before
             content: ""
-            top: -0.5em
+            top: -$menu-btn-width/3
         &>span::after
             content: ""
-            top: 0.5em
+            top: $menu-btn-width/3
     .menu-wrapper
         position: fixed
         top: 0

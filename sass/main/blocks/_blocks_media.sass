@@ -22,6 +22,13 @@
  
 
 @media screen and ( max-width: 990px)
+    section
+        .panel
+            .services-header
+                min-height: 5em
+            &.secondary-services
+                .secondary-image
+                    margin-top: 2em
     #intro
         .intro-header
             margin-top: 0
@@ -31,14 +38,12 @@
         .intro-subheader
             flex-direction: column
             margin-left: 32vw
-    section
-        .panel
-            .services-header
-                min-height: 5em
-            &.secondary-services
-                .secondary-image
-                    margin-top: 2em
-
+    #contacts
+        .wrapper
+            .logo
+                img
+                    width: 9em
+    
 @media screen and ( max-width: 768px)
     #intro
         .intro-header
@@ -50,7 +55,6 @@
             flex-direction: row
             .logo
                 img
-                    width: 12em
             .contacts-wrapper
                 flex-direction: column
                 .contacts
@@ -114,14 +118,11 @@
             flex-basis: 60%
             background-size: auto 80%
     #contacts
-        padding: .5em
-        padding-top: 6em
-        padding-right: 3em
+        padding-right: 0.5em
         .wrapper
             width: 100%
             .logo
                 img
-                    width: 9em
             .contacts-wrapper
                 flex-direction: column
     
