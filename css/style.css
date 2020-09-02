@@ -70,6 +70,8 @@ h1, h2 {
 }
 
 section {
+  -webkit-perspective: 1500px;
+          perspective: 1500px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,8 +108,8 @@ section .panel {
 section .panel:hover {
   -webkit-box-shadow: 0 0 5px #969696;
           box-shadow: 0 0 5px #969696;
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+  -webkit-transform: translateZ(10px);
+          transform: translateZ(10px);
 }
 
 section .panel:active {

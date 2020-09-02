@@ -28,6 +28,7 @@ h1, h2
             width: 60px
 
 section
+    perspective: 1500px
     height: 100vh
     display: flex
     box-sizing: border-box
@@ -46,7 +47,7 @@ section
         transition: .1s
         &:hover
             box-shadow: 0 0 5px rgba(150, 150, 150, 1)
-            transform: scale(1.01)
+            transform: translateZ(10px)
         &:active
             box-shadow: 0 0 10px inset rgba(150, 150, 150, 0.5)
             transform: scale(1)
