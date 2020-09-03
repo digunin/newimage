@@ -14,7 +14,7 @@ Template Name: Полиграфия
     <section id="polygraphy1">
         <div class="primary-services-container">
             <div class="side left-side">
-                <div class="left-side-header"><?php echo get_the_title(); ?></div>
+                <div class="left-side-header"><?php array_shift($paragraph_array[0]) ?></div>
                 <div class="left-side-info">
                 <?php 
                     foreach($paragraph_array[0] as $paragraph){

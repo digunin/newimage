@@ -61,7 +61,7 @@ Template Name: Главная
             </div>
             <div  class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
         </a>
-        <a href="<?php echo get_permalink(35); ?>" class="panel secondary-services">
+        <a href="<?php echo get_permalink(201); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/plotter.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">НАКЛЕЙКИ. ПЛОТТЕРНАЯ РЕЗКА</h2>
@@ -144,12 +144,7 @@ Template Name: Главная
                 </div>
             </div>
             <div class="route">
-                <p>Проезд в Москве: По Алтуфьевскому шоссе до поворота на Нововладыкинский проезд (при съезде с эстакады).
-                    Далее 500м. по Нововладыкинскому проезду до второй проходной бизнес-центра «Вэлдан».</p>
-                <p>1. м. Владыкино, обойти слева высотное здание гостиницы «Восход»далее пешком 100м до
-                    Нововладыкинского проезда и направо 500м до второй проходной бизнес-центра «Вэлдан».</p>
-                <p>2. м. Отрадное, пешком 700м по ул. Хачатуряна в сторону центра до мечети. Перед мечетью налево,
-                    позади мечети мост через р. Лихоборка и выход к проходной бизнес-центра «Вэлдан».</p>
+                <p>Посмотреть карту и описание маршрута можно на странице <a href="<?php echo get_permalink(183) ?>">&laquo;Контакты&raquo;</a></p>
             </div>
         </div>
 </section><!-- section contacts -->

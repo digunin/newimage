@@ -13,7 +13,7 @@ Template Name: Основные услуги
 <?php get_header(); ?>
     <div class="primary-services-container <?php $post->post_name ?>">
         <div class="side left-side">
-            <div class="left-side-header"><?php echo get_the_title(); ?></div>
+            <div class="left-side-header"><?php array_shift($paragraph_array[0]) ?></div>
             <div class="left-side-info">
                 <?php 
                     foreach($paragraph_array[0] as $paragraph){

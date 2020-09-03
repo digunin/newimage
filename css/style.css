@@ -69,6 +69,13 @@ h1, h2 {
   width: 60px;
 }
 
+.phone-href, .panel {
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
 section {
   -webkit-perspective: 1500px;
           perspective: 1500px;
@@ -80,13 +87,6 @@ section {
           box-sizing: border-box;
   overflow: hidden;
   z-index: -1;
-}
-
-section a {
-  display: block;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
 }
 
 section .panel {
@@ -475,6 +475,15 @@ section .panel .services-logo img {
   z-index: -1;
 }
 
+#contacts .map-wrapper {
+  width: 900px;
+  max-width: 100%;
+}
+
+#contacts.single-contacts-page {
+  background-attachment: fixed;
+}
+
 #contacts .wrapper {
   color: #031634;
   width: 85%;
@@ -501,10 +510,6 @@ section .panel .services-logo img {
 #contacts .wrapper .contacts-wrapper .contacts {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
-}
-
-#contacts .wrapper .contacts-wrapper .contacts:first-child {
-  margin-right: 10px;
 }
 
 #contacts .wrapper .contacts-wrapper .contacts .header {
@@ -768,12 +773,11 @@ header .menu-wrapper .menu li.current-menu-item a {
   padding-left: 2.5em;
 }
 
-header .menu-wrapper .menu li:nth-child(1), header .menu-wrapper .menu li:nth-child(4) {
+header .menu-wrapper .menu li:nth-child(1), header .menu-wrapper .menu li:nth-child(4), header .menu-wrapper .menu li:nth-child(9) {
   margin-bottom: 1em;
 }
 
 header .menu-wrapper .menu li a {
-  font-weight: 600;
   display: block;
   padding: 0.4em 1em;
   color: #ebf0fa;
@@ -951,7 +955,10 @@ header .menu-wrapper .menu li a:hover {
     background-size: auto 80%;
   }
   #contacts {
-    padding-right: 0.5em;
+    padding-right: 2em;
+  }
+  #contacts.single-contacts-page {
+    padding-bottom: 10em;
   }
   #contacts .wrapper {
     width: 100%;

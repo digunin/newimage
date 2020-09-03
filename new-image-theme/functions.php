@@ -11,7 +11,7 @@
 
     function ni_styles(){
         wp_enqueue_style('normalize', get_template_directory_uri()."/assets/css/normalize.min.css");
-        if(is_front_page()){
+        if(is_front_page()||is_page_template('contacts.php')){
             wp_enqueue_style('style', get_template_directory_uri()."/assets/css/style.min.css", array('normalize'));
         }else{
             wp_enqueue_style('services-style', get_template_directory_uri()."/assets/css/services-style.min.css", array('normalize'));
