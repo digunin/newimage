@@ -12,6 +12,7 @@ Template Name: Страница не найдена
                 <div class="links-block">
                     <ul>
                         <li><a href="<?php echo get_home_url(); ?>">Главная</a></li>
+                        <li><a href="<?php echo get_permalink(148); ?>">Контакты</a></li>
                         <li><a href="<?php echo get_permalink(148); ?>">Дизайн</a></li>
                         <li><a href="<?php echo get_permalink(148); ?>">Полиграфия</a></li>
                         <li><a href="<?php echo get_permalink(148); ?>">Пластиковые карты</a></li>

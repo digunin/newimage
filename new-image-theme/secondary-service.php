@@ -14,7 +14,7 @@ Template Name: Дополнительные услуги
     <div class="container">
         <div class="content">
             <div class="content-info">
-                <h2 class="content-header"><?php echo get_the_title(); ?></h2>
+                <h2 class="content-header"><?php echo array_shift($paragraph_array[0]); ?></h2>
                 <div class="content-text">
                 <?php 
                     foreach($paragraph_array[0] as $paragraph){
