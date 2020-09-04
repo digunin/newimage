@@ -4,7 +4,7 @@
         .wrapper
             .logo
                 img
-                    width: 200px
+                    width: 9em
     section
         .panel
             font-size: 1rem
@@ -39,10 +39,6 @@
             flex-direction: column
             margin-left: 32vw
     #contacts
-        .wrapper
-            .logo
-                img
-                    width: 9em
     
 @media screen and ( max-width: 768px)
     #intro
@@ -50,15 +46,20 @@
             img
         .intro-subheader
     #contacts
-        .wrapper
-            width: 100%
-            flex-direction: row
-            .logo
-                img
+        font-size: 0.8rem
+        padding-top: 1em
+        .contacts-body
+            flex-direction: column
+            justify-content: flex-start
             .contacts-wrapper
-                flex-direction: column
+                flex-direction: row
+                justify-content: flex-start
+                height: auto
                 .contacts
-                    .header
+                    margin-right: 3em
+            .map-wrapper
+                margin-top: 1em
+                margin-left: 0
     #services1
         flex-direction: column
         .secondary-services
@@ -119,15 +120,7 @@
             background-size: auto 80%
     #contacts
         &.single-contacts-page
-            padding-bottom: 10em
-        padding-right: 2em
-        .wrapper
-            width: 100%
-            .logo
-                img
-            .contacts-wrapper
-                flex-direction: column
-    
+            
     #services
         flex-direction: column
         .primary-services

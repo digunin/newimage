@@ -113,6 +113,8 @@ var swipe = function(el, settings) {
     dist = 0;
     startX = event.pageX;
     startY = event.pageY;
+    startXfromEvent = startX;
+    startYfromEvent = startY;
     startTime = new Date().getTime();
     if (isMouse) isMouseDown = true; // поддержка мыши
     // e.preventDefault();
@@ -190,6 +192,8 @@ const byID = function(id){
 var current = +localStorage.getItem(pageName+'currentSection')||0;
 var sectionCount = 0;
 var wheelDelay = false;
+var startXfromEvent = 0;
+var startYfromEvent = 0;
 
 const fssOnClick = function(n){
     if(n==current) return;
@@ -205,7 +209,6 @@ const moveTo = function(index) {
         if(!callback_widget) return;
         if(current > 0 && current < 4){
             callback_widget.style.display = "none";
-            console.log(callback_widget);
         }else{
             callback_widget.style.display = "block";
         }
@@ -258,6 +261,9 @@ const moveToPrevious = function(){
 
 const wheelHandler = function(event){
     if(wheelDelay) return;
+    if(cursor_in_map(event.clientX, event.clientY)){
+      return
+    }
     if(event.deltaY < 0){
         moveToPrevious();
     }else{
@@ -267,7 +273,18 @@ const wheelHandler = function(event){
     setTimeout(function(){wheelDelay = false}, 400);
 }
 
+const cursor_in_map = function(x, y){
+  let elem = document.elementFromPoint(x, y);
+  if(elem.tagName == 'YMAPS'){
+    return true
+  }
+  return false
+}
+
 const swipeHandler = function(e){
+    if(cursor_in_map(startXfromEvent, startYfromEvent)){
+      return
+    }
     let dir = e.detail.dir;
     if(dir == "left"){
         moveToNext();

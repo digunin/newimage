@@ -1,60 +1,53 @@
 #contacts
-    font-size: 1.5rem
-    padding: 3em
-    padding-top: ($menu-btn-width/3)*5
-    padding-left: ($menu-btn-width/3)*5
-    z-index: -1
-    .map-wrapper
-        width: 900px
-        max-width: 100%
     &.single-contacts-page
+        min-height: 100vh
         background-attachment: fixed
-    .wrapper
-        color: $primary-color
-        width: 85%
-        +B_reg
-        .phones, .e-mail
-            +B_bold
-        span
-            display: block
+    +B_reg
+    padding-left: ($menu-btn-width/3)*5
+    padding-top: ($menu-btn-width/3)*5
+    padding-right: 2.5em
+    font-size: 1.5rem
+    justify-content: space-between
+    .logo
+        margin-bottom: 2em
+        img
+            width: 200px
+    .contacts-body
+        display: flex
         .contacts-wrapper
             display: flex
+            flex-direction: column
             justify-content: space-between
-            .contacts
-                flex-basis: 45%
-                .header
-                    font-size: 2.4em
-                    position: relative
-                    margin-top: 1em
-                    margin-bottom: .6em
-                    padding-bottom: .6em
-                    &::after
-                        position: absolute
-                        content: ""
-                        height: 1px
-                        width: 100%
-                        bottom: 0
-                        left: 0
-                        background-color: $primary-color
-                .adress
-                    font-size: 1.6em
-                .phones
-                    font-size: 1.8em
-                    .phone-href
-                        color: inherit
-                .e-mail
-                    font-size: 1.8em
-                    color: inherit
-        .route
-            font-size: 1.6em
-            margin-top: 1em
+            height: 22rem
+        .contacts
+            color: $primary-color
+            min-width: 21em
             p
-                text-align: justify
-                &:first-child
-                    margin-top: 0
-    .callback-button
-        position: absolute
-        right: 45px
-        bottom: 45px
-        img
-            width: 60px
+                margin: 0
+                padding: 0
+            a
+                color: inherit
+            .header
+                margin-top: 0
+                margin-bottom: 0.5em
+                padding-bottom: 0.5em
+                font-size: 2em
+                position: relative
+                &::after
+                    content: ""
+                    position: absolute
+                    height: 1px
+                    width: 100%
+                    left: 0
+                    bottom: 0
+                    background-color: $primary-color
+            .phones, .e-mail
+                font-size: 1.8em
+        .map-wrapper
+            height: 22rem
+            margin-left: 4em
+            width: 900px
+            max-width: 100%
+    .contacts-footer
+        margin-top: 2em
+        font-size: 1.6em

@@ -69,7 +69,7 @@ h1, h2 {
   width: 60px;
 }
 
-.phone-href, .panel {
+.phone-href, .e-mail, .panel {
   display: block;
   text-decoration: none;
   margin: 0;
@@ -105,11 +105,16 @@ section .panel {
   transition: .1s;
 }
 
+section .panel.primary-services:nth-child(3):hover {
+  text-shadow: 2px 2px 5px #ebf0fa;
+}
+
 section .panel:hover {
   -webkit-box-shadow: 0 0 5px #969696;
           box-shadow: 0 0 5px #969696;
   -webkit-transform: translateZ(10px);
           transform: translateZ(10px);
+  text-shadow: 2px 2px 5px #031634;
 }
 
 section .panel:active {
@@ -468,106 +473,95 @@ section .panel .services-logo img {
 }
 
 #contacts {
-  font-size: 1.5rem;
-  padding: 3em;
-  padding-top: 40px;
-  padding-left: 40px;
-  z-index: -1;
-}
-
-#contacts .map-wrapper {
-  width: 900px;
-  max-width: 100%;
-}
-
-#contacts.single-contacts-page {
-  background-attachment: fixed;
-}
-
-#contacts .wrapper {
-  color: #031634;
-  width: 85%;
   font-family: 'PF Bague Sans Pro', sans-serif;
-}
-
-#contacts .wrapper .phones, #contacts .wrapper .e-mail {
-  font-family: 'PF Bague Sans Pro Bold', sans-serif;
-}
-
-#contacts .wrapper span {
-  display: block;
-}
-
-#contacts .wrapper .contacts-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-right: 2.5em;
+  font-size: 1.5rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-#contacts .wrapper .contacts-wrapper .contacts {
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
+#contacts.single-contacts-page {
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
-#contacts .wrapper .contacts-wrapper .contacts .header {
-  font-size: 2.4em;
+#contacts .logo {
+  margin-bottom: 2em;
+}
+
+#contacts .logo img {
+  width: 200px;
+}
+
+#contacts .contacts-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contacts .contacts-body .contacts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 22rem;
+}
+
+#contacts .contacts-body .contacts {
+  color: #031634;
+  min-width: 21em;
+}
+
+#contacts .contacts-body .contacts p {
+  margin: 0;
+  padding: 0;
+}
+
+#contacts .contacts-body .contacts a {
+  color: inherit;
+}
+
+#contacts .contacts-body .contacts .header {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 2em;
   position: relative;
-  margin-top: 1em;
-  margin-bottom: .6em;
-  padding-bottom: .6em;
 }
 
-#contacts .wrapper .contacts-wrapper .contacts .header::after {
-  position: absolute;
+#contacts .contacts-body .contacts .header::after {
   content: "";
+  position: absolute;
   height: 1px;
   width: 100%;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   background-color: #031634;
 }
 
-#contacts .wrapper .contacts-wrapper .contacts .adress {
-  font-size: 1.6em;
-}
-
-#contacts .wrapper .contacts-wrapper .contacts .phones {
+#contacts .contacts-body .contacts .phones, #contacts .contacts-body .contacts .e-mail {
   font-size: 1.8em;
 }
 
-#contacts .wrapper .contacts-wrapper .contacts .phones .phone-href {
-  color: inherit;
+#contacts .contacts-body .map-wrapper {
+  height: 22rem;
+  margin-left: 4em;
+  width: 900px;
+  max-width: 100%;
 }
 
-#contacts .wrapper .contacts-wrapper .contacts .e-mail {
-  font-size: 1.8em;
-  color: inherit;
-}
-
-#contacts .wrapper .route {
+#contacts .contacts-footer {
+  margin-top: 2em;
   font-size: 1.6em;
-  margin-top: 1em;
-}
-
-#contacts .wrapper .route p {
-  text-align: justify;
-}
-
-#contacts .wrapper .route p:first-child {
-  margin-top: 0;
-}
-
-#contacts .callback-button {
-  position: absolute;
-  right: 45px;
-  bottom: 45px;
-}
-
-#contacts .callback-button img {
-  width: 60px;
 }
 
 .fss-nav {
@@ -805,7 +799,7 @@ header .menu-wrapper .menu li a:hover {
     font-size: 1rem;
   }
   #contacts .wrapper .logo img {
-    width: 200px;
+    width: 9em;
   }
   section .panel {
     font-size: 1rem;
@@ -845,24 +839,38 @@ header .menu-wrapper .menu li a:hover {
             flex-direction: column;
     margin-left: 32vw;
   }
-  #contacts .wrapper .logo img {
-    width: 9em;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  #contacts .wrapper {
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+  #contacts {
+    font-size: 0.8rem;
+    padding-top: 1em;
   }
-  #contacts .wrapper .contacts-wrapper {
+  #contacts .contacts-body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #contacts .contacts-body .contacts-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: auto;
+  }
+  #contacts .contacts-body .contacts-wrapper .contacts {
+    margin-right: 3em;
+  }
+  #contacts .contacts-body .map-wrapper {
+    margin-top: 1em;
+    margin-left: 0;
   }
   #services1 {
     -webkit-box-orient: vertical;
@@ -953,21 +961,6 @@ header .menu-wrapper .menu li a:hover {
     -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
     background-size: auto 80%;
-  }
-  #contacts {
-    padding-right: 2em;
-  }
-  #contacts.single-contacts-page {
-    padding-bottom: 10em;
-  }
-  #contacts .wrapper {
-    width: 100%;
-  }
-  #contacts .wrapper .contacts-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   #services {
     -webkit-box-orient: vertical;
