@@ -105,16 +105,11 @@ section .panel {
   transition: .1s;
 }
 
-section .panel.primary-services:nth-child(3):hover {
-  text-shadow: 2px 2px 5px #ebf0fa;
-}
-
 section .panel:hover {
   -webkit-box-shadow: 0 0 5px #969696;
           box-shadow: 0 0 5px #969696;
   -webkit-transform: translateZ(10px);
           transform: translateZ(10px);
-  text-shadow: 2px 2px 5px #031634;
 }
 
 section .panel:active {
@@ -477,10 +472,48 @@ section .panel .services-logo img {
   padding-left: 40px;
   padding-top: 40px;
   padding-right: 2.5em;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+#contacts .contacts {
+  color: #031634;
+  min-width: 20em;
+  max-width: 21em;
+}
+
+#contacts .contacts p {
+  margin: 0;
+  padding: 0;
+}
+
+#contacts .contacts a {
+  color: #031634;
+}
+
+#contacts .contacts .header {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 2em;
+  position: relative;
+}
+
+#contacts .contacts .header::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #031634;
+}
+
+#contacts .contacts .phones, #contacts .contacts .e-mail, #contacts .contacts .adress {
+  font-size: 1.8em;
+  text-align: justify;
 }
 
 #contacts.single-contacts-page {
@@ -493,7 +526,7 @@ section .panel .services-logo img {
 }
 
 #contacts .logo img {
-  width: 200px;
+  width: 150px;
 }
 
 #contacts .contacts-body {
@@ -513,47 +546,11 @@ section .panel .services-logo img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 22rem;
-}
-
-#contacts .contacts-body .contacts {
-  color: #031634;
-  min-width: 21em;
-}
-
-#contacts .contacts-body .contacts p {
-  margin: 0;
-  padding: 0;
-}
-
-#contacts .contacts-body .contacts a {
-  color: inherit;
-}
-
-#contacts .contacts-body .contacts .header {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-  padding-bottom: 0.5em;
-  font-size: 2em;
-  position: relative;
-}
-
-#contacts .contacts-body .contacts .header::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  background-color: #031634;
-}
-
-#contacts .contacts-body .contacts .phones, #contacts .contacts-body .contacts .e-mail {
-  font-size: 1.8em;
+  height: 22em;
 }
 
 #contacts .contacts-body .map-wrapper {
-  height: 22rem;
+  height: 22em;
   margin-left: 4em;
   width: 900px;
   max-width: 100%;
@@ -561,7 +558,12 @@ section .panel .services-logo img {
 
 #contacts .contacts-footer {
   margin-top: 2em;
+  margin-bottom: 2em;
   font-size: 1.6em;
+}
+
+#contacts .contacts-footer p {
+  margin: 0.3em;
 }
 
 .fss-nav {
@@ -871,6 +873,7 @@ header .menu-wrapper .menu li a:hover {
   #contacts .contacts-body .map-wrapper {
     margin-top: 1em;
     margin-left: 0;
+    height: auto;
   }
   #services1 {
     -webkit-box-orient: vertical;
@@ -914,9 +917,6 @@ header .menu-wrapper .menu li a:hover {
 }
 
 @media screen and (max-width: 575px) {
-  section {
-    height: 95vh;
-  }
   .bazz-widget {
     display: block;
     margin-right: -70px;

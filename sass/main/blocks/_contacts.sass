@@ -1,53 +1,58 @@
 #contacts
-    &.single-contacts-page
-        min-height: 100vh
-        background-attachment: fixed
     +B_reg
     padding-left: ($menu-btn-width/3)*5
     padding-top: ($menu-btn-width/3)*5
     padding-right: 2.5em
-    font-size: 1.5rem
+    font-size: 1.2rem
     justify-content: space-between
+    .contacts
+        color: $primary-color
+        min-width: 20em
+        max-width: 21em
+        p
+            margin: 0
+            padding: 0
+        a
+            color: $primary-color
+        .header
+            margin-top: 0
+            margin-bottom: 0.5em
+            padding-bottom: 0.5em
+            font-size: 2em
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                height: 1px
+                width: 100%
+                left: 0
+                bottom: 0
+                background-color: $primary-color
+        .phones, .e-mail, .adress
+            font-size: 1.8em
+            text-align: justify
+    &.single-contacts-page
+        min-height: 100vh
+        background-attachment: fixed
     .logo
         margin-bottom: 2em
         img
-            width: 200px
+            width: 150px
     .contacts-body
         display: flex
         .contacts-wrapper
             display: flex
             flex-direction: column
             justify-content: space-between
-            height: 22rem
-        .contacts
-            color: $primary-color
-            min-width: 21em
-            p
-                margin: 0
-                padding: 0
-            a
-                color: inherit
-            .header
-                margin-top: 0
-                margin-bottom: 0.5em
-                padding-bottom: 0.5em
-                font-size: 2em
-                position: relative
-                &::after
-                    content: ""
-                    position: absolute
-                    height: 1px
-                    width: 100%
-                    left: 0
-                    bottom: 0
-                    background-color: $primary-color
-            .phones, .e-mail
-                font-size: 1.8em
+            height: 22em
         .map-wrapper
-            height: 22rem
+            height: 22em
             margin-left: 4em
             width: 900px
             max-width: 100%
     .contacts-footer
         margin-top: 2em
+        margin-bottom: 2em
         font-size: 1.6em
+        p
+            margin: 0.3em

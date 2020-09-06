@@ -44,7 +44,7 @@ Template Name: Главная
             </div>
             <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo.png'?>" /></div>
         </a>
-        <a href="<?php echo get_permalink(148); ?>" class="panel primary-services">
+        <a href="<?php echo get_permalink(59); ?>" class="panel primary-services">
             <div class="primary-services-info">
                 <h2 class="services-header">Пластиковые карты</h2>
                 <div class="services-text"><p>Ком&shy;па&shy;ния «НОВЫЙ ИМИДЖ» рас&shy;по&shy;ла&shy;га&shy;ет соб&shy;ствен&shy;ным про&shy;из&shy;вод&shy;ством в Мо&shy;скве и мы мо&shy;жем пред&shy;ло&shy;жить из&shy;го&shy;тов&shy;ле&shy;ние лю&shy;бых ти&shy;пов карт с раз&shy;лич&shy;ным на&shy;бо&shy;ром функ&shy;ций в крат&shy;чай&shy;шие сро&shy;ки.</p></div>
@@ -53,7 +53,7 @@ Template Name: Главная
         </a>
 </section><!-- section services -->
 <section id="services1" class="full-screen-section next-section">
-        <a href="<?php echo get_permalink(140); ?>" class="panel secondary-services">
+        <a href="<?php echo get_permalink(24); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/laser.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">ЛАЗЕРНАЯ РЕЗКА И ГРАВИРОВКА</h2>
@@ -61,7 +61,7 @@ Template Name: Главная
             </div>
             <div  class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
         </a>
-        <a href="<?php echo get_permalink(201); ?>" class="panel secondary-services">
+        <a href="<?php echo get_permalink(35); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/plotter.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">НАКЛЕЙКИ. ПЛОТТЕРНАЯ РЕЗКА</h2>
@@ -115,46 +115,48 @@ Template Name: Главная
         </div>
 </section><!-- section about -->
 <section id="contacts" class="full-screen-section next-section">
-    <div class="wrapper">
-            <div class="logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_blue.png'?>"></div>
-            <div class="contacts-body">
-                <div class="contacts-wrapper">
-                    <div class="contacts moscow">
-                        <h2 class="header">КОНТАКТЫ В МОСКВЕ</h2>
-                        <p class="phones">
-                            <a class="phone-href" href="tel:+74956469779">Тел.: +7 (495) 646-9779</a>
-                            <a class="phone-href" href="tel:+74955053203">Тел.: +7 (495) 505-3203</a>
-                        </p>
-                        <a href="mailto:info@new-image.su" class="e-mail">Email: info@new-image.su</a>                    
-                    </div>
-                    <div class="contacts spb">
-                        <h2 class="header">КОНТАКТЫ В ПИТЕРЕ</h2>
-                        <p class="phones">
-                            <a class="phone-href" href="tel:+79218754505">Тел.: +7 (921) 875-4505</a>
-                        </p>
-                        <a href="mailto:spb@new-image.su" class="e-mail">Email: spb@new-image.su</a>
-                    </div>
+<div class="wrapper">
+        <div class="logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_blue.png'?>"></div>
+        <div class="contacts-body">
+            <div class="contacts-wrapper">
+                <div class="contacts moscow">
+                    <h2 class="header">КОНТАКТЫ В МОСКВЕ</h2>
+                    <p class="phones">
+                        <a class="phone-href" href="tel:+74956469779">Тел.: +7 (495) 646-9779</a>
+                        <a class="phone-href" href="tel:+74955053203">Тел.: +7 (495) 505-3203</a>
+                    </p>
+                    <a href="mailto:info@new-image.su" class="e-mail">Email: info@new-image.su</a>                    
                 </div>
-                <div class="map-wrapper">
-                    <?php 
-                        $post = get_post(183);
-                        setup_postdata($post);
-                        echo do_shortcode(apply_filters( 'the_content', get_the_content()));
-                        wp_reset_postdata();
-                     ?>
-                </div><!-- map_wrapper -->
+                <div class="contacts">
+                    <p class="adress">127273, г. Москва, Сигнальный проезд, д.19. Бизнес-центр «Вэлдан»</p>
+                </div>
             </div>
-            
-            <div class="contacts-footer">
-                <p>127273, г. Москва, Сигнальный проезд, д.19. Бизнес-центр «Вэлдан»</p>
-                <p>Проезд в Москве: По Алтуфьевскому шоссе до поворота на Нововладыкинский проезд (при съезде с эстакады).
-                    Далее 500м. по Нововладыкинскому проезду до второй проходной бизнес-центра «Вэлдан».</p>
-                <p>1. м. Владыкино, обойти слева высотное здание гостиницы «Восход»далее пешком 100м до
-                    Нововладыкинского проезда и направо 500м до второй проходной бизнес-центра «Вэлдан».</p>
-                <p>2. м. Отрадное, пешком 700м по ул. Хачатуряна в сторону центра до мечети. Перед мечетью налево,
-                    позади мечети мост через р. Лихоборка и выход к проходной бизнес-центра «Вэлдан».</p>
-            </div>
+            <div class="map-wrapper">
+                <?php 
+                    $post = get_post(89);
+                    setup_postdata($post);
+                    echo do_shortcode(apply_filters( 'the_content', get_the_content()));
+                    wp_reset_postdata();
+                 ?>
+            </div><!-- map_wrapper -->
         </div>
+        
+        <div class="contacts-footer">
+            <p>Проезд в Москве: По Алтуфьевскому шоссе до поворота на Нововладыкинский проезд (при съезде с эстакады).
+                Далее 500м. по Нововладыкинскому проезду до второй проходной бизнес-центра «Вэлдан».</p>
+            <p>1. м. Владыкино, обойти слева высотное здание гостиницы «Восход»далее пешком 100м до
+                Нововладыкинского проезда и направо 500м до второй проходной бизнес-центра «Вэлдан».</p>
+            <p>2. м. Отрадное, пешком 700м по ул. Хачатуряна в сторону центра до мечети. Перед мечетью налево,
+                позади мечети мост через р. Лихоборка и выход к проходной бизнес-центра «Вэлдан».</p>
+        </div>
+        <div class="contacts spb">
+            <h2 class="header">КОНТАКТЫ В ПИТЕРЕ</h2>
+            <p class="phones">
+                <a class="phone-href" href="tel:+79218754505">Тел.: +7 (921) 875-4505</a>
+            </p>
+            <a href="mailto:spb@new-image.su" class="e-mail">Email: spb@new-image.su</a>
+        </div>
+    </div>
 </section><!-- section contacts -->
 <div class="fss-nav">
         <div class="fss-button" onClick="fssOnClick(0)"></div>
