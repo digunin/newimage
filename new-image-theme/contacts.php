@@ -23,7 +23,7 @@ Template Name: Контакты
             </div>
             <div class="map-wrapper">
                 <?php 
-                    $post = get_post(89);
+                    $post = get_post(183);
                     setup_postdata($post);
                     echo do_shortcode(apply_filters( 'the_content', get_the_content()));
                     wp_reset_postdata();

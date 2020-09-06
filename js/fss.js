@@ -213,6 +213,14 @@ const moveTo = function(index) {
             callback_widget.style.display = "block";
         }
     }
+    if(pageName == "cards-"){
+      let elem = byID(sectionsNames[current]);
+      if(current == 0 || current == 1){
+        document.getElementsByClassName("sidebar")[0].style.display = "none"
+      }else{
+        document.getElementsByClassName("sidebar")[0].style.display = "flex"
+      }
+    }
 }
 
 const setCurrentSection = function(n){

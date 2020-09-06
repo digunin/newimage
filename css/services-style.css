@@ -45,11 +45,9 @@ body {
   text-decoration: none;
 }
 
-.container {
+.sidebar {
   font-size: 1.1rem;
-}
-
-.container .sidebar {
+  z-index: 90;
   position: fixed;
   top: 0;
   right: 0;
@@ -69,22 +67,26 @@ body {
   text-align: center;
 }
 
-.container .sidebar .logo {
+.sidebar .logo {
   margin: 5em auto;
 }
 
-.container .sidebar .logo img {
+.sidebar .logo img {
   width: 10em;
 }
 
-.container .sidebar .phones {
+.sidebar .phones {
   color: white;
   margin: 3em auto;
 }
 
-.container .sidebar .phones .phone-href {
+.sidebar .phones .phone-href {
   font-family: 'PF Bague Sans Pro Bold', sans-serif;
   font-size: 2em;
+}
+
+.container {
+  font-size: 1.1rem;
 }
 
 .container .content {
@@ -639,6 +641,9 @@ header .menu-wrapper .menu li a:hover {
   .container {
     font-size: .9rem;
   }
+  .sidebar {
+    font-size: .9rem;
+  }
   .primary-services-container {
     font-size: .9rem;
   }
@@ -649,7 +654,7 @@ header .menu-wrapper .menu li a:hover {
     margin: 0 0 8em 0;
     min-height: auto;
   }
-  .container .sidebar {
+  .sidebar {
     top: auto;
     width: 100%;
     bottom: 0;
@@ -664,16 +669,16 @@ header .menu-wrapper .menu li a:hover {
             align-items: center;
     padding: 1em;
   }
-  .container .sidebar .logo {
+  .sidebar .logo {
     margin: 0;
   }
-  .container .sidebar .logo img {
+  .sidebar .logo img {
     width: 45px;
   }
-  .container .sidebar .phones {
+  .sidebar .phones {
     margin: 0;
   }
-  .container .sidebar .phones a {
+  .sidebar .phones a {
     display: inline-block;
     margin-left: 1em;
   }

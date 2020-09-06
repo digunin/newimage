@@ -22,7 +22,7 @@ Template Name: Главная
         </h1>
 </section><!--intro -->
 <section id="services" class="full-screen-section next-section">
-        <a href="<?php echo get_permalink(47); ?>" class="panel primary-services">
+        <a href="<?php echo get_permalink(205); ?>" class="panel primary-services">
             <div class="primary-services-info">
                 <h2 class="services-header">Дизайн</h2>
                 <div class="services-text"><p>Пред&shy;ла&shy;га&shy;ем ши&shy;ро&shy;кий спектр ус&shy;луг 
@@ -44,7 +44,7 @@ Template Name: Главная
             </div>
             <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo.png'?>" /></div>
         </a>
-        <a href="<?php echo get_permalink(59); ?>" class="panel primary-services">
+        <a href="<?php echo get_permalink(148); ?>" class="panel primary-services">
             <div class="primary-services-info">
                 <h2 class="services-header">Пластиковые карты</h2>
                 <div class="services-text"><p>Ком&shy;па&shy;ния «НОВЫЙ ИМИДЖ» рас&shy;по&shy;ла&shy;га&shy;ет соб&shy;ствен&shy;ным про&shy;из&shy;вод&shy;ством в Мо&shy;скве и мы мо&shy;жем пред&shy;ло&shy;жить из&shy;го&shy;тов&shy;ле&shy;ние лю&shy;бых ти&shy;пов карт с раз&shy;лич&shy;ным на&shy;бо&shy;ром функ&shy;ций в крат&shy;чай&shy;шие сро&shy;ки.</p></div>
@@ -53,7 +53,7 @@ Template Name: Главная
         </a>
 </section><!-- section services -->
 <section id="services1" class="full-screen-section next-section">
-        <a href="<?php echo get_permalink(24); ?>" class="panel secondary-services">
+        <a href="<?php echo get_permalink(140); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/laser.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">ЛАЗЕРНАЯ РЕЗКА И ГРАВИРОВКА</h2>
@@ -61,7 +61,7 @@ Template Name: Главная
             </div>
             <div  class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
         </a>
-        <a href="<?php echo get_permalink(35); ?>" class="panel secondary-services">
+        <a href="<?php echo get_permalink(201); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/plotter.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">НАКЛЕЙКИ. ПЛОТТЕРНАЯ РЕЗКА</h2>
@@ -69,7 +69,7 @@ Template Name: Главная
             </div>
             <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo_inv.png'?>" /></div>
         </a>
-        <a href="<?php echo get_permalink(38); ?>" class="panel secondary-services">
+        <a href="<?php echo get_permalink(168); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/souvenir.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">НАНЕСЕНИЕ НА СУВЕНИРЫ</h2>
@@ -133,7 +133,7 @@ Template Name: Главная
             </div>
             <div class="map-wrapper">
                 <?php 
-                    $post = get_post(89);
+                    $post = get_post(183);
                     setup_postdata($post);
                     echo do_shortcode(apply_filters( 'the_content', get_the_content()));
                     wp_reset_postdata();

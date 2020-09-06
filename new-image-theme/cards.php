@@ -67,7 +67,6 @@ Template Name: Пластиковые карты
                 <?php print_img_tag($img_set[2]); ?>
                 </div>
             </div>
-            <?php print_sidebar(); ?>
         </div>
     </section>
     <section id="cards4" class="full-screen-section next-section">
@@ -87,9 +86,10 @@ Template Name: Пластиковые карты
                     <?php print_img_tag($img_set[3]); ?>
                 </div>
             </div>
-            <?php print_sidebar(); ?>
+            
         </div>
     </section>
+    <?php print_sidebar(); ?>
     <div class="fss-nav">
         <div class="fss-button" onClick="fssOnClick(0)"></div>
         <div class="fss-button" onClick="fssOnClick(1)"></div>
