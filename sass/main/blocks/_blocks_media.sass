@@ -47,7 +47,7 @@
         .intro-subheader
     #contacts
         font-size: 0.8rem
-        padding-top: 1em
+        padding-top: $menu-btn-width/3
         .contacts-body
             flex-direction: column
             justify-content: flex-start
@@ -104,19 +104,23 @@
             margin-left: 5px
     #about
         flex-direction: column
-        padding-top: 2em
+        padding-top: $menu-btn-width/3
         .about-left
-            min-height: 40%
+            min-height: 60%
             .about-left-content
-                flex: 0
-                padding: 0.5em
+                flex: 1
+                padding: 1em
+                padding-top: 0
+                padding-left: ($menu-btn-width/3)*5
                 &-header
-                    text-align: right
             .about-left-footer
                 transition-duration: 2s
         .about-right
-            flex-basis: 60%
+            flex-basis: 40%
             background-size: auto 80%
+            .wrapper
+                img
+                    width: 65%
     #contacts
         &.single-contacts-page
             

@@ -194,6 +194,7 @@ var sectionCount = 0;
 var wheelDelay = false;
 var startXfromEvent = 0;
 var startYfromEvent = 0;
+var previousOffsetValue = -1;
 
 const fssOnClick = function(n){
     if(n==current) return;
@@ -203,6 +204,7 @@ const fssOnClick = function(n){
 const moveTo = function(index) {
     setCurrentSection(index);
     current = index;
+    previousOffsetValue = -1;
     localStorage.setItem(pageName+'currentSection', current);
     if(pageName == "index-"){
         let callback_widget = document.getElementsByClassName('bazz-widget')[0];
@@ -272,9 +274,19 @@ const wheelHandler = function(event){
     if(cursor_in_map(event.clientX, event.clientY)){
       return
     }
+    elem = byID(sectionsNames[current]);
+    let currentOffsetValue = Math.max(document.documentElement.scrollTop, elem.scrollTop);
     if(event.deltaY < 0){
+        if(currentOffsetValue > 0){
+          previousOffsetValue = -1;
+          return;
+        }
         moveToPrevious();
     }else{
+        if(currentOffsetValue > previousOffsetValue){
+          previousOffsetValue = currentOffsetValue;
+          return;
+        }
         moveToNext();
     }
     wheelDelay = true;

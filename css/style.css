@@ -472,10 +472,12 @@ section .panel .services-logo img {
   padding-left: 40px;
   padding-top: 40px;
   padding-right: 2.5em;
+  padding-bottom: 2.5em;
   font-size: 1.2rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow-y: auto;
 }
 
 #contacts .contacts {
@@ -846,7 +848,7 @@ header .menu-wrapper .menu li a:hover {
 @media screen and (max-width: 768px) {
   #contacts {
     font-size: 0.8rem;
-    padding-top: 1em;
+    padding-top: 8px;
   }
   #contacts .contacts-body {
     -webkit-box-orient: vertical;
@@ -939,28 +941,30 @@ header .menu-wrapper .menu li a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 2em;
+    padding-top: 8px;
   }
   #about .about-left {
-    min-height: 40%;
+    min-height: 60%;
   }
   #about .about-left .about-left-content {
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0;
-    padding: 0.5em;
-  }
-  #about .about-left .about-left-content-header {
-    text-align: right;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 1em;
+    padding-top: 0;
+    padding-left: 40px;
   }
   #about .about-left .about-left-footer {
     -webkit-transition-duration: 2s;
             transition-duration: 2s;
   }
   #about .about-right {
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
     background-size: auto 80%;
+  }
+  #about .about-right .wrapper img {
+    width: 65%;
   }
   #services {
     -webkit-box-orient: vertical;
