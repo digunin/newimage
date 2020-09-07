@@ -127,4 +127,45 @@
         }
         echo '">';
     }
+
+    function print_contacts($content){
+        echo '<div class="wrapper">';
+        echo '<div class="logo"><img src="';
+        echo get_template_directory_uri();
+        echo '/assets/img/contrast_logo_blue.png"></div>';
+        echo '<div class="contacts-body">';
+            echo '<div class="contacts-wrapper">';
+                echo '<div class="contacts moscow">';
+                    echo '<h2 class="header">КОНТАКТЫ В МОСКВЕ</h2>';
+                    echo '<p class="phones">';
+                        echo '<a class="phone-href" href="tel:+74956469779">Тел.: +7 (495) 646-9779</a>';
+                        echo '<a class="phone-href" href="tel:+74955053203">Тел.: +7 (495) 505-3203</a>';
+                    echo '</p>';
+                    echo '<a href="mailto:info@new-image.su" class="e-mail">Email: info@new-image.su</a>                    ';
+                echo '</div>';
+                echo '<div class="contacts">';
+                    echo '<p class="adress">127273, г. Москва, Сигнальный проезд, д.19. Бизнес-центр «Вэлдан»</p>';
+                echo '</div>';
+            echo '</div>';
+            echo '<div class="map-wrapper">';
+            echo do_shortcode(apply_filters( 'the_content', $content));
+            echo '</div>';
+        echo '</div>';
+        
+        echo '<div class="contacts-footer">';
+            echo '<p>Проезд в Москве: По Алтуфьевскому шоссе до поворота на Нововладыкинский проезд (при съезде с эстакады). Далее 500м. по Нововладыкинскому проезду до второй проходной бизнес-центра «Вэлдан».</p>';
+            echo '<p>1. м. Владыкино, обойти слева высотное здание гостиницы «Восход»далее пешком 100м до
+                Нововладыкинского проезда и направо 500м до второй проходной бизнес-центра «Вэлдан».</p>';
+            echo '<p>2. м. Отрадное, пешком 700м по ул. Хачатуряна в сторону центра до мечети. Перед мечетью налево,
+                позади мечети мост через р. Лихоборка и выход к проходной бизнес-центра «Вэлдан».</p>';
+        echo '</div>';
+        echo '<div class="contacts spb">';
+            echo '<h2 class="header">КОНТАКТЫ В ПИТЕРЕ</h2>';
+            echo '<p class="phones">';
+                echo '<a class="phone-href" href="tel:+79218754505">Тел.: +7 (921) 875-4505</a>';
+            echo '</p>';
+            echo '<a href="mailto:spb@new-image.su" class="e-mail">Email: spb@new-image.su</a>';
+        echo '</div>';
+    echo '</div>';
+    }
 ?> 

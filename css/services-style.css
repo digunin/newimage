@@ -95,17 +95,7 @@ body {
   padding: 2em;
   padding-left: 40px;
   padding-top: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .container .content-info {
@@ -162,6 +152,7 @@ body {
   color: #031634;
   padding: 2.5em;
   padding-left: 40px;
+  padding-top: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +331,7 @@ body {
 
 .fss-nav {
   position: fixed;
-  right: 0.1em;
+  left: 0.1em;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -562,10 +553,6 @@ header .menu-wrapper .menu li a:hover {
   header .menu-wrapper {
     width: 100%;
   }
-  header .menu-btn {
-    left: 8px;
-    top: 8px;
-  }
 }
 
 #notfound {
@@ -650,11 +637,15 @@ header .menu-wrapper .menu li a:hover {
 }
 
 @media screen and (max-width: 575px) {
+  .container {
+    font-size: .8rem;
+  }
   .container .content {
     margin: 0 0 8em 0;
     min-height: auto;
   }
   .sidebar {
+    font-size: .8rem;
     top: auto;
     width: 100%;
     bottom: 0;
@@ -695,9 +686,6 @@ header .menu-wrapper .menu li a:hover {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
   }
-  #cards1 .primary-services-container .left-side-header {
-    margin-top: 0;
-  }
   #cards1 .primary-services-container .left-side-footer {
     display: none;
   }
@@ -716,6 +704,7 @@ header .menu-wrapper .menu li a:hover {
     width: 100%;
   }
   .primary-services-container {
+    font-size: .8rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

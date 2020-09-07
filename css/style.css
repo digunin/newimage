@@ -570,7 +570,7 @@ section .panel .services-logo img {
 
 .fss-nav {
   position: fixed;
-  right: 0.1em;
+  left: 0.1em;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -791,10 +791,6 @@ header .menu-wrapper .menu li a:hover {
 @media screen and (max-width: 575px) {
   header .menu-wrapper {
     width: 100%;
-  }
-  header .menu-btn {
-    left: 8px;
-    top: 8px;
   }
 }
 
