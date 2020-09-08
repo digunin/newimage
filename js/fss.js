@@ -113,8 +113,8 @@ var swipe = function(el, settings) {
     dist = 0;
     startX = event.pageX;
     startY = event.pageY;
-    startXfromEvent = startX;
-    startYfromEvent = startY;
+    startXfromSwipeEvent = startX;
+    startYfromSwipeEvent = startY;
     startTime = new Date().getTime();
     if (isMouse) isMouseDown = true; // поддержка мыши
     // e.preventDefault();
@@ -192,9 +192,10 @@ const byID = function(id){
 var current = +localStorage.getItem(pageName+'currentSection')||0;
 var sectionCount = 0;
 var wheelDelay = false;
-var startXfromEvent = 0;
-var startYfromEvent = 0;
+var startXfromSwipeEvent = 0;
+var startYfromSwipeEvent = 0;
 var previousOffsetValue = -1;
+var scrollDirection = "down";
 
 const fssOnClick = function(n){
     if(n==current) return;
@@ -288,12 +289,20 @@ const wheelHandler = function(event){
     let currentOffsetValue = Math.max(document.documentElement.scrollTop, elem.scrollTop);
     currentOffsetValue += event.deltaY;
     if(event.deltaY < 0){
+        if(isScrollDirChange("up")){
+          previousOffsetValue = currentOffsetValue - event.deltaY
+        }
+        scrollDirection = "up";
         if(currentOffsetValue < previousOffsetValue){
           previousOffsetValue = currentOffsetValue;
           return;
         }
         moveToPrevious();
     }else{
+        if(isScrollDirChange("down")){
+          previousOffsetValue = currentOffsetValue - event.deltaY
+        }
+        scrollDirection = "down";
         if(currentOffsetValue > previousOffsetValue){
           previousOffsetValue = currentOffsetValue;
           return;
@@ -313,7 +322,7 @@ const cursor_in_map = function(x, y){
 }
 
 const swipeHandler = function(e){
-    if(cursor_in_map(startXfromEvent, startYfromEvent)){
+    if(cursor_in_map(startXfromSwipeEvent, startYfromSwipeEvent)){
       return
     }
     let dir = e.detail.dir;
@@ -323,6 +332,10 @@ const swipeHandler = function(e){
     if(dir == "right"){
         moveToPrevious();
     }
+}
+
+const isScrollDirChange = function(currentDir){
+  return currentDir != scrollDirection;
 }
 
 window.onload = function(){
