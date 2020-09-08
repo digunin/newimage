@@ -1,5 +1,6 @@
 #about
     font-size: 1.2rem
+    overflow-y: auto
     .about-left, .about-right
         flex-basis: 50%
         display: flex
@@ -14,6 +15,7 @@
             flex-direction: column
             justify-content: center
             padding: 5px 7%
+            padding-left: ($menu-btn-width/3)*5
             &-header
                 text-transform: uppercase
                 font-size: 2.2em
@@ -34,6 +36,7 @@
         .about-left-footer
             width: 90%
             height: 64px
+            margin-top: auto
             background: url('../img/about/footer-image.png') no-repeat 0 0/cover
             margin: 0 auto 10px
             overflow: hidden

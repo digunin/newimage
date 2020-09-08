@@ -333,6 +333,7 @@ section .panel .services-logo img {
 
 #about {
   font-size: 1.2rem;
+  overflow-y: auto;
 }
 
 #about .about-left, #about .about-right {
@@ -368,6 +369,7 @@ section .panel .services-logo img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5px 7%;
+  padding-left: 40px;
 }
 
 #about .about-left .about-left-content-header {
@@ -396,6 +398,7 @@ section .panel .services-logo img {
 #about .about-left .about-left-footer {
   width: 90%;
   height: 64px;
+  margin-top: auto;
   background: url("../img/about/footer-image.png") no-repeat 0 0/cover;
   margin: 0 auto 10px;
   overflow: hidden;
@@ -933,19 +936,13 @@ header .menu-wrapper .menu li a:hover {
     margin-left: 5px;
   }
   #about {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: block;
     padding-top: 8px;
   }
   #about .about-left {
-    min-height: 60%;
+    min-height: 50%;
   }
   #about .about-left .about-left-content {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
     padding: 1em;
     padding-top: 0;
     padding-left: 40px;
@@ -955,8 +952,7 @@ header .menu-wrapper .menu li a:hover {
             transition-duration: 2s;
   }
   #about .about-right {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
+    min-height: 50%;
     background-size: auto 80%;
   }
   #about .about-right .wrapper img {

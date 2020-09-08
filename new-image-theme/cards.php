@@ -24,10 +24,14 @@ Template Name: Пластиковые карты
                 <div class="left-side-footer"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_inv.png'?>" alt=""></div>
             </div>
             <div class="side right-side">
-                <a href="/1.rar" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/ai.png'?>" alt=""></a>
-                <a href="/2.rar" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/id.png'?>" alt=""></a>
-                <a href="/3.rar" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/psd.png'?>" alt=""></a>
-                <a href="/4.rar" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/cdr.png'?>" alt=""></a>
+            <?php 
+                $tmp = wp_upload_dir();
+                $uploads_url = $tmp['baseurl'];
+            ?>
+                <a href="<?php echo $uploads_url.'/2020/09/illustrator-template.ai' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/ai.png'?>" alt=""></a>
+                <a href="<?php echo $uploads_url.'/2020/09/indesign-template.indd' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/id.png'?>" alt=""></a>
+                <a href="<?php echo $uploads_url.'/2020/09/photoshop-template.psd' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/psd.png'?>" alt=""></a>
+                <a href="<?php echo $uploads_url.'/2020/09/corel-template.cdr' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/cdr.png'?>" alt=""></a>
             </div>
         </div>
     </section>
@@ -45,8 +49,11 @@ Template Name: Пластиковые карты
                 <div class="left-side-footer"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_inv.png'?>" alt=""></div>
             </div>
             <div class="side right-side">
-                <?php print_img_tag($img_set[0]); ?>
-                <?php print_img_tag($img_set[1]); ?>
+            <?php
+                foreach($img_set[0] as $img){
+                    print_img_tag($img);
+                } 
+            ?>
             </div>
         </div>
     </section>
@@ -63,9 +70,7 @@ Template Name: Пластиковые карты
                     ?>
                     </div>
                 </div>
-                <div class="footer">
-                <?php print_img_tag($img_set[2]); ?>
-                </div>
+                <?php print_footer_with_images('cards', $img_set[1]); ?>
             </div>
         </div>
     </section>
@@ -82,9 +87,7 @@ Template Name: Пластиковые карты
                     ?>
                     </div>
                 </div>
-                <div class="footer">
-                    <?php print_img_tag($img_set[3]); ?>
-                </div>
+                <?php print_footer_with_images('cards', $img_set[2]); ?>
             </div>
             
         </div>

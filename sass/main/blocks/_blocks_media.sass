@@ -103,12 +103,12 @@
         .intro-subheader
             margin-left: 5px
     #about
-        flex-direction: column
+        display: block
         padding-top: $menu-btn-width/3
         .about-left
-            min-height: 60%
+            min-height: 50%
             .about-left-content
-                flex: 1
+                // flex: 1
                 padding: 1em
                 padding-top: 0
                 padding-left: ($menu-btn-width/3)*5
@@ -116,7 +116,7 @@
             .about-left-footer
                 transition-duration: 2s
         .about-right
-            flex-basis: 40%
+            min-height: 50%
             background-size: auto 80%
             .wrapper
                 img

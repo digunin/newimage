@@ -135,6 +135,45 @@ body {
   max-width: 100%;
 }
 
+.container .content ._1-in-row, .container .content ._2-in-row, .container .content ._3-in-row, .container .content ._4-in-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .content ._1-in-row .img-wrapper, .container .content ._2-in-row .img-wrapper, .container .content ._3-in-row .img-wrapper, .container .content ._4-in-row .img-wrapper {
+  border: 1px solid #ebf0fa;
+  padding: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .content ._1-in-row .img-wrapper img, .container .content ._2-in-row .img-wrapper img, .container .content ._3-in-row .img-wrapper img, .container .content ._4-in-row .img-wrapper img {
+  width: 100%;
+}
+
+.container .content ._1-in-row .img-wrapper {
+  width: 100%;
+}
+
+.container .content ._2-in-row .img-wrapper {
+  width: 50%;
+}
+
+.container .content ._3-in-row .img-wrapper {
+  width: 33.33%;
+}
+
+.container .content ._4-in-row .img-wrapper {
+  width: 25%;
+}
+
 .primary-services-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -203,6 +242,7 @@ body {
 
 .primary-services-container .right-side {
   padding: 2em;
+  padding-bottom: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,7 +366,6 @@ body {
 
 #cards3 .container .footer img, #cards4 .container .footer img {
   max-width: 100%;
-  max-height: 72vh;
 }
 
 .fss-nav {
@@ -636,6 +675,18 @@ header .menu-wrapper .menu li a:hover {
   }
 }
 
+@media screen and (max-width: 1170px) {
+  .container .content ._3-in-row .img-wrapper, .container .content ._4-in-row .img-wrapper {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .content ._2-in-row .img-wrapper, .container .content ._3-in-row .img-wrapper, .container .content ._4-in-row .img-wrapper {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .container {
     font-size: .8rem;
@@ -700,7 +751,7 @@ header .menu-wrapper .menu li a:hover {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
-  #cards2 .primary-services-container .right-side img {
+  #cards2 .primary-services-container .right-side > img {
     width: 100%;
   }
   .primary-services-container {
@@ -725,17 +776,11 @@ header .menu-wrapper .menu li a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .primary-services-container .right-side > img {
-    width: 100%;
-  }
   #polygraphy1 .side.left-side, #polygraphy2 .side.left-side {
     position: static;
   }
   #polygraphy1 .right-side, #polygraphy2 .right-side {
     margin: 0;
-  }
-  #polygraphy1 .right-side img, #polygraphy2 .right-side img {
-    width: 100%;
   }
   #notfound {
     font-size: 1.2rem;

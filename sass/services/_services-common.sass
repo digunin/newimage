@@ -71,6 +71,28 @@ body
         .footer
             img
                 max-width: 100%
+        ._1-in-row, ._2-in-row, ._3-in-row, ._4-in-row
+            display: flex
+            flex-wrap: wrap
+            .img-wrapper
+                border: 1px solid $secondary-color
+                padding: .5em
+                display: flex
+                align-items: center
+                img
+                    width: 100%
+        ._1-in-row
+            .img-wrapper
+                width: 100%
+        ._2-in-row
+            .img-wrapper
+                width: 50%
+        ._3-in-row
+            .img-wrapper
+                width: 33.33%
+        ._4-in-row
+            .img-wrapper
+                width: 25%
 
 .primary-services-container
     display: flex
@@ -115,6 +137,7 @@ body
                 width: 92px
     .right-side
         padding: 2em
+        padding-bottom: 3em
         display: flex
         justify-content: center
         align-items: center

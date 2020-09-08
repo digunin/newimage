@@ -26,6 +26,7 @@
 
     function get_text_and_image($source){
         $txt_blocks = [];
+        $img_blocks = [];
         $current = [];
         $imgs = [];
         $tag_with_img = '';
@@ -43,6 +44,10 @@
                 if(sizeof($current)>0){
                     array_push($txt_blocks, $current);
                     $current = [];
+                }
+                if(sizeof($imgs)>0){
+                    array_push($img_blocks, $imgs);
+                    $imgs = [];
                 }
                 array_push($current, extract_text_from_tag($line, "<h"));
                 continue;
@@ -69,7 +74,8 @@
             };
         }
         array_push($txt_blocks, $current);
-        return [$txt_blocks, $imgs];
+        array_push($img_blocks, $imgs);
+        return [$txt_blocks, $img_blocks];
     }
 
     function startsWith($targetStr, $start){
@@ -167,5 +173,44 @@
             echo '<a href="mailto:spb@new-image.su" class="e-mail">Email: spb@new-image.su</a>';
         echo '</div>';
     echo '</div>';
+    }
+
+    function get_class_for_footer($count){
+        switch($count){
+            case 0:
+                return '';
+            break;
+            case 1:
+            case 2:
+            case 3:
+                return ' _'.$count.'-in-row';
+            break;
+            case 4:
+                return ' _2-in-row';
+            break;
+            default:
+                return ' _3-in-row';
+            break;
+        }
+    }
+
+    function print_footer_with_images($name, $img_set){
+        echo '<div class="footer ';
+        echo $name;
+        echo '-footer';
+        if($name == "souvenir"){
+            echo '">';
+            print_img_tag($img_set[0], "souvenirs-small");
+            print_img_tag($img_set[1], "souvenirs-big");
+        }else{
+            echo ' '.get_class_for_footer(count($img_set));
+            echo '">';
+            foreach($img_set as $single_img){
+                echo '<div class="img-wrapper">';
+                print_img_tag($single_img);
+                echo '</div>';
+            }
+        }
+        echo '</div>';
     }
 ?> 

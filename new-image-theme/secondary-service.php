@@ -33,18 +33,11 @@ Template Name: Дополнительные услуги
                 echo '</div>';
                 echo '</div>';
             }else{
-                echo '<div class="footer '.$post->post_name.'-footer">';
-                if($post->post_name == "souvenir"){
-                    print_img_tag($img_set[0], "souvenirs-small");
-                    print_img_tag($img_set[1], "souvenirs-big");
-                }else{
-                    print_img_tag($img_set[0]);
-                }
-                echo '</div>';
+                print_footer_with_images($post->post_name, $img_set[0]);
             };
             ?>
             
         </div>
         <?php print_sidebar(); ?>
     </div>
-<?php get_footer('services');
+<?php get_footer('services'); ?>

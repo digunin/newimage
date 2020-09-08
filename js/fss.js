@@ -263,10 +263,10 @@ const keyHandler = function(event){
         moveToNext();
     }
     if(event.code == "ArrowUp"||event.code == "ArrowLeft"){
-      if(currentOffsetValue < previousOffsetValue){
-        previousOffsetValue = currentOffsetValue;
-        return;
-      }
+        if(currentOffsetValue < previousOffsetValue){
+          previousOffsetValue = currentOffsetValue;
+          return;
+        }
         moveToPrevious();
     }
 }
@@ -286,6 +286,7 @@ const wheelHandler = function(event){
     }
     elem = byID(sectionsNames[current]);
     let currentOffsetValue = Math.max(document.documentElement.scrollTop, elem.scrollTop);
+    currentOffsetValue += event.deltaY;
     if(event.deltaY < 0){
         if(currentOffsetValue < previousOffsetValue){
           previousOffsetValue = currentOffsetValue;

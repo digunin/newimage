@@ -6,13 +6,26 @@
     .primary-services-container
         font-size: .9rem
 
+@media screen and ( max-width: 1170px)
+    .container
+        .content
+            ._3-in-row, ._4-in-row
+                .img-wrapper
+                    width: 50%
+
+@media screen and ( max-width: 768px)
+    .container
+        .content
+            ._2-in-row, ._3-in-row, ._4-in-row
+                .img-wrapper
+                    width: 100%
+
 @media screen and ( max-width: 575px)
     .container
         font-size: .8rem
         .content
             margin: 0 0 8em 0
             min-height: auto
-            &-header
     .sidebar
         font-size: .8rem
         top: auto
@@ -48,11 +61,10 @@
                 flex: 1
                 flex-direction: row
                 flex-basis: 30%
-
     #cards2
         .primary-services-container
             .right-side
-                img
+                &>img
                     width: 100%
          
     .primary-services-container
@@ -66,16 +78,12 @@
                 display: none
         .right-side
             flex-direction: column
-            &>img
-                width: 100%
 
     #polygraphy1, #polygraphy2
         .side.left-side
             position: static
         .right-side
             margin: 0
-            img
-                width: 100%
 
     #notfound
         font-size: 1.2rem
