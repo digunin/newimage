@@ -136,15 +136,18 @@ body {
 }
 
 .container .content ._1-in-row, .container .content ._2-in-row, .container .content ._3-in-row, .container .content ._4-in-row {
+  background-color: #031634;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container .content ._1-in-row .img-wrapper, .container .content ._2-in-row .img-wrapper, .container .content ._3-in-row .img-wrapper, .container .content ._4-in-row .img-wrapper {
-  border: 1px solid #ebf0fa;
   padding: .5em;
   display: -webkit-box;
   display: -ms-flexbox;
