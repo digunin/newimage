@@ -173,6 +173,14 @@ body {
   width: 33.33%;
 }
 
+.container .content ._3-in-row .img-wrapper:last-child:nth-child(3n+1), .container .content ._3-in-row .img-wrapper:last-child:nth-child(3n+2) {
+  width: 50%;
+}
+
+.container .content ._3-in-row .img-wrapper:nth-last-child(2):nth-child(3n+1) {
+  width: 50%;
+}
+
 .container .content ._4-in-row .img-wrapper {
   width: 25%;
 }

@@ -119,7 +119,9 @@
     }
 
     function print_img_tag($img_set, $extra_class=""){
-        echo '<img src="';
+        echo '<img';
+        echo ' loading="lazy"';
+        echo ' src="';
         echo $img_set["src"];
         echo '" alt="';
         echo $img_set["alt"];
@@ -172,7 +174,7 @@
             echo '</p>';
             echo '<a href="mailto:spb@new-image.su" class="e-mail">Email: spb@new-image.su</a>';
         echo '</div>';
-    echo '</div>';
+        echo '</div>';
     }
 
     function get_class_for_footer($count){
@@ -182,9 +184,9 @@
             break;
             case 1:
             case 2:
-            case 3:
                 return ' _'.$count.'-in-row';
             break;
+            case 3:
             case 4:
                 return ' _2-in-row';
             break;

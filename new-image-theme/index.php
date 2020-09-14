@@ -64,7 +64,7 @@ Template Name: Главная
         <a href="<?php echo get_permalink(35); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/plotter.png'?>"/></div>
             <div class="secondary-services-info">
-                <h2 class="services-header">НАКЛЕЙКИ. ПЛОТТЕРНАЯ РЕЗКА</h2>
+                <h2 class="services-header">НАКЛЕЙКИ<br>ПЛОТТЕРНАЯ РЕЗКА</h2>
                 <div class="services-text"><p>Раз&shy;меры на&shy;кл&shy;ек для пе&shy;ча&shy;ти мо&shy;гут быть са&shy;мым&shy;и раз&shy;но&shy;об&shy;раз&shy;ны&shy;ми. Мы из&shy;го&shy;то&shy;вим для вас на&shy;клей&shy;ки лю&shy;бо&shy;го раз&shy;ме&shy;ра: от сов&shy;сем кро&shy;шеч&shy;ных на&shy;кле&shy;ек-сти&shy;ке&shy;ров, до объем&shy;ных и боль&shy;ших на&shy;кле&shy;ек на вит&shy;ри&shy;ны и стек&shy;ла, и да&shy;же на&shy;кле&shy;ек для выс&shy;та&shy;воч&shy;ных стен&shy;дов.</p></div>
             </div>
             <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo_inv.png'?>" /></div>
@@ -88,7 +88,7 @@ Template Name: Главная
         <a href="<?php echo get_permalink(6); ?>" class="panel secondary-services">
             <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/banner.png'?>"/></div>
             <div class="secondary-services-info">
-                <h2 class="services-header">БАННЕРЫ. ПЛАКАТЫ</h2>
+                <h2 class="services-header">БАННЕРЫ<br>ПЛАКАТЫ</h2>
                 <div class="services-text"><p>Пе&shy;чать рек&shy;лам&shy;ных бан&shy;не&shy;ров — это эф&shy;фек&shy;тив&shy;ный ин&shy;стру&shy;мент для рек&shy;ла&shy;мы брен&shy;да, прод&shy;ви&shy;же&shy;ния ком&shy;па&shy;нии и рас&shy;крут&shy;ки про&shy;дук&shy;та. Воз&shy;мож&shy;нос&shy;ти по&shy;ли&shy;гра&shy;фии поз&shy;во&shy;ля&shy;ют соз&shy;да&shy;вать ка&shy;чес&shy;твен&shy;ный про&shy;дукт с яр&shy;ким ди&shy;зай&shy;ном и прив&shy;ле&shy;ка&shy;тель&shy;ными цве&shy;то&shy;вы&shy;ми ком&shy;по&shy;зи&shy;ци&shy;ями, ко&shy;то&shy;рый до&shy;но&shy;сит до по&shy;тен&shy;ци&shy;аль&shy;ных кли&shy;ен&shy;тов по&shy;лез&shy;ную ин&shy;фор&shy;ма&shy;цию.</p></div>
             </div>
             <div  class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
