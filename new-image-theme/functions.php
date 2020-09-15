@@ -147,7 +147,7 @@
                     echo '<h2 class="header">КОНТАКТЫ В МОСКВЕ</h2>';
                     echo '<p class="phones">';
                         echo '<a class="phone-href" href="tel:+74956469779">Тел.: +7 (495) 646-9779</a>';
-                        echo '<a class="phone-href" href="tel:+74955053203">Тел.: +7 (495) 505-3203</a>';
+                        echo '<a class="phone-href" href="tel:+79255053203">Тел.: +7 (925) 505-3203</a>';
                     echo '</p>';
                     echo '<a href="mailto:info@new-image.su" class="e-mail">Email: info@new-image.su</a>                    ';
                 echo '</div>';
