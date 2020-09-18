@@ -67,11 +67,14 @@
                 $txt = trim($txt);
                 if(strlen($txt)>0){
                     array_push($current, $line);
-                }
+                };
+                continue;
             };
             if(startsWith($line, "<a")){
                 array_push($current, $line);
+                continue;
             };
+            array_push($current, $line);
         }
         array_push($txt_blocks, $current);
         array_push($img_blocks, $imgs);

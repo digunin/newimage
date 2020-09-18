@@ -4,7 +4,7 @@ Template Name: Полиграфия
 */
 ?>
 <?php
-    global $post; 
+    the_post();
     $content = get_the_content(); 
     $content = apply_filters( 'the_content', $content );
     $content = str_replace( ']]>', ']]>', $content );

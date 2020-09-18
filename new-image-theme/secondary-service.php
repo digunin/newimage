@@ -4,7 +4,7 @@ Template Name: Дополнительные услуги
 */
 ?>
 <?php
-    global $post;
+    the_post();
     $content = get_the_content(); 
     $content = apply_filters( 'the_content', $content );
     $content = str_replace( ']]>', ']]>', $content );
@@ -18,7 +18,7 @@ Template Name: Дополнительные услуги
             <div class="content-info">
                 <h2 class="content-header"><?php echo array_shift($paragraph_array[0]); ?></h2>
                 <div class="content-text">
-                <?php 
+                <?php
                     foreach($paragraph_array[0] as $paragraph){
                         echo $paragraph;
                     }

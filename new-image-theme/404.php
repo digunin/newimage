@@ -12,19 +12,20 @@ Template Name: Страница не найдена
                 <div class="links-block">
                     <ul>
                         <li><a href="<?php echo get_home_url(); ?>">Главная</a></li>
-                        <li><a href="<?php echo get_permalink(148); ?>">Контакты</a></li>
-                        <li><a href="<?php echo get_permalink(148); ?>">Дизайн</a></li>
-                        <li><a href="<?php echo get_permalink(148); ?>">Полиграфия</a></li>
-                        <li><a href="<?php echo get_permalink(148); ?>">Пластиковые карты</a></li>
+                        <li><a href="<?php echo get_permalink(7291); ?>">Контакты</a></li>
+                        <li><a href="<?php echo get_permalink(7303); ?>">Дизайн</a></li>
+                        <li><a href="<?php echo get_permalink(7308); ?>">Полиграфия</a></li>
+                        <li><a href="<?php echo get_permalink(7305); ?>">Пластиковые карты</a></li>
+                        <li><a href="<?php echo get_permalink(7317); ?>">Бейджи</a></li>
                     </ul>
                 </div>
                 <div class="links-block">
                     <ul>
-                        <li><a href="<?php echo get_permalink(148); ?>">Лазерная резка, гравировка</a></li>
-                        <li><a href="<?php echo get_permalink(148); ?>">Наклейки, плоттерная резка</a></li>
-                        <li><a href="<?php echo get_permalink(148); ?>">Печать на сувенирной продукции</a></li>
-                        <li><a href="<?php echo get_permalink(148); ?>">Брендирование авто</a></li>
-                        <li><a href="<?php echo get_permalink(148); ?>">Баннеры, плакаты, наружная реклама</a></li>
+                        <li><a href="<?php echo get_permalink(7299); ?>">Лазерная резка, гравировка</a></li>
+                        <li><a href="<?php echo get_permalink(7311); ?>">Наклейки, плоттерная резка</a></li>
+                        <li><a href="<?php echo get_permalink(7256); ?>">Печать на сувенирной и рекламной продукции</a></li>
+                        <li><a href="<?php echo get_permalink(7301); ?>">Брендирование авто</a></li>
+                        <li><a href="<?php echo get_permalink(7314); ?>">Баннеры, плакаты, наружная реклама</a></li>
                     </ul>
                 </div>
             </div>

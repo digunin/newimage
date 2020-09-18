@@ -52,22 +52,18 @@ header
         margin: 0
         padding: 4em 0
         transition-duration: 0.2s
-        // box-shadow: 6px 0px 6px rgba(256, 256, 256, .2)
-        // transform: translateX(-100%)
-        .menu
+        overflow-y: auto
+        ul
             margin: 0
             padding: 0
             list-style: none
             li
                 &.current-menu-item
                     a
-                        padding-left: 2.5em
-                &:nth-child(1), &:nth-child(4), &:nth-child(9)
-                    
-                    margin-bottom: 1em
+                        padding-left: 3em
                 a
                     display: block
-                    padding: 0.4em 1em
+                    padding: 0.4em 2em
                     color: $secondary-color
                     text-decoration: none
                     transition-duration: 0.2s

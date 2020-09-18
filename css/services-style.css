@@ -397,7 +397,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 99;
+  z-index: 80;
 }
 
 .fss-nav .fss-button {
@@ -570,32 +570,29 @@ header .menu-wrapper {
   padding: 4em 0;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+  overflow-y: auto;
 }
 
-header .menu-wrapper .menu {
+header .menu-wrapper ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-header .menu-wrapper .menu li.current-menu-item a {
-  padding-left: 2.5em;
+header .menu-wrapper ul li.current-menu-item a {
+  padding-left: 3em;
 }
 
-header .menu-wrapper .menu li:nth-child(1), header .menu-wrapper .menu li:nth-child(4), header .menu-wrapper .menu li:nth-child(9) {
-  margin-bottom: 1em;
-}
-
-header .menu-wrapper .menu li a {
+header .menu-wrapper ul li a {
   display: block;
-  padding: 0.4em 1em;
+  padding: 0.4em 2em;
   color: #ebf0fa;
   text-decoration: none;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
 }
 
-header .menu-wrapper .menu li a:hover {
+header .menu-wrapper ul li a:hover {
   background-color: #07384d;
 }
 
