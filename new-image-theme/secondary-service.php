@@ -8,7 +8,9 @@ Template Name: Дополнительные услуги
     $content = get_the_content(); 
     $content = apply_filters( 'the_content', $content );
     $content = str_replace( ']]>', ']]>', $content );
-    [$paragraph_array, $img_set] = get_text_and_image($content);
+    $text_and_images = get_text_and_image($content);
+    $paragraph_array = $text_and_images[0];
+    $img_set = $text_and_images[1];
 ?>
 <?php get_header(); ?>
     <div class="container">

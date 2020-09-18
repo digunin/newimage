@@ -1,4 +1,4 @@
-<?php 
+<?php
     add_action('wp_enqueue_scripts', 'ni_styles');
     add_action('wp_footer', 'ni_scripts');
     add_action('after_setup_theme', 'menu_reg');
@@ -215,4 +215,4 @@
         }
         echo '</div>';
     }
-?> 
+?>
