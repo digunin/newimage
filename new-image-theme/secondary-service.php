@@ -25,7 +25,7 @@ Template Name: Дополнительные услуги
                 ?>
                 </div>
             </div>
-            <?php if($post->post_name == "plotter"){
+            <?php if($post->post_name == "naklejki-i-plotternaya-rezka"){
                 echo '<div class="content-info">';
                 echo '<h2 class="content-header">'.array_shift($paragraph_array[1]).'</h2>';
                 echo '<div class="content-text">';

@@ -203,7 +203,7 @@
         echo '<div class="footer ';
         echo $name;
         echo '-footer';
-        if($name == "souvenir"){
+        if($name == "printing-advertising-products"){
             echo '">';
             print_img_tag($img_set[0], "souvenirs-small");
             print_img_tag($img_set[1], "souvenirs-big");

@@ -274,10 +274,6 @@ body {
   display: none;
 }
 
-.footer.laser-footer img {
-  width: 100%;
-}
-
 .footer.souvenir-footer {
   text-align: center;
 }
@@ -288,15 +284,6 @@ body {
 
 .footer.souvenir-footer .souvenirs-small {
   width: 50%;
-}
-
-.footer.car-footer img {
-  width: 700px;
-  max-width: 50%;
-}
-
-.footer.banner-footer img {
-  width: 100%;
 }
 
 .primary-services-container.design .right-side img {
