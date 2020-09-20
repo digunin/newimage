@@ -274,15 +274,15 @@ body {
   display: none;
 }
 
-.footer.souvenir-footer {
+.footer.printing-advertising-products-footer {
   text-align: center;
 }
 
-.footer.souvenir-footer .souvenirs-big {
+.footer.printing-advertising-products-footer .souvenirs-big {
   width: 100%;
 }
 
-.footer.souvenir-footer .souvenirs-small {
+.footer.printing-advertising-products-footer .souvenirs-small {
   width: 50%;
 }
 
@@ -593,6 +593,8 @@ header .menu-wrapper ul li a:hover {
   background: url("../img/intro/intro.png") no-repeat top right/auto 100%, radial-gradient(ellipse, white, #ebf0fa);
   font-size: 1.5rem;
   padding: 2em;
+  padding-left: 40px;
+  padding-top: 40px;
   min-height: 100vh;
   font-family: 'PF Bague Sans Pro', sans-serif;
 }
@@ -662,6 +664,9 @@ header .menu-wrapper ul li a:hover {
   .container {
     font-size: .9rem;
   }
+  .container .content ._3-in-row .img-wrapper, .container .content ._4-in-row .img-wrapper {
+    width: 50%;
+  }
   .sidebar {
     font-size: .9rem;
   }
@@ -670,14 +675,14 @@ header .menu-wrapper ul li a:hover {
   }
 }
 
-@media screen and (max-width: 1170px) {
-  .container .content ._3-in-row .img-wrapper, .container .content ._4-in-row .img-wrapper {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
   .container .content ._2-in-row .img-wrapper, .container .content ._3-in-row .img-wrapper, .container .content ._4-in-row .img-wrapper {
+    width: 100%;
+  }
+  .container .content ._2-in-row .img-wrapper:last-child:nth-child(3n+1), .container .content ._2-in-row .img-wrapper:last-child:nth-child(3n+2), .container .content ._3-in-row .img-wrapper:last-child:nth-child(3n+1), .container .content ._3-in-row .img-wrapper:last-child:nth-child(3n+2), .container .content ._4-in-row .img-wrapper:last-child:nth-child(3n+1), .container .content ._4-in-row .img-wrapper:last-child:nth-child(3n+2) {
+    width: 100%;
+  }
+  .container .content ._2-in-row .img-wrapper:nth-last-child(2):nth-child(3n+1), .container .content ._3-in-row .img-wrapper:nth-last-child(2):nth-child(3n+1), .container .content ._4-in-row .img-wrapper:nth-last-child(2):nth-child(3n+1) {
     width: 100%;
   }
 }

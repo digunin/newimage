@@ -1,5 +1,9 @@
 @media screen and ( max-width: 1400px)
     .container
+        .content
+            ._3-in-row, ._4-in-row
+                .img-wrapper
+                    width: 50%
         font-size: .9rem
     .sidebar
         font-size: .9rem
@@ -8,17 +12,22 @@
 
 @media screen and ( max-width: 1170px)
     .container
-        .content
-            ._3-in-row, ._4-in-row
-                .img-wrapper
-                    width: 50%
 
-@media screen and ( max-width: 768px)
+@media screen and ( max-width: 990px )
     .container
         .content
             ._2-in-row, ._3-in-row, ._4-in-row
                 .img-wrapper
                     width: 100%
+                    &:last-child
+                        &:nth-child(3n+1), &:nth-child(3n+2)
+                            width: 100%
+                    &:nth-last-child(2)
+                        &:nth-child(3n+1)
+                            width: 100%
+
+@media screen and ( max-width: 768px)
+    .container
 
 @media screen and ( max-width: 575px)
     .container

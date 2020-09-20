@@ -841,38 +841,7 @@ header .menu-wrapper ul li a:hover {
   }
 }
 
-@media screen and (max-width: 768px) {
-  #contacts {
-    font-size: 0.8rem;
-    padding-top: 8px;
-  }
-  #contacts .contacts-body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  #contacts .contacts-body .contacts-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    height: auto;
-  }
-  #contacts .contacts-body .contacts-wrapper .contacts {
-    margin-right: 3em;
-  }
-  #contacts .contacts-body .map-wrapper {
-    margin-top: 1em;
-    margin-left: 0;
-    height: auto;
-  }
+@media screen and (max-width: 900px) {
   #services1 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -914,17 +883,51 @@ header .menu-wrapper ul li a:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #contacts {
+    font-size: 0.8rem;
+    padding-top: 8px;
+  }
+  #contacts .contacts-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #contacts .contacts-body .contacts-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: auto;
+  }
+  #contacts .contacts-body .contacts-wrapper .contacts {
+    margin-right: 3em;
+  }
+  #contacts .contacts-body .map-wrapper {
+    margin-top: 1em;
+    margin-left: 0;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .bazz-widget {
     display: block;
-    margin-right: -70px;
+    margin-right: -65px;
     margin-bottom: -15px;
   }
   .bazz-widget-form label {
     font-size: 14px;
   }
   .bazz-widget.opened {
-    width: 400px;
+    width: 95vw;
   }
   #intro .intro-phones-panel img {
     display: none;

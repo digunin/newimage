@@ -40,28 +40,8 @@
             margin-left: 32vw
     #contacts
     
-@media screen and ( max-width: 768px)
-    #intro
-        .intro-header
-            img
-        .intro-subheader
-    #contacts
-        font-size: 0.8rem
-        padding-top: $menu-btn-width/3
-        .contacts-body
-            flex-direction: column
-            justify-content: flex-start
-            .contacts-wrapper
-                flex-direction: row
-                justify-content: flex-start
-                height: auto
-                .contacts
-                    margin-right: 3em
-            .map-wrapper
-                margin-top: 1em
-                margin-left: 0
-                height: auto
-    #services1
+@media screen and ( max-width: 900px)
+     #services1
         flex-direction: column
         .secondary-services
             padding: 0.5em
@@ -86,16 +66,39 @@
                 img
                     width: 4em
 
+@media screen and ( max-width: 768px)
+    #intro
+        .intro-header
+            img
+        .intro-subheader
+    #contacts
+        font-size: 0.8rem
+        padding-top: $menu-btn-width/3
+        .contacts-body
+            flex-direction: column
+            justify-content: flex-start
+            .contacts-wrapper
+                flex-direction: row
+                justify-content: flex-start
+                height: auto
+                .contacts
+                    margin-right: 3em
+            .map-wrapper
+                margin-top: 1em
+                margin-left: 0
+                height: auto
+   
+
 @media screen and ( max-width: 575px)
     .bazz-widget
         display: block
-        margin-right: -70px
+        margin-right: -65px
         margin-bottom: -15px
         &-form
             label
                 font-size: 14px
         &.opened
-            width: 400px
+            width: 95vw
     #intro
         .intro-phones-panel
             img
