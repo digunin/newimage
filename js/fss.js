@@ -338,11 +338,11 @@ const isScrollDirChange = function(currentDir){
   return currentDir != scrollDirection;
 }
 
-window.onload = function(){
+window.addEventListener("load", function(){
     sectionCount = sectionsNames.length;
     swipe(document.body, { maxTime: 800, minTime: 100, maxDist: 150,  minDist: 60 });
     document.body.addEventListener("swipe", swipeHandler, { passive: false });
     document.body.addEventListener("keyup", keyHandler);
     document.body.addEventListener("wheel", wheelHandler);
     moveTo(current);
-}
+})
