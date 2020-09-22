@@ -208,7 +208,8 @@ const moveTo = function(index) {
     previousOffsetValue = -1;
     localStorage.setItem(pageName+'currentSection', current);
     if(pageName == "index-"){
-        let callback_widget = document.getElementsByClassName('bazz-widget')[0];
+        // let callback_widget = document.getElementsByClassName('bazz-widget')[0];
+        let callback_widget = byID('arcontactus');
         if(!callback_widget) return;
         if(current > 0 && current < 4){
             callback_widget.style.display = "none";
@@ -310,12 +311,12 @@ const wheelHandler = function(event){
         moveToNext();
     }
     wheelDelay = true;
-    setTimeout(function(){wheelDelay = false}, 400);
+    setTimeout(function(){wheelDelay = false}, 200);
 }
 
 const cursor_in_map = function(x, y){
   let elem = document.elementFromPoint(x, y);
-  if(elem.tagName == 'YMAPS'){
+  if(elem&&elem.tagName == 'YMAPS'){
     return true
   }
   return false
@@ -340,9 +341,9 @@ const isScrollDirChange = function(currentDir){
 
 window.addEventListener("load", function(){
     sectionCount = sectionsNames.length;
-    swipe(document.body, { maxTime: 800, minTime: 100, maxDist: 150,  minDist: 60 });
-    document.body.addEventListener("swipe", swipeHandler, { passive: false });
-    document.body.addEventListener("keyup", keyHandler);
-    document.body.addEventListener("wheel", wheelHandler);
+    swipe(window, { maxTime: 800, minTime: 100, maxDist: 200,  minDist: 100 });
+    window.addEventListener("swipe", swipeHandler, { passive: false });
+    window.addEventListener("keyup", keyHandler);
+    window.addEventListener("wheel", wheelHandler);
     moveTo(current);
 })

@@ -47,7 +47,7 @@ body {
 
 .sidebar {
   font-size: 1.1rem;
-  z-index: 90;
+  z-index: 85;
   position: fixed;
   top: 0;
   right: 0;
@@ -384,7 +384,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 80;
+  z-index: 88;
 }
 
 .fss-nav .fss-button {
@@ -790,6 +790,9 @@ header .menu-wrapper ul li a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .footer.printing-advertising-products-footer .souvenirs-small {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=services-style.css.map */

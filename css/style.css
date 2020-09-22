@@ -518,7 +518,6 @@ section .panel .services-logo img {
 
 #contacts .contacts .phones, #contacts .contacts .e-mail, #contacts .contacts .adress {
   font-size: 1.8em;
-  text-align: justify;
 }
 
 #contacts.single-contacts-page {
@@ -551,11 +550,11 @@ section .panel .services-logo img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 22em;
+  height: 30em;
 }
 
 #contacts .contacts-body .map-wrapper {
-  height: 22em;
+  height: 30em;
   margin-left: 4em;
   width: 900px;
   max-width: 100%;
@@ -589,7 +588,7 @@ section .panel .services-logo img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  z-index: 80;
+  z-index: 88;
 }
 
 .fss-nav .fss-button {
@@ -850,7 +849,8 @@ header .menu-wrapper ul li a:hover {
   }
   #services1 .secondary-services {
     padding: 0.5em;
-    padding-right: 2em;
+    padding-right: 1em;
+    padding-left: 2em;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -866,6 +866,9 @@ header .menu-wrapper ul li a:hover {
     font-size: 1.8em;
     min-height: auto;
     margin-top: 0;
+  }
+  #services1 .secondary-services .services-header br {
+    display: none;
   }
   #services1 .secondary-services .services-logo {
     margin-top: 0;
@@ -902,6 +905,8 @@ header .menu-wrapper ul li a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -909,6 +914,12 @@ header .menu-wrapper ul li a:hover {
   }
   #contacts .contacts-body .contacts-wrapper .contacts {
     margin-right: 3em;
+  }
+  #contacts .contacts-body .contacts-wrapper .contacts:last-child {
+    margin-right: 0;
+  }
+  #contacts .contacts-body .contacts-wrapper .contacts .e-mail {
+    margin-bottom: 0.5em;
   }
   #contacts .contacts-body .map-wrapper {
     margin-top: 1em;
@@ -994,8 +1005,8 @@ header .menu-wrapper ul li a:hover {
     margin-top: 0;
   }
   #services1 .secondary-services {
-    padding-right: 0.5em;
-    padding-bottom: 2em;
+    padding-right: 1em;
+    padding-left: 1em;
   }
   #services1 .secondary-services .services-text {
     max-height: 3.5em;
