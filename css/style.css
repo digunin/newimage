@@ -3,6 +3,7 @@
   src: local("../fonts/PF Bague Sans Pro Regular"), local("PF-Bague-Sans-Pro-Regular"), url("../fonts/PFBagueSansPro.woff2") format("woff2"), url("../fonts/PFBagueSansPro.woff") format("woff"), url("../fonts/PFBagueSansPro.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: local("../fonts/PF Bague Sans Pro Bold"), local("PF-Bague-Sans-Pro-Bold"), url("../fonts/PFBagueSansPro-Bold.woff2") format("woff2"), url("../fonts/PFBagueSansPro-Bold.woff") format("woff"), url("../fonts/PFBagueSansPro-Bold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {

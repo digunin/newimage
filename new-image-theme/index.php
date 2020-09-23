@@ -35,63 +35,63 @@ Template Name: Главная
                     про&shy;дук&shy;ции, за&shy;ни&shy;ма&shy;ем&shy;ся оформ&shy;ле&shy;ни&shy;ем.</p>
                 </div>
             </div>
-            <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_blue.png'?>" /></div>
+            <div class="services-logo"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_blue.png'?>" /></div>
         </a>
         <a href="<?php echo get_permalink(7308); ?>" class="panel primary-services">
             <div class="primary-services-info">
                 <h2 class="services-header">Полиграфия</h2>
                 <div class="services-text"><p>Одно из нап&shy;рав&shy;ле&shy;ний де&shy;я&shy;тель&shy;нос&shy;ти на&shy;шей ком&shy;па&shy;нии пос&shy;тав&shy;ка и пе&shy;чать по&shy;ли&shy;гра&shy;фи&shy;чес&shy;кой рек&shy;лам&shy;ной про&shy;дук&shy;ции.</p></div>
             </div>
-            <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo.png'?>" /></div>
+            <div class="services-logo"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo.png'?>" /></div>
         </a>
         <a href="<?php echo get_permalink(7305); ?>" class="panel primary-services">
             <div class="primary-services-info">
                 <h2 class="services-header">Пластиковые карты</h2>
                 <div class="services-text"><p>Ком&shy;па&shy;ния «НОВЫЙ ИМИДЖ» рас&shy;по&shy;ла&shy;га&shy;ет соб&shy;ствен&shy;ным про&shy;из&shy;вод&shy;ством в Мо&shy;скве и мы мо&shy;жем пред&shy;ло&shy;жить из&shy;го&shy;тов&shy;ле&shy;ние лю&shy;бых ти&shy;пов карт с раз&shy;лич&shy;ным на&shy;бо&shy;ром функ&shy;ций в крат&shy;чай&shy;шие сро&shy;ки.</p></div>
             </div>
-            <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_inv.png'?>" /></div>
+            <div class="services-logo"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/contrast_logo_inv.png'?>" /></div>
         </a>
 </section><!-- section services -->
 <section id="services1" class="full-screen-section next-section">
         <a href="<?php echo get_permalink(7299); ?>" class="panel secondary-services">
-            <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/laser.png'?>"/></div>
+            <div class="secondary-image"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/laser.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">ЛАЗЕРНАЯ РЕЗКА И ГРАВИРОВКА</h2>
                 <div class="services-text"><p>Бы&shy;стро&shy;та, низ&shy;кая сто&shy;и&shy;мость — лишь 2 плю&shy;са пре&shy;до&shy;став&shy;ля&shy;е&shy;мо&shy;го сер&shy;ви&shy;са. За&shy;ка&shy;зы&shy;вая де&shy;ше&shy;во ус&shy;лу&shy;ги ла&shy;зер&shy;ной рез&shy;ки ме&shy;тал&shy;ла у на&shy;шей ком&shy;па&shy;нии, вы га&shy;ран&shy;ти&shy;ру&shy;е&shy;те се&shy;бе вы&shy;со&shy;кое ка&shy;чес&shy;тво, дос&shy;ти&shy;га&shy;е&shy;мое бла&shy;го&shy;да&shy;ря ис&shy;поль&shy;зо&shy;ва&shy;нию обо&shy;ру&shy;до&shy;ва&shy;ния из&shy;вест&shy;ных брен&shy;дов. Это, по&shy;жа&shy;луй, глав&shy;ный кри&shy;те&shy;рий при вы&shy;боре ис&shy;пол&shy;ни&shy;те&shy;ля.</p></div>
             </div>
-            <div  class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
+            <div  class="services-logo"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
         </a>
         <a href="<?php echo get_permalink(7311); ?>" class="panel secondary-services">
-            <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/plotter.png'?>"/></div>
+            <div class="secondary-image"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/plotter.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">НАКЛЕЙКИ<br>ПЛОТТЕРНАЯ РЕЗКА</h2>
                 <div class="services-text"><p>Раз&shy;меры на&shy;кл&shy;ек для пе&shy;ча&shy;ти мо&shy;гут быть са&shy;мым&shy;и раз&shy;но&shy;об&shy;раз&shy;ны&shy;ми. Мы из&shy;го&shy;то&shy;вим для вас на&shy;клей&shy;ки лю&shy;бо&shy;го раз&shy;ме&shy;ра: от сов&shy;сем кро&shy;шеч&shy;ных на&shy;кле&shy;ек-сти&shy;ке&shy;ров, до объем&shy;ных и боль&shy;ших на&shy;кле&shy;ек на вит&shy;ри&shy;ны и стек&shy;ла, и да&shy;же на&shy;кле&shy;ек для выс&shy;та&shy;воч&shy;ных стен&shy;дов.</p></div>
             </div>
-            <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo_inv.png'?>" /></div>
+            <div class="services-logo"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/white_logo_inv.png'?>" /></div>
         </a>
         <a href="<?php echo get_permalink(7256); ?>" class="panel secondary-services">
-            <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/souvenir.png'?>"/></div>
+            <div class="secondary-image"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/souvenir.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">НАНЕСЕНИЕ НА СУВЕНИРЫ</h2>
                 <div class="services-text"><p>На&shy;не&shy;се&shy;ние ло&shy;го&shy;ти&shy;па на су&shy;ве&shy;нир&shy;ную про&shy;дук&shy;цию пре&shy;вра&shy;ща&shy;ет прос&shy;тые пред&shy;ме&shy;ты в эф&shy;фек&shy;тив&shy;ные рек&shy;лам&shy;ные ин&shy;стру&shy;мен&shy;ты. Биз&shy;нес-по&shy;дар&shy;ки и про&shy;мо&shy;про&shy;дук&shy;ция обес&shy;пе&shy;чи&shy;ва&shy;ют лич&shy;ный кон&shy;такт с ва&shy;шим потре&shy;би&shy;те&shy;лем и при этом эко&shy;но&shy;ми&shy;чес&shy;ки вы&shy;год&shy;нее дру&shy;гих спо&shy;со&shy;бов прод&shy;ви&shy;же&shy;ния про&shy;дук&shy;тов и ус&shy;луг.</p></div>
             </div>
-            <div  class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
+            <div  class="services-logo"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
         </a>
         <a href="<?php echo get_permalink(7301); ?>" class="panel secondary-services">
-            <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/car.png'?>"/></div>
+            <div class="secondary-image"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/car.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">БРЕНДИРОВАНИЕ АВТО</h2>
                 <div class="services-text"><p>Брен&shy;ди&shy;ро&shy;ва&shy;ние ав&shy;то – сов&shy;ре&shy;мен&shy;ная фор&shy;ма имид&shy;же&shy;вой на&shy;руж&shy;ной рек&shy;ла&shy;мы. На ав&shy;то&shy;мо&shy;би&shy;ле мо&shy;жет быть и обыч&shy;ный тек&shy;сто&shy;вый при&shy;зыв за&shy;ка&shy;зать ус&shy;лу&shy;гу, и пол&shy;но&shy;цвет&shy;ная гра&shy;фи&shy;ка. Не&shy;смот&shy;ря на по&shy;пу&shy;ляр&shy;ность та&shy;кой рек&shy;ла&shy;мы в Мос&shy;кве, ав&shy;то&shy;лю&shy;би&shy;те&shy;ли об&shy;ра&shy;щают вни&shy;ма&shy;ние на кра&shy;си&shy;во оформ&shy;лен&shy;ный транс&shy;порт. Осо&shy;бен&shy;но ког&shy;да пред&shy;ло&shy;же&shy;ние для них ак&shy;ту&shy;аль&shy;но.</p></div>
             </div>
-            <div class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo_inv.png'?>" /></div>
+            <div class="services-logo"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/white_logo_inv.png'?>" /></div>
         </a>
         <a href="<?php echo get_permalink(7314); ?>" class="panel secondary-services">
-            <div class="secondary-image"><img src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/banner.png'?>"/></div>
+            <div class="secondary-image"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/secondary-services/banner.png'?>"/></div>
             <div class="secondary-services-info">
                 <h2 class="services-header">БАННЕРЫ<br>ПЛАКАТЫ</h2>
                 <div class="services-text"><p>Пе&shy;чать рек&shy;лам&shy;ных бан&shy;не&shy;ров — это эф&shy;фек&shy;тив&shy;ный ин&shy;стру&shy;мент для рек&shy;ла&shy;мы брен&shy;да, прод&shy;ви&shy;же&shy;ния ком&shy;па&shy;нии и рас&shy;крут&shy;ки про&shy;дук&shy;та. Воз&shy;мож&shy;нос&shy;ти по&shy;ли&shy;гра&shy;фии поз&shy;во&shy;ля&shy;ют соз&shy;да&shy;вать ка&shy;чес&shy;твен&shy;ный про&shy;дукт с яр&shy;ким ди&shy;зай&shy;ном и прив&shy;ле&shy;ка&shy;тель&shy;ными цве&shy;то&shy;вы&shy;ми ком&shy;по&shy;зи&shy;ци&shy;ями, ко&shy;то&shy;рый до&shy;но&shy;сит до по&shy;тен&shy;ци&shy;аль&shy;ных кли&shy;ен&shy;тов по&shy;лез&shy;ную ин&shy;фор&shy;ма&shy;цию.</p></div>
             </div>
-            <div  class="services-logo"><img src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
+            <div  class="services-logo"><img loading="lazy" src="<?php echo get_template_directory_uri().'/assets/img/white_logo.png'?>" /></div>
         </a>
 </section><!-- section services1 (secondary) -->
 <section id="about" class="full-screen-section next-section">
@@ -109,8 +109,8 @@ Template Name: Главная
         </div>
         <div class="about-right">
             <div class="wrapper">
-                <img class="back" src="<?php echo get_template_directory_uri().'/assets/img/about/center-logo-inv-reflect.png'?>">
-                <img class="face" src="<?php echo get_template_directory_uri().'/assets/img/about/center-logo.png'?>">
+                <img loading="lazy" class="back" src="<?php echo get_template_directory_uri().'/assets/img/about/center-logo-inv-reflect.png'?>">
+                <img loading="lazy" class="face" src="<?php echo get_template_directory_uri().'/assets/img/about/center-logo.png'?>">
             </div>
         </div>
 </section><!-- section about -->
