@@ -399,7 +399,7 @@ section .panel .services-logo img {
   width: 90%;
   height: 64px;
   margin-top: auto;
-  background: url("../img/about/footer-image.png") no-repeat 0 0/cover;
+  background: url("../img/about/footer-image.jpg") no-repeat 0 0/cover;
   margin: 0 auto 10px;
   overflow: hidden;
   -webkit-box-shadow: 0 0 5px inset rgba(100, 100, 100, 0.15);
@@ -830,13 +830,13 @@ header .menu-wrapper ul li a:hover {
   #intro .intro-header img {
     height: auto;
     width: 90vw;
+    max-width: 600px;
   }
   #intro .intro-subheader {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-left: 32vw;
   }
 }
 
