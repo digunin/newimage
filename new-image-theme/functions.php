@@ -23,6 +23,12 @@
         }
     }
 
+    function fonts_preload_tag(){
+        echo '<link rel="preload" href="https://new-image.su/wp-content/themes/newimage/assets/fonts/PFBagueSansPro.woff2" as="font" type="font/woff2" crossorigin>';
+        echo '<link rel="preload" href="https://new-image.su/wp-content/themes/newimage/assets/fonts/PFBagueSansPro-Bold.woff2" as="font" type="font/woff2" crossorigin>';
+        echo '<link rel="preload" href="https://new-image.su/wp-content/themes/newimage/assets/js/fss.min.js?ver=4.9.8" as="script">';
+    }
+
     function get_text_and_image($source){
         $txt_blocks = [];
         $img_blocks = [];
