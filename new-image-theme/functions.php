@@ -9,7 +9,20 @@
     }
 
     function ni_styles(){
+        wp_deregister_script( 'jquery-core' );
         wp_enqueue_style('normalize', get_template_directory_uri()."/assets/css/normalize.min.css");
+        if(is_front_page()||is_page_template('contacts.php')||is_404()){
+            wp_enqueue_script( 'jquery' );
+            // для версий WP меньше 3.6 'jquery' нужно поменять на 'jquery-core'
+            $wp_jquery_ver = $GLOBALS['wp_scripts']->registered['jquery']->ver;
+            $jquery_ver = $wp_jquery_ver == '' ? '1.11.0' : $wp_jquery_ver;
+            $start = strpos($jquery_ver, "-wp");
+            if($start){
+                $jquery_ver = substr($jquery_ver, 0, -3);
+            }
+            wp_register_script( 'jquery-core', 'https://ajax.googleapis.com/ajax/libs/jquery/'. $jquery_ver .'/jquery.min.js', false, null, true );
+            wp_enqueue_script( 'jquery' );
+        };
         if(is_front_page()||is_page_template('contacts.php')){
             wp_enqueue_style('style', get_template_directory_uri()."/assets/css/style.min.css", array('normalize'));
         }else{
@@ -24,9 +37,17 @@
     }
 
     function fonts_preload_tag(){
-        echo '<link rel="preload" href="https://new-image.su/wp-content/themes/newimage/assets/fonts/PFBagueSansPro.woff2" as="font" type="font/woff2" crossorigin>';
-        echo '<link rel="preload" href="https://new-image.su/wp-content/themes/newimage/assets/fonts/PFBagueSansPro-Bold.woff2" as="font" type="font/woff2" crossorigin>';
-        echo '<link rel="preload" href="https://new-image.su/wp-content/themes/newimage/assets/js/fss.min.js?ver=4.9.8" as="script">';
+        echo '<link rel="preload" href="';
+        echo get_template_directory_uri();
+        echo '/assets/fonts/PFBagueSansPro.woff2" as="font" type="font/woff2" crossorigin>';
+        echo '<link rel="preload" href="';
+        echo get_template_directory_uri();
+        echo '/assets/fonts/PFBagueSansPro-Bold.woff2" as="font" type="font/woff2" crossorigin>';
+        if(is_front_page()||is_page_template('cards.php')){
+            echo '<link rel="preload" href="';
+            echo get_template_directory_uri();
+            echo '/assets/js/fss.min.js?ver=4.9.8" as="script">';
+        }
     }
 
     function get_text_and_image($source){
