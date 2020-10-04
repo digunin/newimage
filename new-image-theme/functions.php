@@ -9,18 +9,12 @@
     }
 
     function ni_styles(){
-        wp_deregister_script( 'jquery-core' );
+        wp_deregister_script('jquery-core');
+        wp_deregister_script('jquery');
         wp_enqueue_style('normalize', get_template_directory_uri()."/assets/css/normalize.min.css");
         if(is_front_page()||is_page_template('contacts.php')||is_404()){
-            wp_enqueue_script( 'jquery' );
-            // для версий WP меньше 3.6 'jquery' нужно поменять на 'jquery-core'
-            $wp_jquery_ver = $GLOBALS['wp_scripts']->registered['jquery']->ver;
-            $jquery_ver = $wp_jquery_ver == '' ? '1.11.0' : $wp_jquery_ver;
-            $start = strpos($jquery_ver, "-wp");
-            if($start){
-                $jquery_ver = substr($jquery_ver, 0, -3);
-            }
-            wp_register_script( 'jquery-core', 'https://ajax.googleapis.com/ajax/libs/jquery/'. $jquery_ver .'/jquery.min.js', false, null, true );
+            wp_register_script( 'jquery-core', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, null, true );
+            wp_register_script( 'jquery', false, array('jquery-core'), null, true );
             wp_enqueue_script( 'jquery' );
         };
         if(is_front_page()||is_page_template('contacts.php')){
