@@ -32,10 +32,10 @@ Template Name: Пластиковые карты
                 $tmp = wp_upload_dir();
                 $uploads_url = $tmp['baseurl'];
             ?>
-                <a href="<?php echo $uploads_url.'/2020/09/illustrator-template.ai' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/ai.png'?>" alt=""></a>
-                <a href="<?php echo $uploads_url.'/2020/09/indesign-template.indd' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/id.png'?>" alt=""></a>
-                <a href="<?php echo $uploads_url.'/2020/09/photoshop-template.psd' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/psd.png'?>" alt=""></a>
-                <a href="<?php echo $uploads_url.'/2020/09/corel-template.cdr' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/cdr.png'?>" alt=""></a>
+                <a href="<?php echo $uploads_url.'/2020/09/illustrator-template.ai' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/ai.jpg'?>" alt=""></a>
+                <a href="<?php echo $uploads_url.'/2020/09/indesign-template.indd' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/id.jpg'?>" alt=""></a>
+                <a href="<?php echo $uploads_url.'/2020/09/photoshop-template.psd' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/psd.jpg'?>" alt=""></a>
+                <a href="<?php echo $uploads_url.'/2020/09/corel-template.cdr' ?>" download><img src="<?php echo get_template_directory_uri().'/assets/img/services/cards/cdr.jpg'?>" alt=""></a>
             </div>
         </div>
     </section>
@@ -107,4 +107,5 @@ Template Name: Пластиковые карты
         var sectionsNames = ["cards1", "cards2", "cards3", "cards4"]
         var pageName = 'cards-'
     </script>
+<?php get_scroll_script(); ?>
 <?php get_footer('services');

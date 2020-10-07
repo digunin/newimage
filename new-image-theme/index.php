@@ -133,4 +133,5 @@ Template Name: Главная
     var sectionsNames = ["intro", "services", "services1", "about", "contacts"]
     var pageName = 'index-'
 </script>
-<?php get_footer() ?>
+<?php get_scroll_script(); ?>
+<?php get_footer(); ?>

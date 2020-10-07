@@ -1,6 +1,5 @@
 <?php
     add_action('wp_enqueue_scripts', 'ni_styles');
-    add_action('wp_footer', 'ni_scripts');
     add_action('after_setup_theme', 'menu_reg');
 
     function menu_reg(){
@@ -12,21 +11,13 @@
         wp_deregister_script('jquery-core');
         wp_deregister_script('jquery');
         wp_enqueue_style('normalize', get_template_directory_uri()."/assets/css/normalize.min.css");
-        if(is_front_page()||is_page_template('contacts.php')||is_404()){
-            wp_register_script( 'jquery-core', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, null, true );
-            wp_register_script( 'jquery', false, array('jquery-core'), null, true );
-            wp_enqueue_script( 'jquery' );
-        };
+        wp_register_script( 'jquery-core', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, null, true );
+        wp_register_script( 'jquery', false, array('jquery-core'), null, true );
+        wp_enqueue_script( 'jquery' );
         if(is_front_page()||is_page_template('contacts.php')){
             wp_enqueue_style('style', get_template_directory_uri()."/assets/css/style.min.css", array('normalize'));
         }else{
             wp_enqueue_style('services-style', get_template_directory_uri()."/assets/css/services-style.min.css", array('normalize'));
-        }
-    }
-
-    function ni_scripts(){
-        if(is_front_page()||is_page_template('cards.php')){
-            wp_enqueue_script('fss-script', get_template_directory_uri()."/assets/js/fss.min.js");
         }
     }
 
@@ -37,11 +28,6 @@
         echo '<link rel="preload" href="';
         echo get_template_directory_uri();
         echo '/assets/fonts/PFBagueSansPro-Bold.woff2" as="font" type="font/woff2" crossorigin>';
-        if(is_front_page()||is_page_template('cards.php')){
-            echo '<link rel="preload" href="';
-            echo get_template_directory_uri();
-            echo '/assets/js/fss.min.js?ver=4.9.8" as="script">';
-        }
     }
 
     function get_text_and_image($source){
@@ -237,5 +223,11 @@
             }
         }
         echo '</div>';
+    }
+
+    function get_scroll_script(){
+        echo '<script>';
+        echo 'Object.assign||Object.defineProperty(Object,"assign",{enumerable:!1,configurable:!0,writable:!0,value:function(a,b){"use strict";null==a&&error("Cannot convert first argument to object");for(var c=Object(a),d=1;d<arguments.length;d++){var e=arguments[d];if(null!=e)for(var f=Object.keys(Object(e)),g=0,h=f.length;g<h;g++){var i=f[g],j=Object.getOwnPropertyDescriptor(e,i);void 0!==j&&j.enumerable&&(c[i]=e[i])}}return c}}),function(){function t(t,e){e=e||{bubbles:!1,cancelable:!1,detail:void 0};var n=document.createEvent("CustomEvent");return n.initCustomEvent(t,e.bubbles,e.cancelable,e.detail),n}"function"!=typeof window.CustomEvent&&(t.prototype=window.Event.prototype,window.CustomEvent=t)}();var swipe=function(el,settings){var settings;(settings=Object.assign({},{minDist:60,maxDist:120,maxTime:700,minTime:50},settings)).maxTime<settings.minTime&&(settings.maxTime=settings.minTime+500),(settings.maxTime<100||settings.minTime<50)&&(settings.maxTime=700,settings.minTime=50);var dir,swipeType,dist,isMouse=!1,isMouseDown=!1,startX=0,distX=0,startY=0,distY=0,startTime=0,support_pointer=!!("PointerEvent"in window||"msPointerEnabled"in window.navigator),support_touch=!!(void 0!==window.orientation||/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)||"ontouchstart"in window||navigator.msMaxTouchPoints||"maxTouchPoints"in window.navigator>1||"msMaxTouchPoints"in window.navigator>1),getSupportedEvents,eventsUnify=function(e){return e.changedTouches?e.changedTouches[0]:e},checkStart=function(e){var event=eventsUnify(e);support_touch&&void 0!==e.touches&&1!==e.touches.length||(dir="none",swipeType="none",dist=0,startX=event.pageX,startY=event.pageY,startXfromSwipeEvent=startX,startYfromSwipeEvent=startY,startTime=(new Date).getTime(),isMouse&&(isMouseDown=!0))},checkMove=function(e){if(!isMouse||isMouseDown){var event=eventsUnify(e);distX=event.pageX-startX,distY=event.pageY-startY,dir=Math.abs(distX)>Math.abs(distY)?distX<0?"left":"right":distY<0?"up":"down"}},checkEnd=function(e){if(!isMouse||isMouseDown){var endTime,time=(new Date).getTime()-startTime;if(time>=settings.minTime&&time<=settings.maxTime&&(Math.abs(distX)>=settings.minDist&&Math.abs(distY)<=settings.maxDist?swipeType=dir:Math.abs(distY)>=settings.minDist&&Math.abs(distX)<=settings.maxDist&&(swipeType=dir)),dist="left"===dir||"right"===dir?Math.abs(distX):Math.abs(distY),"none"!==swipeType&&dist>=settings.minDist){var swipeEvent=new CustomEvent("swipe",{bubbles:!0,cancelable:!0,detail:{full:e,dir:swipeType,dist:dist,time:time}});el.dispatchEvent(swipeEvent)}}else mouseDown=!1},events=function(){switch(!0){case support_touch:events={type:"touch",start:"touchstart",move:"touchmove",end:"touchend",cancel:"touchcancel"};break;case support_pointer:events={type:"pointer",start:"PointerDown",move:"PointerMove",end:"PointerUp",cancel:"PointerCancel",leave:"PointerLeave"};var ie10=window.navigator.msPointerEnabled&&Function("/*@cc_on return document.documentMode===10@*/")();for(var value in events)"type"!==value&&(events[value]=ie10?"MS"+events[value]:events[value].toLowerCase());break;default:events={type:"mouse",start:"mousedown",move:"mousemove",end:"mouseup",leave:"mouseleave"}}return events}();(support_pointer&&!support_touch||"mouse"===events.type)&&(isMouse=!0),el.addEventListener(events.start,checkStart),el.addEventListener(events.move,checkMove),el.addEventListener(events.end,checkEnd)};const byID=function(id){return document.getElementById(id)};var current=+localStorage.getItem(pageName+"currentSection")||0,sectionCount=0,wheelDelay=!1,startXfromSwipeEvent=0,startYfromSwipeEvent=0,previousOffsetValue=-1,scrollDirection="down";const fssOnClick=function(n){n!=current&&moveTo(n)},moveTo=function(index){setCurrentSection(index),current=index,previousOffsetValue=-1,localStorage.setItem(pageName+"currentSection",current),"cards-"==pageName&&(document.getElementsByClassName("sidebar")[0].style.display=0==current||1==current?"none":"flex")},setCurrentSection=function(n){let buttons=document.getElementsByClassName("fss-button");sectionsNames.map((function(name,i){let section=byID(name),btn=buttons[i];i<n?setPrevious(section):i==n?setActive(section):setNext(section),i==n?btn.classList.add("active"):btn.classList.remove("active")}))},setPrevious=function(elem){elem.classList.remove("active-section"),elem.classList.remove("next-section"),elem.classList.contains("previous-section")||elem.classList.add("previous-section")},setActive=function(elem){elem.classList.remove("previous-section"),elem.classList.remove("next-section"),elem.classList.contains("active-section")||elem.classList.add("active-section"),elem.classList.add("active-section")},setNext=function(elem){elem.classList.remove("previous-section"),elem.classList.remove("active-section"),elem.classList.contains("next-section")||elem.classList.add("next-section")},keyHandler=function(event){elem=byID(sectionsNames[current]);let currentOffsetValue=Math.max(document.documentElement.scrollTop,elem.scrollTop);if("ArrowDown"==event.code||"ArrowRight"==event.code){if(currentOffsetValue>previousOffsetValue)return void(previousOffsetValue=currentOffsetValue);moveToNext()}if("ArrowUp"==event.code||"ArrowLeft"==event.code){if(currentOffsetValue<previousOffsetValue)return void(previousOffsetValue=currentOffsetValue);moveToPrevious()}},moveToNext=function(){current<sectionCount-1&&moveTo(current+1)},moveToPrevious=function(){current>0&&moveTo(current-1)},wheelHandler=function(event){if(wheelDelay)return;if(cursor_in_map(event.clientX,event.clientY))return;elem=byID(sectionsNames[current]);let currentOffsetValue=Math.max(document.documentElement.scrollTop,elem.scrollTop);if(currentOffsetValue+=event.deltaY,event.deltaY<0){if(isScrollDirChange("up")&&(previousOffsetValue=currentOffsetValue-event.deltaY),scrollDirection="up",currentOffsetValue<previousOffsetValue)return void(previousOffsetValue=currentOffsetValue);moveToPrevious()}else{if(isScrollDirChange("down")&&(previousOffsetValue=currentOffsetValue-event.deltaY),scrollDirection="down",currentOffsetValue>previousOffsetValue)return void(previousOffsetValue=currentOffsetValue);moveToNext()}wheelDelay=!0,setTimeout((function(){wheelDelay=!1}),200)},cursor_in_map=function(x,y){let elem=document.elementFromPoint(x,y);return!(!elem||"YMAPS"!=elem.tagName)},swipeHandler=function(e){if(cursor_in_map(startXfromSwipeEvent,startYfromSwipeEvent))return;let dir=e.detail.dir;"left"==dir&&moveToNext(),"right"==dir&&moveToPrevious()},isScrollDirChange=function(currentDir){return currentDir!=scrollDirection};sectionCount=sectionsNames.length,swipe(window,{maxTime:800,minTime:100,maxDist:200,minDist:100}),window.addEventListener("swipe",swipeHandler,{passive:!1}),window.addEventListener("keyup",keyHandler),window.addEventListener("wheel",wheelHandler),moveTo(current);';
+        echo '</script>';
     }
 ?>

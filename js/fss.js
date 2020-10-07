@@ -207,18 +207,7 @@ const moveTo = function(index) {
     current = index;
     previousOffsetValue = -1;
     localStorage.setItem(pageName+'currentSection', current);
-    if(pageName == "index-"){
-        // let callback_widget = document.getElementsByClassName('bazz-widget')[0];
-        let callback_widget = byID('arcontactus');
-        if(!callback_widget) return;
-        if(current > 0 && current < 4){
-            callback_widget.style.display = "none";
-        }else{
-            callback_widget.style.display = "block";
-        }
-    }
     if(pageName == "cards-"){
-      let elem = byID(sectionsNames[current]);
       if(current == 0 || current == 1){
         document.getElementsByClassName("sidebar")[0].style.display = "none"
       }else{
@@ -339,11 +328,9 @@ const isScrollDirChange = function(currentDir){
   return currentDir != scrollDirection;
 }
 
-window.addEventListener("load", function(){
-    sectionCount = sectionsNames.length;
-    swipe(window, { maxTime: 800, minTime: 100, maxDist: 200,  minDist: 100 });
-    window.addEventListener("swipe", swipeHandler, { passive: false });
-    window.addEventListener("keyup", keyHandler);
-    window.addEventListener("wheel", wheelHandler);
-    moveTo(current);
-})
+sectionCount = sectionsNames.length;
+swipe(window, { maxTime: 800, minTime: 100, maxDist: 200,  minDist: 100 });
+window.addEventListener("swipe", swipeHandler, { passive: false });
+window.addEventListener("keyup", keyHandler);
+window.addEventListener("wheel", wheelHandler);
+moveTo(current);
