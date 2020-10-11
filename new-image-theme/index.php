@@ -116,10 +116,7 @@ Template Name: Главная
 </section><!-- section about -->
 <section id="contacts" class="full-screen-section next-section">
     <?php 
-        $post = get_post(7291);
-        setup_postdata($post);
-        print_contacts(get_the_content());
-        wp_reset_postdata();
+        print_contacts();
     ?>
 </section><!-- section contacts -->
 <div class="fss-nav">

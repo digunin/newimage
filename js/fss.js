@@ -196,6 +196,7 @@ var startXfromSwipeEvent = 0;
 var startYfromSwipeEvent = 0;
 var previousOffsetValue = -1;
 var scrollDirection = "down";
+var isMapLoaded = false;
 
 const fssOnClick = function(n){
     if(n==current) return;
@@ -207,6 +208,15 @@ const moveTo = function(index) {
     current = index;
     previousOffsetValue = -1;
     localStorage.setItem(pageName+'currentSection', current);
+    if(pageName == "index-"&&!isMapLoaded){
+      if(sectionsNames[current] == "contacts"){
+        var elem_with_map_script = document.createElement('script');
+        elem_with_map_script.type = 'text/javascript';
+        elem_with_map_script.src = '//api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=e511ca73-3039-488e-8fef-064eff47e4c4&ver=2.1&onload=get_ya_map';
+        document.getElementsByTagName('body')[0].appendChild(elem_with_map_script);
+        isMapLoaded = true;
+      }
+    }
     if(pageName == "cards-"){
       if(current == 0 || current == 1){
         document.getElementsByClassName("sidebar")[0].style.display = "none"
@@ -326,6 +336,44 @@ const swipeHandler = function(e){
 
 const isScrollDirChange = function(currentDir){
   return currentDir != scrollDirection;
+}
+
+function get_ya_map(){
+  document.getElementById("yamap0").innerHTML = "";
+  var myMap0 = new ymaps.Map("yamap0", {
+                                    center: [55.8549,37.5934],
+                                    zoom: 17,
+                                    type: "yandex#map",
+                                    controls: ["zoomControl", "routeButtonControl"] ,
+                                    
+                                },
+                                {
+                                  suppressMapOpenBlock: false
+                                }); 
+
+              
+  myMap0placemark1 = new ymaps.Placemark([55.8551,37.5948], {
+                              hintContent: "",
+                              iconContent: "Вторая проходная бц «Вэлдан»",
+
+
+                            
+                          }, {                        
+                            preset: "islands#blueStretchyIcon", 
+                            iconColor: "#1e98ff",
+                          });  
+  
+  myMap0placemark2 = new ymaps.Placemark([55.8544,37.5935], {
+                              hintContent: "",
+                              iconContent: "ООО «Новый имидж»",
+
+
+                            
+                          }, {                        
+                            preset: "islands#blueStretchyIcon", 
+                            iconColor: "#ff1f75",
+                          });  
+  myMap0.geoObjects.add(myMap0placemark1).add(myMap0placemark2);
 }
 
 sectionCount = sectionsNames.length;
