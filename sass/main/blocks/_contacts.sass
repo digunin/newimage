@@ -57,3 +57,28 @@
         font-size: 1.6em
         p
             margin: 0.3em
+
+@keyframes spinZ
+    0%
+        transform: translate(-50%, -50%) rotate(0deg)
+    100%
+        transform: translate(-50%, -50%) rotate(360deg)
+
+.spinner-wrapper
+    width: 100%
+    height: 30em
+    position: relative
+    .spinner
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        position: absolute
+        z-index: 99
+        width: 7em
+        height: 7em
+        border: 0.6em solid darken($primary-color, 10%)
+        border-left-color: $primary-color
+        border-right-color: transparent
+        border-bottom-color: lighten($primary-color, 10%)
+        border-radius: 100%
+        animation: spinZ 0.7s infinite linear

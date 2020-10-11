@@ -49,44 +49,6 @@ h1, h2 {
   font-weight: normal;
 }
 
-@-webkit-keyframes spinZ {
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-@keyframes spinZ {
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-.spinner-wrapper {
-  width: 100%;
-  height: 30em;
-  position: relative;
-}
-
-.spinner-wrapper .spinner {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: absolute;
-  z-index: 99;
-  width: 7em;
-  height: 7em;
-  border: 0.6em solid #000204;
-  border-left-color: #031634;
-  border-right-color: transparent;
-  border-bottom-color: #062a64;
-  border-radius: 100%;
-  -webkit-animation: spinZ 700ms infinite linear;
-          animation: spinZ 700ms infinite linear;
-}
-
 .bazz-widget {
   margin-right: -30px;
 }
@@ -608,6 +570,52 @@ section .panel .services-logo img {
 
 #contacts .contacts-footer p {
   margin: 0.3em;
+}
+
+@-webkit-keyframes spinZ {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spinZ {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.spinner-wrapper {
+  width: 100%;
+  height: 30em;
+  position: relative;
+}
+
+.spinner-wrapper .spinner {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 99;
+  width: 7em;
+  height: 7em;
+  border: 0.6em solid #000204;
+  border-left-color: #031634;
+  border-right-color: transparent;
+  border-bottom-color: #062a64;
+  border-radius: 100%;
+  -webkit-animation: spinZ 0.7s infinite linear;
+          animation: spinZ 0.7s infinite linear;
 }
 
 .fss-nav {
